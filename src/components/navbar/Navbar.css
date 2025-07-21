@@ -1,0 +1,40 @@
+.navbar-container{
+    position: absolute;
+    margin: 20px;    
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    cursor:default;
+}
+
+
+.nav-icon{
+    width: 45px;
+    height: 45px;
+    margin-top: 20px;
+}
+
+
+
+.icon-name {
+    position: relative;
+    bottom: 5px;
+    font-family: tahoma;
+    font-size: 12px;
+    color: white;
+    padding: 0px 3px 1px 3px;
+    text-shadow: 2px 1px 3px black;
+    text-decoration: none;
+}
+
+.icon-name.selected{
+    background-color: rgb(85, 85, 255);
+    
+    
+}
