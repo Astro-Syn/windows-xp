@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    box-sizing: border-box;
 }
 
 .footer{
@@ -75,7 +76,8 @@ body{
     display: flex;
     flex-direction: column;
     position: absolute;
-    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
     bottom: 100%;
     left: 0;
     background: white;
@@ -86,89 +88,109 @@ body{
     z-index: 11;
     overflow: hidden;
     box-shadow: 5px 5px 5px rgb(0, 49, 114);
-    
 }
 
 .row-top{
     display: flex;
-    flex-direction:row;
-    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
     border-bottom: 2px solid rgb(0, 0, 167);
     background: radial-gradient(circle, rgb(63, 63, 255), rgb(47, 126, 230));
     color: white;
     font-size: 20px;
     width: 100%;
-    height: 80px;
+    height: 70px;
+    padding: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    
-    
 }
 
 .userInfo{
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .both-cols{
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     color: rgb(0, 0, 42);
-}
-.both-cols ul li {
-    display: flex;
-    justify-content: flex-start;
-    
+    height: 100%;
 }
 
-.col-one,
-.col-two
-{
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(246, 249, 255);
-    width: 100%;
+.col-one{
+    display: grid;
+    background: white;
     padding: 10px;
+    border-right: 1px solid #d0d0d0;
 }
 
 .col-two{
-    background-color: rgb(168, 223, 255);
+  background: linear-gradient(to bottom, #dbeeff, #c6e6ff);
+  padding: 12px;
+  font-size: 13px;
 }
 
 .col-two ul:first-of-type{
     font-weight: bold;
 }
 
-.all-programs {
-    margin-top: auto;
-    padding-top: 10px;
+
+
+.top-icon-text p:first-child{
     font-weight: bold;
+    line-height: 0;
 }
 
-.row-bottom{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    background-color: blue;
-    color: white;
-    text-align: end;
-}
-
-
-
-.off-buttons-container{
-    padding: 10px;
-}
-
-.menu-icons{
-    width: 40px;
-    height: 40px;
-    padding: 5px;
+.top-icon-text p:nth-child(2){
+    color: gray;
 }
 
 ul{
     list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    padding: 5px;
+    font-family: tahoma;
+    font-size: 13px;
+}
+
+ul li:hover {
+  background-color: #0c79ff;
+  color: white;
+}
+
+.item-box{
+    display: flex;
+    align-items: center;
+}
+
+.divider{
+    display: flex;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 2px;
+    background: radial-gradient(circle at center, rgb(174, 174, 174), rgba(225, 225, 225, 0.408));
+}
+
+
+.menu-icons{
+    width: 35px;
+    height: 35px;
+    padding-right: 5px;
+}
+
+.menu-icons-two {
+  width: 24px;
+  height: 24px;
 }
 
 .log-icons{
@@ -179,5 +201,56 @@ ul{
 .off-buttons-container{
     display: flex;
     justify-content: space-between;
-    
+    padding: 10px;
+}
+.all-programs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.green-arrow{
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+}
+
+.row-bottom{
+    display: flex;
+    justify-content: flex-end;
+    background: radial-gradient(circle, rgb(63, 63, 255), rgb(47, 126, 230));
+    color: white;
+    text-align: end;
+    height: 55px;
+}
+
+.off-buttons-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-top: 1px solid rgb(2, 2, 95);
+}
+
+.off-buttons-container p{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+}
+
+
+
+.log-off{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.shut-down{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
 }

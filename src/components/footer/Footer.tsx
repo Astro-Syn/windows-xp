@@ -18,54 +18,92 @@ export default function Footer(){
                                 <div className='col-one'>
                                 <ul>
                                     <li>
-                                        <img
+                                        <div className='item-box'>
+                                            <img
                                         className='menu-icons'
                                         src='/Images/icon_internet_explorer.png'
                                         />
-                                        Internet Exolorer</li>
+                                        <div className='top-icon-text'>
+                                            <p>
+                                                Internet
+                                            </p>
+                                            <p>
+                                                Internet Explorer
+                                            </p>
+                                        </div>
+                                       
+                                        </div>
+                                         
+                                    </li>
                                     <li>
-                                        <img
+                                        <div className='item-box'>
+                                            <img
                                          className='menu-icons'
                                         src='/Images/icon_email.png'
                                         />
-                                        E-mail
+                                        <div className='top-icon-text'>
+                                            <p>E-mail</p>
+                                            <p>Outlook Express</p>
+                                        </div>
+                                        
+                                        </div>
+                                        
                                         
                                         </li>
                                 </ul>
-                                <span>----</span>
+                                <span className='divider'></span>
                                 <ul>
                                     <li>
-                                        <img
+                                        <div className='item-box'>
+                                            <img
                                          className='menu-icons'
                                         src='/Images/icon_msn2.png'
                                         />
-                                        MSN
+                                        <p>MSN</p>
+
+                                        </div>
+                                        
                                     </li>
                                     <li>
-                                        <img
+                                        <div className='item-box'>
+                                            <img
                                          className='menu-icons'
                                          src='/Images/icon_limewire.png'
                                         />
-                                        Limewire
+                                        <p>Limewire</p>
+                                        </div>
+                                        
                                     </li>
                                     <li>
-                                        <img
+                                        <div className='item-box'>
+                                             <img
                                          className='menu-icons'
                                          src='/Images/icon_notepad.png'
                                         />
-                                        Notepad
+                                        <p>Notepad</p>
+                                        </div>
+                                       
                                     </li>
                                     <li>
-                                        <img
+                                        <div className='item-box'>
+                                            <img
                                          className='menu-icons'
                                          src='/Images/icon_command.png'
                                         />
-                                        Command Prompt
+                                        <p>Command Prompt</p>
+                                        </div>
+                                        
+                                        
                                     </li>
                                 </ul>
-                                <span>----</span>
+                                <span className='divider'></span>
+
                                 <div className='all-programs'>
                                     <p>All Programs</p>
+                                    <img 
+                                    className='green-arrow'
+                                    src='/Images/icon_green_arrow.png'
+                                    />
                                 </div>
                             </div>
                             <div className='col-two'>
@@ -84,22 +122,45 @@ export default function Footer(){
                                     />
                                     My Pictures
                                 </li>
-                                <li>My Music</li>
+                                <li>
+                                    <img 
+                                    className='menu-icons-two'
+                                    src='/Images/icon_folder_music.png'/>
+                                    My Music
+                                </li>
                                 <li>
                                     <img
-                                    className='menu-icons'
+                                    className='menu-icons-two'
                                     src='/Images/icon_my_computer.png'
                                     />
                                     My Computer
                                 </li>
                             </ul>
-                            <span>------</span>
+                            <span className='divider'></span>
                             <ul>
-                                <li>Control Panel</li>
-                                <li>Set Program Access and Defaults</li>
-                                <li>Printers and Faxes</li>
+                                <li>
+                                    <img
+                                    className='menu-icons-two'
+                                    src='/Images/icon_control_panel.png'
+                                    />
+                                    Control Panel
+                                </li>
+                                <li>
+                                    <img
+                                    className='menu-icons-two'
+                                    src='/Images/icon_default.png'
+                                    />
+                                    Set Program Access and Defaults
+                                </li>
+                                <li>
+                                    <img
+                                    className='menu-icons-two'
+                                    src='/Images/icon_printers_and_faxes.png'
+                                    />
+                                    Printers and Faxes
+                                </li>
                             </ul>
-                            <span>-------</span>
+                            <span className='divider'></span>
                             <ul>
                                 <li>
                                     <img
@@ -108,8 +169,20 @@ export default function Footer(){
                                     />
                                     Help and Support
                                 </li>
-                                <li>Search</li>
-                                <li>Run...</li>
+                                <li>
+                                    <img
+                                    className='menu-icons-two'
+                                    src='/Images/icon_search.png'
+                                    />
+                                    Search
+                                </li>
+                                <li>
+                                    <img
+                                    className='menu-icons-two'
+                                    src='/Images/icon_run.png'
+                                    />
+                                    Run...
+                                </li>
                             </ul>
                             </div>
 
@@ -121,7 +194,7 @@ export default function Footer(){
                                         <div className='log-off'>
                                             <img
                                             className='log-icons'
-                                            src='/Images/icon_log_off.png'
+                                            src='/Images/icon_log_off_2.png'
                                             />
                                              <p>Log Off</p>
                                         </div>
