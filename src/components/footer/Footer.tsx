@@ -1,19 +1,36 @@
 import '../footer/Footer.css';
 import { useState } from 'react';
+import Time from '../time/Time';
+import { IoIosArrowBack } from "react-icons/io";
 
 export default function Footer(){
     const [menu, setMenu] = useState(false);
     return (
         <div className='footer-container'>
+            <div className='footer-gradient'></div>
             <div className='footer'>
+                <div className='time-container'>
+                    <Time />
+                    <button className='footer-right-btn'>
+                    <IoIosArrowBack />
+                </button>
+                </div>
+                
                 {
                     menu && (
                         <div className="start-menu">
                             <div className='row-top'>
+                                <div className='top-row-gradient'></div>
                                 <div className='userInfo'>
-                                    display pic and username
+                                    <img
+                                    className='login-pic'
+                                    src='/Images/login_drip.png'
+                                    /> 
+                                    <p>Kelsey Synnpulse</p>
                                 </div>
+                                
                             </div>
+                            <div className='yellow-underline'></div>
                             <div className='both-cols'>
                                 <div className='col-one'>
                                 <ul>
@@ -68,6 +85,27 @@ export default function Footer(){
                                         <div className='item-box'>
                                             <img
                                          className='menu-icons'
+                                        src='/Images/icon_msn_3.png'
+                                        />
+                                        <p>Windows Messenger</p>
+
+                                        </div>
+                                        
+                                    </li>
+                                    <li>
+                                        <div className='item-box'>
+                                            <img
+                                         className='menu-icons'
+                                         src='/Images/icon_tour_windows.png'
+                                        />
+                                        <p>Tour Windows</p>
+                                        </div>
+                                        
+                                    </li>
+                                    <li>
+                                        <div className='item-box'>
+                                            <img
+                                         className='menu-icons'
                                          src='/Images/icon_limewire.png'
                                         />
                                         <p>Limewire</p>
@@ -108,12 +146,20 @@ export default function Footer(){
                             </div>
                             <div className='col-two'>
                             <ul>
-                                <li>
+                                <div className='col-two-top'>
+                                    <li>
                                     <img
                                     className='menu-icons-two'
                                     src='/Images/icon_my_documents.png'
                                     />
                                     My Documents
+                                </li>
+                                <li>
+                                    <img
+                                    className='menu-icons-two'
+                                    src='/Images/icon_recent_documents.png'
+                                    />
+                                    My Recent Documents 
                                 </li>
                                 <li>
                                     <img
@@ -135,7 +181,9 @@ export default function Footer(){
                                     />
                                     My Computer
                                 </li>
-                            </ul>
+                            
+                                </div>
+                                </ul>
                             <span className='divider'></span>
                             <ul>
                                 <li>
