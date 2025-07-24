@@ -3,6 +3,7 @@ import Navbar from './components/navbar/Navbar';
 import Background from './components/background/Background';
 import Footer from './components/footer/Footer';
 import '../src/App.css';
+import Limewire from './pages/limewire/Limewire';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
       className='navbar-master'
       />
       <Background />
-      
+      <Limewire />
       <Footer />
     </BrowserRouter>
   )

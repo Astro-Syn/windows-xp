@@ -1,0 +1,12 @@
+
+
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    font-size: 12px;
+    gap: 15px;
+    line-height: 0.5px;
+    background-color: beige;
+
+}
