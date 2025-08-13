@@ -1,4 +1,52 @@
+::-webkit-scrollbar {
+    width: 17px;
+    height: 17px;
+    
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to right, #efecea, #fffcf8);
+  border-radius: 2px;
+  border: 1px solid rgb(237, 250, 255);
+}
+
+::-webkit-scrollbar-thumb {
+  background: 
+  repeating-linear-gradient(
+            #7a7a7a,
+            #e8e8e8 1px,
+            #ffffffc2 1px,
+            #ffffff35 2px
+        ) center/6px 15px no-repeat,
+  linear-gradient(rgb(198, 222, 255), rgb(204, 225, 255) );
+    background-position: center;
+  border-radius: 2px;
+  border: 1px solid white;
+      
+}
 
 
 
+::-webkit-scrollbar-button {
+    background: linear-gradient(rgb(198, 222, 255), rgb(187, 215, 255) );
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+    background: linear-gradient(rgb(198, 222, 255), rgb(187, 215, 255) );
+    background-image: url('/public/Images/scrollbar-down-arrow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 17px;
+
+}
+
+::-webkit-scrollbar-button:vertical:decrement {
+    background: linear-gradient(rgb(198, 222, 255), rgb(187, 215, 255) );
+    background-image: url('/public/Images/scrollbar-up-arrow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15px;
+
+}
 

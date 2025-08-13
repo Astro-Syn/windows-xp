@@ -1,12 +1,26 @@
 
-
 .nav-container{
     display: flex;
     flex-direction: row;
     justify-content:flex-start;
     font-size: 12px;
     gap: 15px;
-    line-height: 0.5px;
+    line-height: 0.2px;
     background-color: beige;
+    top: 35px;
+    border-bottom: 2px solid rgb(186, 186, 168);
+    width: 100%;
+    padding-left: 10px;
+}
 
+.nav-container ul{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-container p:hover {
+    cursor: default;
 }

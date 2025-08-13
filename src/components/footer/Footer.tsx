@@ -10,6 +10,10 @@ export default function Footer(){
             <div className='footer-gradient'></div>
             <div className='footer'>
                 <div className='time-container'>
+                    <div className='tiny-img-container'>
+                        <img src='/Images/tiny_msn.png'/>
+                        <img src='/Images/tiny_volume.png'/>
+                    </div>
                     <Time />
                     <button className='footer-right-btn'>
                     <IoIosArrowBack />

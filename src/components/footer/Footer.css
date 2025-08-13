@@ -37,6 +37,15 @@ body{
     border-left: 1px solid rgb(133, 196, 255);
 
 }
+.tiny-img-container{
+    display: flex;
+    margin: 7px;
+}
+
+.tiny-img-container img {
+    padding: 5px;
+    
+}
 
 .footer-right-btn {
     position: absolute;

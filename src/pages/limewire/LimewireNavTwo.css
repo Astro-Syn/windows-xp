@@ -1,0 +1,47 @@
+.second-nav{
+    background-color: beige;
+    display: flex;
+    border-bottom: 2px solid rgb(182, 182, 165);
+}
+
+.limewire_images {
+    width: 30px;
+    height: 30px;
+    padding-right: 2px;
+}
+
+.second-nav > button {
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(201, 201, 180);
+    margin-top: 5px;
+    line-height: 0.5;
+    font-family: tahoma;
+    font-size: 0.7em;
+    background: linear-gradient(to top, rgb(247, 247, 229), rgb(255, 255, 249));
+    
+}
+
+.second-nav > button:hover {
+    background: linear-gradient(to top, rgb(255, 255, 255), rgb(252, 252, 250));
+
+}
+
+.second-nav > button:active {
+    background: linear-gradient(to top, rgb(255, 255, 255), rgb(252, 252, 250));
+    border-top: 3px solid rgb(255, 191, 0);
+
+}
+
+.logo-container{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    
+}
+
+.lw-logo{
+    width: 140px;
+    height: 35px;
+}
