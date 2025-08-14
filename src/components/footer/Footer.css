@@ -37,6 +37,19 @@ body{
     border-left: 1px solid rgb(133, 196, 255);
 
 }
+
+.tiny-icons-container{
+    display: flex;
+    margin-left: 15px;
+    padding: 5px;
+    
+}
+
+.tiny-icons-container img {
+    width: 90%;
+    
+}
+
 .tiny-img-container{
     display: flex;
     margin: 7px;

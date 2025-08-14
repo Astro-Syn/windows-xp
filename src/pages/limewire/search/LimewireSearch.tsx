@@ -1,4 +1,5 @@
 import '../search/LimewireSearch.css';
+import MainSearch from '../search/MainSearch';
 
 export default function LimewireSearch () {
     return (
@@ -60,8 +61,19 @@ export default function LimewireSearch () {
                             </div>
 
                 </div>
+                <div className='main-search-master'>
+                    <div className='top-search'>
+                            music
+                        </div>
+                <div className='main-search-container'>
+                        
+                    <MainSearch />
+                </div>
+                </div>
+                
                 
             </div>
+            
         </div>
     )
 }

@@ -9,6 +9,8 @@ export default function Footer(){
         <div className='footer-container'>
             <div className='footer-gradient'></div>
             <div className='footer'>
+                
+
                 <div className='time-container'>
                     <div className='tiny-img-container'>
                         <img src='/Images/tiny_msn.png'/>
@@ -259,6 +261,7 @@ export default function Footer(){
                                         </div>
 
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -275,6 +278,9 @@ export default function Footer(){
                 </img>    
                 start
                 </button>
+                <div className='tiny-icons-container'>
+                    <img src='/Images/tiny_explorer.png'/>
+                </div>
             </div>
             
         </div>
