@@ -1,0 +1,108 @@
+.msn {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 400px;
+    height: 700px;
+    background: white;
+    border-right: 3px solid blue;
+    border-left: 3px solid blue;
+    border-bottom: 3px solid blue;
+    border-radius: 10px;
+    font-family: tahoma;
+    font-weight: 200;
+    z-index: 60;
+}
+
+.msn-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to top, rgb(39, 86, 255), 
+    rgb(23, 73, 255), 
+    rgb(47, 165, 255));
+    border-bottom: 2px solid rgb(0, 53, 211);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    color: white;
+    font-weight: 500;
+    cursor: default;
+    padding: 4px;
+    user-select: none;
+    
+}
+
+.header-line {
+    width: 98%;
+    height: 2px;
+    background: radial-gradient(rgb(71, 163, 255), rgba(255, 255, 255, 0.074));
+    position: absolute;
+    top: 2px;
+}
+
+.header-logo-container{
+    display: flex;
+    align-items: center;
+}
+
+.msn-little-pic {
+    width: 23px;
+    height: 20px;
+    padding-right: 2px;
+    overflow: hidden;
+    margin-right: 5px;
+
+}
+
+.msn-buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.msn-buttons button {
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border: 1px solid rgb(220, 229, 255);
+    color: white;
+    font-size: 1.1rem;
+    cursor: default;
+    overflow: none;
+    border-radius: 5px;
+}
+
+.msn-buttons button:first-child{
+     background: linear-gradient(to top, rgb(21, 58, 221),  rgb(56, 99, 255), rgb(125, 169, 255));
+     padding-top: 10px;
+     padding-bottom: 4px;
+     padding-right: 10px;
+     font-size: 27px;
+}
+
+.msn-buttons button:nth-child(2){
+    line-height: 9px;
+    font-size: 20px;
+    background: linear-gradient(to top, rgb(21, 58, 221),  rgb(56, 99, 255), rgb(125, 169, 255));
+}
+
+.msn-buttons button:nth-child(3){
+    font-size: 35px;
+    background: linear-gradient(to top, rgb(195, 0, 0),  rgb(255, 66, 66), rgb(255, 151, 151));
+}
+
+.msn-title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+    text-shadow: 0 2px 3px rgb(0, 0, 105);
+}
+
+.msn-buttons {
+
+}
+
+.msn-content {
+
+}
+

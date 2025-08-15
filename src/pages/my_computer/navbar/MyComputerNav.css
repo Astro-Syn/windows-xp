@@ -1,3 +1,7 @@
+.page-content {
+    font-family: tahoma;
+
+}
 
 .my-computer-first-nav{
     font-family: tahoma;
@@ -23,32 +27,71 @@
 }
 
 .dropdown {
-    border-bottom: 1px solid blue;
+    border-bottom: 2px solid gray;
     
 }
 
 .page-content {
     display: flex;
     background: white;
+     overflow: scroll;
 }
 
 .left-category {
+    height: 450px;
     background: linear-gradient(to top, rgb(94, 116, 224), rgb(155, 189, 255));
+    padding: 10px;
 }
 
 .sub-cat {
-    background: rgb(184, 205, 255);
-    margin: 5px;
-    border: 1px solid white;
+    background: rgb(206, 220, 247);
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    
 }
 
-.sub-cat p {
+.sub-cat ul li {
+    font-size: 0.70em;
+    margin-right: 20px;
+    color: rgb(69, 85, 206);
+}
+
+.left-boxes p {
     background: linear-gradient(to right, white, rgb(205, 215, 255));
     padding: 4px;
-    font-size: 0.8em;
-    color: rgb(94, 116, 224);
+    font-size: 0.7em;
+    color: rgb(82, 100, 195);
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 0;
+}
+
+.details ul li {
+    color: black;
+    padding: 0;
+    padding-left: 5px;
+}
+
+.details ul li:first-child{
+    padding-top: 10px;
     font-weight: bold;
 }
+
+.details ul li:last-child{
+    padding-bottom: 5px;
+}
+
+.right-category div p {
+    font-size: 0.8em;
+    font-weight: bold;
+    margin: 1px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+
 
 .system-tasks {
     
@@ -70,8 +113,10 @@
 
 }
 
-.right-category-line {
-
+.deco-line {
+    width: 300px;
+    height: 2px;
+    background: linear-gradient(to right, rgb(75, 150, 255), rgb(121, 177, 255), white)
 }
 
 .hard-disk-drives {

@@ -64,7 +64,7 @@ export default function MyComputer(){
                 className='header-logo-container'>
                     <img
                     className='my-computer-little-pic'
-                    src='/Images/icon_my_computer.png'
+                    src='/Images/tiny_my_computer.png'
                     />
                     <span
                     className='my-computer-title'

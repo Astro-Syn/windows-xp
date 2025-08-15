@@ -1,6 +1,6 @@
 import '../navbar/MyComputerNav.css';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+
 
 export default function MyComputerNav(){
     const [open, setOpen] = useState(false);
@@ -42,17 +42,28 @@ export default function MyComputerNav(){
              {/*Bottom Part of Page */}
             <div className='page-content'>
                 
+                    {/*Left Side */}
                 <div className='left-category'>
-                    <div className='sub-cat system-tasks'>
+
+                        {/*Sysyem Tasks*/}
+                    <div className='left-boxes'>
                         <p>System Tasks</p>
+                    <div className='sub-cat system-tasks'>
+                        
                         <ul>
                             <li>View system information</li>
                             <li>Add or remove programs</li>
                             <li>Change a setting</li>
                         </ul>
                     </div>
-                    <div className='sub-cat other-places'>
+
+                    </div>
+                    
+
+                    <div className='left-boxes'>
                         <p>Other Places</p>
+                    <div className='sub-cat other-places'>
+                        
                         <ul>
                             <li>My Network Places</li>
                             <li>My Documents</li>
@@ -60,24 +71,48 @@ export default function MyComputerNav(){
                             <li>Control Panel</li>
                         </ul>
                     </div>
-                    <div className='sub-cat details'>
-                        <p>Details</p>
-                        <h3>My Computer</h3>
-                        <p>System Folder</p>
+
                     </div>
+                    
+                    <div className='left-boxes'>
+                        <p>Details</p>
+
+                    <div className='sub-cat details'>
+                        
+                        <ul>
+                            <li>My Computer</li>
+                            <li>System Folder</li>
+                        </ul>
+                    </div>
+                        
+                    </div>
+                    
                 </div>
+
+                {/*Right Category */}
                 <div className='right-category'>
                     <div className='files-stored'>
-                        <div className='right-category-line'></div>
+
+                            {/*Files Stored on This Computer */}
+                        <p>Files Stored on This Computer</p>
+                         <div className='deco-line'></div>
                         <a>Shared Documents</a>
                         <a>Admin Documents</a>
                     </div>
+
+                        {/*Hard Disk Drives */}
                     <div className='hard-disk-drives'>
-                        <div className='right-category-line'></div>
+                        <p>Hard Disk Drives</p>
+                         <div className='deco-line'></div>
+        
                         <a>WDC6400(C:)</a>
                     </div>
+
+                        {/*Devices with Removable Storage */}
                     <div className='removable-storage'>
-                        <div className='right-category-line'></div>
+                        
+                        <p>Devices with Removable Storage</p>
+                        <div className='deco-line'></div>
                         <a>Floppy</a>
                         <a>WXPVOL_EN(D:)</a>
                         <a>CD Drive(E:)</a>

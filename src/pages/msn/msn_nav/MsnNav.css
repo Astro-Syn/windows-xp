@@ -1,0 +1,36 @@
+.msn-first-nav {
+    background-color: rgb(250, 250, 230);
+    
+}
+
+.msn-first-nav ul {
+    display: flex;
+    cursor: default;
+}
+
+.msn-second-nav {
+
+}
+
+.msn-display-pic {
+    border-radius: 15px;
+    border: 1px solid black;
+    margin: 5px;
+    width: 80px;
+}
+
+.first-row {
+
+}
+
+.second-row {
+    background: linear-gradient(to top, white, blue, white, gray, blue, white);
+    border: 1px solid black;
+    border-radius: 5px;
+
+}
+
+.name-main-container {
+
+}
+
