@@ -1,0 +1,85 @@
+
+.my-computer-first-nav{
+    font-family: tahoma;
+    font-size: 0.7em;
+    background: rgb(255, 255, 245);
+    padding: 2px;
+    border-bottom: 2px solid rgb(219, 219, 196);
+    z-index: 30;
+}
+
+.my-computer-first-nav a {
+    margin-left: 10px;
+}
+
+.my-computer-second-nav{
+    height: 40px;
+    border-top: 2px solid white;
+    background: rgb(255, 255, 245);
+}
+
+.dropdown-container{
+    background: rgb(255, 255, 245);
+}
+
+.dropdown {
+    border-bottom: 1px solid blue;
+    
+}
+
+.page-content {
+    display: flex;
+    background: white;
+}
+
+.left-category {
+    background: linear-gradient(to top, rgb(94, 116, 224), rgb(155, 189, 255));
+}
+
+.sub-cat {
+    background: rgb(184, 205, 255);
+    margin: 5px;
+    border: 1px solid white;
+}
+
+.sub-cat p {
+    background: linear-gradient(to right, white, rgb(205, 215, 255));
+    padding: 4px;
+    font-size: 0.8em;
+    color: rgb(94, 116, 224);
+    font-weight: bold;
+}
+
+.system-tasks {
+    
+}
+
+.other-places {
+
+}
+
+.details {
+
+}
+
+.right-category {
+
+}
+
+.files-stored {
+
+}
+
+.right-category-line {
+
+}
+
+.hard-disk-drives {
+
+}
+
+.removable-storage {
+
+}
+
+

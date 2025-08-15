@@ -18,7 +18,6 @@ function App() {
       <Background />
       <MyComputer />
       <Limewire />
-      
       <Footer />
     </BrowserRouter>
   )

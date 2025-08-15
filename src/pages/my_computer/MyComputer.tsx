@@ -1,5 +1,6 @@
 import '../my_computer/MyComputer.css';
 import { useRef, useState, useEffect } from 'react';
+import Navbar from '../my_computer/navbar/MyComputerNav';
 
 export default function MyComputer(){
     const [isVisible, setIsVisible] = useState(true);
@@ -49,7 +50,7 @@ export default function MyComputer(){
     return (
         <div
         ref={myComputerRef}
-        className={`myComputer ${isMaximized ? 'maximized' : ''}`}
+        className={`my-computer ${isMaximized ? 'maximized' : ''}`}
         style={{
             top: isMaximized ? 0 : `${position.y}px`,
             left: isMaximized ? 0 : `${position.x}px`,
@@ -61,7 +62,10 @@ export default function MyComputer(){
             onMouseDown={onMouseDown}>
                 <div
                 className='header-logo-container'>
-                    My Computer logo
+                    <img
+                    className='my-computer-little-pic'
+                    src='/Images/icon_my_computer.png'
+                    />
                     <span
                     className='my-computer-title'
                     >
@@ -82,7 +86,9 @@ export default function MyComputer(){
                 <div
                 className='my-computer-content'
                 >
-                    CONTENT
+                    
+                    <Navbar/>
+
                 </div>
             )}
 
