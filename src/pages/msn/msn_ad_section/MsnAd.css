@@ -1,0 +1,17 @@
+.msn-ad-container {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    
+
+}
+
+.msn-ad-container img {
+    position: relative;
+    top: 40px;
+    left: 57%;
+    transform: translate(-50%, -50%);
+    width: 345px;
+    margin: 10px;
+    border: 2px solid rgb(88, 118, 171);
+}

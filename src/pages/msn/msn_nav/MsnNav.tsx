@@ -31,12 +31,14 @@ export default function MsnNav() {
                 </nav>
                 <nav className='msn-second-nav'>
                     <div className='first-row'>
-                        <button>
+                        <button className='down-up-btn'>
                             <img
-                            src='/Images/my_computer_arrow_double.png'
+                            
+                            src='/Images/down_up_btn.png'
                             />
                         </button>
                         <img
+                        className='msn-logo'
                         src='/Images/msn_logo.png'
                         /> 
                         
@@ -59,7 +61,8 @@ export default function MsnNav() {
                                 >
                                     <button className='drop-btn'
                                     onClick={() => setOpen(!open)}
-                                    >(Online)<p>▼</p>
+                                    >(Online)
+                                    <p>▼</p>
                                     </button>
                                     {open && (
                                         <div className='dropdown-content'>

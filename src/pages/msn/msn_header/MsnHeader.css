@@ -1,0 +1,47 @@
+.msn-header-container {
+    display: flex;
+}
+
+.med-msn-icon img {
+    width: 40px;
+}
+
+.customer-and-contact {
+
+}
+
+.info {
+    display: flex;
+    border: 1px solid blue;
+    margin: 5px;
+    font-size: 0.8em;
+    background: rgb(255, 255, 233);
+}
+.info p {
+    margin: 0;
+    text-decoration: underline;
+    color: rgb(33, 33, 160);
+}
+
+.info img {
+    width: 15px;
+    height: 15px;
+    margin: 3px;
+}
+
+.add-contact {
+    display: flex;
+    align-items: center;
+    
+}
+.add-contact p {
+    color: rgb(56, 56, 151);
+    font-size: 0.7em;
+    margin: 0;
+}
+
+.add-contact img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}

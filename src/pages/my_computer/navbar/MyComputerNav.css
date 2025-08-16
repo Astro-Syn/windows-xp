@@ -58,6 +58,10 @@
 }
 
 .left-boxes p {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     background: linear-gradient(to right, white, rgb(205, 215, 255));
     padding: 4px;
     font-size: 0.7em;
@@ -66,6 +70,11 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     margin-bottom: 0;
+}
+
+.left-boxes p img {
+    border-radius: 50%;
+    box-shadow: 4px 4px 10px rgba(37, 74, 118, 0.337);
 }
 
 .details ul li {

@@ -2,7 +2,10 @@ import '../msn_names/MsnNames.css';
 
 export default function MsnNames() {
     return (
-        <div>
+        <div className='msn-names-master'>
+            <div className='bottom-left-border'>
+
+            </div>
             <div className='msn-names-container'>
                 <ul>
                     <li>✿☆ Melissa ☆✿ 💫💜</li>

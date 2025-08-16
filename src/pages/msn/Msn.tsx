@@ -1,7 +1,10 @@
 import '../msn/Msn.css';
 import MsnNames from '../msn/msn_names/MsnNames';
 import MsnNav from '../msn/msn_nav/MsnNav';
+import MsnAd from '../msn/msn_ad_section/MsnAd';
+import MsnHeader from '../msn/msn_header/MsnHeader';
 import { useRef, useState, useEffect } from 'react';
+
 
 
 export default function Msn(){
@@ -95,8 +98,9 @@ export default function Msn(){
                 >
                     
                     <MsnNav />
-                    
-                         <MsnNames />  
+                    <MsnHeader />
+                    <MsnNames />
+                    <MsnAd/>    
                     
                                     
 
