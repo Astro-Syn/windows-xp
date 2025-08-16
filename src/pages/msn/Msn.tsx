@@ -95,7 +95,10 @@ export default function Msn(){
                 >
                     
                     <MsnNav />
-                    <MsnNames />                   
+                    
+                         <MsnNames />  
+                    
+                                    
 
                 </div>
             )}

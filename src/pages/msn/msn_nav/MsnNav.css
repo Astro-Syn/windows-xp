@@ -9,28 +9,73 @@
 }
 
 .msn-second-nav {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to top, white, rgb(188, 188, 253), white, rgb(243, 246, 249), rgb(167, 205, 238), white);
+    border: 1px solid rgb(141, 180, 246);
+    border-radius: 5px;
 
+}
+.messenger-title {
+    font-size: 0.7em;
+    font-weight: bold;
+    margin-left: 10px;
+    color: rgb(1, 1, 81);
 }
 
 .msn-display-pic {
     border-radius: 15px;
-    border: 1px solid black;
+    border: 1px solid rgb(31, 56, 115);
     margin: 5px;
     width: 80px;
 }
 
+.msn-envelope {
+    width: 30px;
+}
+
 .first-row {
+    display: flex;
+    flex-direction: row;
 
 }
 
 .second-row {
-    background: linear-gradient(to top, white, blue, white, gray, blue, white);
-    border: 1px solid black;
-    border-radius: 5px;
+    display: flex;
+    
 
 }
 
-.name-main-container {
-
+.info-container p:last-of-type {
+    font-size: 0.8em;
+    color: gray;
 }
+
+.name-and-status {
+    display: flex;
+}
+
+.dropdown-status {
+    display: flex;
+}
+
+.drop-btn{
+    display: flex;
+}
+
+.dropdown-content {
+      
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    font-size: 0.7em;
+    display: block;
+}
+
 

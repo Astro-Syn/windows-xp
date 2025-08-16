@@ -1,6 +1,22 @@
 import '../msn_nav/MsnNav.css';
+import {useState, useEffect, useRef} from 'react';
 
 export default function MsnNav() {
+    const [open, setOpen] = useState(false);
+    const dropdownRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        function handleClickOutside(event: MouseEvent) {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+                setOpen(false);
+            }
+        }
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        }
+    })
+
     return (
         <div>
             <div className='msn-nav-container'>
@@ -15,10 +31,16 @@ export default function MsnNav() {
                 </nav>
                 <nav className='msn-second-nav'>
                     <div className='first-row'>
-                        <button>arrow</button>
-                        image here 
+                        <button>
+                            <img
+                            src='/Images/my_computer_arrow_double.png'
+                            />
+                        </button>
+                        <img
+                        src='/Images/msn_logo.png'
+                        /> 
                         
-                        <p>Messenger</p>
+                        <p className='messenger-title'>Messenger</p>
                     </div>
                     <div className='second-row'>
                         <div className='image-container'>
@@ -27,10 +49,36 @@ export default function MsnNav() {
                         src='/Images/login_duck.png'
                         />
                         </div>
-                        <div className='name-main-container'>
-                            <p>Name Here</p>
+
+                        {/*Dropdown Section*/}
+                        <div className='info-container'>
+                            <div className='name-and-status'>
+                                <p>Nomad</p>
+                                <div className='dropdown-status'
+                                ref={dropdownRef}
+                                >
+                                    <button className='drop-btn'
+                                    onClick={() => setOpen(!open)}
+                                    >(Online)<p>▼</p>
+                                    </button>
+                                    {open && (
+                                        <div className='dropdown-content'>
+                                        <a>Online</a>
+                                        <a>Away</a>
+                                        <a>Busy</a>
+                                        <a>Appear Offline</a>
+                                    </div>
+                                    )}
+                                    
+                                </div>
+                            </div>
+                            
                             <p>Type a personal message</p>
-                            <p>Envelope</p>
+                            <img
+                            className='msn-envelope'
+                            src='/Images/msn_envelope.png'
+                            >
+                            </img>
                         </div>
 
                     </div>
