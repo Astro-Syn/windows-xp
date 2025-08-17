@@ -10,11 +10,11 @@ export default function MyComputerNav(){
                 <nav className='my-computer-first-nav'>
                     <div className='first-nav-items'>
                         <a><u>F</u>ile</a>
-                <a><u>E</u>dit</a>
-                <a><u>V</u>iew</a>
-                <a><u>F</u>avorites</a>
-                <a><u>T</u>ools</a>
-                <a><u>H</u>elp</a>
+                        <a><u>E</u>dit</a>
+                        <a><u>V</u>iew</a>
+                        <a><u>F</u>avorites</a>
+                        <a><u>T</u>ools</a>
+                        <a><u>H</u>elp</a>
                     </div>
                 
                 <span>
@@ -28,7 +28,7 @@ export default function MyComputerNav(){
                 <button>Back</button>
                 <button>Forward</button>
                 <span>
-                    ▼
+                    <p>▼</p>
                 </span>
                 <button>
                     <img
@@ -84,14 +84,16 @@ export default function MyComputerNav(){
                         )}
                         
                 </div>
-                <button
-                        className='go'
-                        >
-                            <img
-                            src='/Images/my_computer_green_go_arrow.png'
-                            />
-                            <p>Go</p>
-                            </button>
+                <div className='go-btn-container'>
+                    <button className='go'>
+                        <img
+                        src='/Images/my_computer_green_go_arrow.png'
+                        />
+                        <p>Go</p>
+                        </button>
+
+                </div>
+                
             </div>
             </div>
              {/*Bottom Part of Page */}

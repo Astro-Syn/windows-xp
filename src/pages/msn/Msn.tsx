@@ -63,7 +63,7 @@ export default function Msn(){
         }}
         >
             <div 
-            className='msn-header'
+            className='standard-title-bar'
             onMouseDown={onMouseDown}>
                 <div 
                 className='header-line'

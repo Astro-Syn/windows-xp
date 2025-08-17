@@ -50,3 +50,34 @@
 
 }
 
+.standard-title-bar {
+  .msn-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     background: linear-gradient(
+        180deg,
+        rgba(9, 151, 255, 1) 0%,
+        rgba(0, 83, 238, 1) 8%,
+        rgba(0, 80, 238, 1) 40%,
+        rgba(0, 102, 255, 1) 88%,
+        rgba(0, 102, 255, 1) 93%,
+        rgba(0, 91, 255, 1) 95%,
+        rgba(0, 61, 215, 1) 96%,
+        rgba(0, 61, 215, 1) 100%
+    );
+    border-bottom: 2px solid rgb(0, 53, 211);
+    border-top: 1px solid #0831d9;
+    border-left: 1px solid #0831d9;
+    border-right: 1px solid #001ea0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 7px;
+    color: white;
+    font-weight: 500;
+    cursor: default;
+    padding: 4px;
+    user-select: none;
+    height: 32px;
+}
+}
+

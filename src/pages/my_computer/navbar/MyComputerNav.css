@@ -24,13 +24,16 @@
 .my-computer-second-nav{
     display: flex;
     flex-direction: row;
+    justify-content: left;
     height: 40px;
     border-top: 2px solid white;
     background: rgb(239, 239, 227);
 }
 
 .my-computer-second-nav span {
-    font-size: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 7px;
     color: gray;
 }
 
@@ -40,21 +43,40 @@
     width: 70px;
     border: none;
     background: none;
-    font-size: 0.6em;
+    font-size: 0.67em;
+    padding: 2px;
 }
 
-.my-computer-second-nav button img {
-    width: 30px;
-    height: 30px;
-    margin-right: 5px;
-}
-
-.my-computer-second-nav button:nth-child(4) {
-    border-right: 2px solid rgb(204, 204, 181);
-}
-
+.my-computer-second-nav button:nth-child(4),
 .my-computer-second-nav button:nth-child(6) {
-    border-right: 2px solid rgb(204, 204, 181);
+    border-right: 2px solid rgb(204, 204, 181);   
+}
+
+.my-computer-second-nav button:nth-child(4) img {
+    width: 25px;
+    height: 25px;
+    margin-right: 3px;
+}
+
+.my-computer-second-nav button:nth-child(5) img {
+    width: 25px;
+    height: 25px;
+    margin-right: 3px;
+}
+
+.my-computer-second-nav button:nth-child(6){
+    margin-left: 16px;
+    padding-right: 15px;
+}
+
+.my-computer-second-nav button:nth-child(6) img{
+    width: 80px;
+    height: 35px;
+    
+}
+
+.my-computer-second-nav button:nth-child(7) img{
+    width: 40px;
 }
 
 .dropdown-container{
@@ -63,12 +85,13 @@
     background: rgb(239, 239, 227);
     font-size: 0.7em;
     border-top: 1px solid rgb(211, 211, 191);
-    padding: 2px;
-
+    padding-top: 2px;
+    border-bottom: 1px solid gray; 
+   
 }
 
 .dropdown-container p:first-of-type {
-    margin: 5px;
+    margin: 2px;
 }
 
 .dropdown-container button {
@@ -76,22 +99,21 @@
     flex-direction: row;
     align-items: center;
     padding: 2px;
+    margin-left:9px;
 }
 
 
 .dropdown {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    border-bottom: 2px solid gray;   
+    width: 100%; 
 }
 
 .dropdown button {
     display: flex;
     border: 1px solid rgb(120, 163, 230);
-    width: 570px;
+    width: 590px;
     background: white;
-    height: 20px;
+    height: 22px;
 }
 
 .dropdown div {
@@ -115,18 +137,32 @@
     
 }
 
+.go-btn-container {
+    position: relative;
+    top:0;
+    padding: 0;
+    height: 20px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+}
+
 .go {
     background: none;
     border: none;
-    justify-content: flex-end;
     font-size: 12px;
 }
+
+.go img {
+    position: relative;
+    left: 5px;
+}
+
 
 
 .page-content {
     display: flex;
     background: white;
-     overflow: scroll;
 }
 
 .mini-control-panel {

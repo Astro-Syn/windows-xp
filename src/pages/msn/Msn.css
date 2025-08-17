@@ -6,39 +6,50 @@
     width: 400px;
     height: 700px;
     background: white;
-    border-right: 3px solid blue;
-    border-left: 3px solid blue;
-    border-bottom: 3px solid blue;
+    border-right: 2px solid rgba(0, 61, 215, 1);
+    border-left: 2px solid rgba(0, 61, 215, 1);
+    border-bottom: 2px solid rgba(0, 61, 215, 1);
     border-radius: 10px;
     font-family: tahoma;
     font-weight: 200;
     z-index: 60;
 }
 
-.msn-header {
+.standard-title-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to top, rgb(39, 86, 255), 
-    rgb(23, 73, 255), 
-    rgb(47, 165, 255));
+     background: linear-gradient(
+        180deg,
+        rgba(9, 151, 255, 1) 0%,
+        rgba(0, 83, 238, 1) 8%,
+        rgba(0, 80, 238, 1) 40%,
+        rgba(0, 102, 255, 1) 88%,
+        rgba(0, 102, 255, 1) 93%,
+        rgba(0, 91, 255, 1) 95%,
+        rgba(0, 61, 215, 1) 96%,
+        rgba(0, 61, 215, 1) 100%
+    );
     border-bottom: 2px solid rgb(0, 53, 211);
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
+    border-top: 1px solid #0831d9;
+    border-left: 1px solid #0831d9;
+    border-right: 1px solid #001ea0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 7px;
     color: white;
     font-weight: 500;
     cursor: default;
     padding: 4px;
     user-select: none;
-    
+    height: 32px;
 }
 
 .header-line {
     width: 98%;
-    height: 2px;
+    height: 3px;
     background: radial-gradient(rgb(71, 163, 255), rgba(255, 255, 255, 0.074));
     position: absolute;
-    top: 2px;
+    top: 0;
 }
 
 .header-logo-container{
@@ -61,7 +72,7 @@
 }
 
 .msn-buttons button {
-    margin-left: 5px;
+    margin-left: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +87,7 @@
 }
 
 .msn-buttons button:first-child{
-     background: linear-gradient(to top, rgb(21, 58, 221),  rgb(56, 99, 255), rgb(125, 169, 255));
+     background: linear-gradient(to top, rgb(15, 71, 150),  rgb(35, 123, 246), rgb(95, 146, 246));
      padding-top: 10px;
      padding-bottom: 4px;
      padding-right: 10px;
@@ -84,14 +95,15 @@
 }
 
 .msn-buttons button:nth-child(2){
+    padding-bottom: 4px;
     line-height: 9px;
-    font-size: 20px;
-    background: linear-gradient(to top, rgb(21, 58, 221),  rgb(56, 99, 255), rgb(125, 169, 255));
+    font-size: 19px;
+    background: linear-gradient(to top, rgb(15, 71, 150),  rgb(35, 123, 246), rgb(95, 146, 246));
 }
 
 .msn-buttons button:nth-child(3){
-    font-size: 35px;
-    background: linear-gradient(to top, rgb(195, 0, 0),  rgb(255, 66, 66), rgb(255, 151, 151));
+    font-size: 33px;
+    background: linear-gradient(to top, rgb(218, 0, 0),  rgb(255, 66, 66), rgb(255, 151, 151));
 }
 
 .msn-title {

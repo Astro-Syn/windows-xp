@@ -59,15 +59,18 @@ export default function Limewire() {
 }}
 
         >
-            <div className="limewire-header" onMouseDown={onMouseDown}>
+            <div className="standard-title-bar" onMouseDown={onMouseDown}>
                 <div className='header-logo-container'>
                     <img
                         className='limewire-little-pic'
                         src='/Images/icon_limewire.png'
-                    />
+                    />         
                     <span className="limewire-title">
                         LimeWire: Enabling Open Information Sharing
                     </span>
+                    <div className='header-line'>
+
+                    </div>
                 </div>
 
                 <div className="limewire-buttons">

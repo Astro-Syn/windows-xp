@@ -58,7 +58,7 @@ export default function MyComputer(){
         }}
         >
             <div 
-            className='my-computer-header'
+            className='standard-title-bar'
             onMouseDown={onMouseDown}>
                 <div
                 className='header-logo-container'>
@@ -71,6 +71,11 @@ export default function MyComputer(){
                     >
                         My Computer
                     </span>
+                    <div 
+                className='header-line'
+                >
+
+                </div>
                 </div>
                 <div
                 className='my-computer-buttons'
