@@ -1,15 +1,20 @@
 .page-content {
     font-family: tahoma;
-
 }
 
 .my-computer-first-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     font-family: tahoma;
     font-size: 0.7em;
-    background: rgb(255, 255, 245);
-    padding: 2px;
+    background: rgb(239, 239, 227);
     border-bottom: 2px solid rgb(219, 219, 196);
     z-index: 30;
+}
+.my-computer-first-nav span {
+    border-left: 2px solid rgb(204, 204, 181);
 }
 
 .my-computer-first-nav a {
@@ -17,24 +22,115 @@
 }
 
 .my-computer-second-nav{
+    display: flex;
+    flex-direction: row;
     height: 40px;
     border-top: 2px solid white;
-    background: rgb(255, 255, 245);
+    background: rgb(239, 239, 227);
+}
+
+.my-computer-second-nav span {
+    font-size: 10px;
+    color: gray;
+}
+
+.my-computer-second-nav button {
+    display: flex;
+    justify-content: center;
+    width: 70px;
+    border: none;
+    background: none;
+    font-size: 0.6em;
+}
+
+.my-computer-second-nav button img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.my-computer-second-nav button:nth-child(4) {
+    border-right: 2px solid rgb(204, 204, 181);
+}
+
+.my-computer-second-nav button:nth-child(6) {
+    border-right: 2px solid rgb(204, 204, 181);
 }
 
 .dropdown-container{
-    background: rgb(255, 255, 245);
+    display: flex;
+    flex-direction: row;
+    background: rgb(239, 239, 227);
+    font-size: 0.7em;
+    border-top: 1px solid rgb(211, 211, 191);
+    padding: 2px;
+
 }
 
+.dropdown-container p:first-of-type {
+    margin: 5px;
+}
+
+.dropdown-container button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2px;
+}
+
+
 .dropdown {
-    border-bottom: 2px solid gray;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: 2px solid gray;   
+}
+
+.dropdown button {
+    display: flex;
+    border: 1px solid rgb(120, 163, 230);
+    width: 570px;
+    background: white;
+    height: 20px;
+}
+
+.dropdown div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+}
+
+.mini-computer{
+    width: 19px;
+    padding: 1px;
+}
+
+.dropdown button span {
+    background-image: url('/Images/scrollbar-down-arrow.png');
+    background-size: cover;
+    background-position: center;
+    width: 18px;
+    height: 16px;
     
 }
+
+.go {
+    background: none;
+    border: none;
+    justify-content: flex-end;
+    font-size: 12px;
+}
+
 
 .page-content {
     display: flex;
     background: white;
      overflow: scroll;
+}
+
+.mini-control-panel {
+    width: 19px;
 }
 
 .left-category {
@@ -55,6 +151,13 @@
     font-size: 0.70em;
     margin-right: 20px;
     color: rgb(69, 85, 206);
+    padding: 2px;
+    padding-left: 1px;
+   
+}
+
+.sub-cat ul li img {
+    margin-left: 2px;
 }
 
 .left-boxes p {
@@ -62,20 +165,23 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to right, white, rgb(205, 215, 255));
-    padding: 4px;
+    background: linear-gradient(to right, white, rgb(240, 242, 251), rgb(205, 215, 255));
+    padding: 2px;
     font-size: 0.7em;
     color: rgb(82, 100, 195);
     font-weight: bold;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     margin-bottom: 0;
+    padding-left: 10px;
+    padding-top: 5px;
 }
 
 .left-boxes p img {
     border-radius: 50%;
     box-shadow: 4px 4px 10px rgba(37, 74, 118, 0.337);
 }
+
 
 .details ul li {
     color: black;
@@ -93,7 +199,6 @@
 }
 
 .right-category div p {
-    font-size: 0.8em;
     font-weight: bold;
     margin: 1px;
     margin-left: 10px;
@@ -101,25 +206,18 @@
 }
 
 
-
-.system-tasks {
-    
-}
-
-.other-places {
-
-}
-
-.details {
-
-}
-
-.right-category {
-
+.files-stored-container{
+    display: flex;
 }
 
 .files-stored {
+    font-size: 12px;
+}
 
+.files-stored a {
+    display: flex;
+    align-items: center;
+    margin: 15px;
 }
 
 .deco-line {
@@ -129,11 +227,30 @@
 }
 
 .hard-disk-drives {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
 
+.hard-disk-container {
+    margin: 15px;
+}
+
+.hard-disk-container a {
+    align-items: center;
+}
+
+.removable-storage-container a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 15px;
+    
 }
 
 .removable-storage {
-
+    font-size: 12px;
+    
 }
 
 

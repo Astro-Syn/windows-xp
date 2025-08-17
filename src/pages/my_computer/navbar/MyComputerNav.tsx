@@ -8,13 +8,20 @@ export default function MyComputerNav(){
         <div>
             <div className='my-computer-nav-container'>
                 <nav className='my-computer-first-nav'>
-                <a><u>F</u>ile</a>
+                    <div className='first-nav-items'>
+                        <a><u>F</u>ile</a>
                 <a><u>E</u>dit</a>
                 <a><u>V</u>iew</a>
                 <a><u>F</u>avorites</a>
                 <a><u>T</u>ools</a>
                 <a><u>H</u>elp</a>
-                <span>Windows pic at the end</span>
+                    </div>
+                
+                <span>
+                    <img
+                    src='/Images/my_computer_windows_logo.png'
+                    />
+                </span>
             </nav>
             
             <div className='my-computer-second-nav'>
@@ -48,21 +55,43 @@ export default function MyComputerNav(){
                 </button>
                 
             </div>
+
+            {/*Dropdown Top*/}
             <div className='dropdown-container'>
                 
                     <p>A<u>d</u>dress</p>
                     <div className='dropdown'>
-                        <button>
-                            <a>My Computer</a>
-                            <a>My Documents</a>
+                        <button onClick={() => setOpen(!open)}
+                            className='my-comp-dropdown'
+                            >
+                                <div>
+                                    <img
+                            className='mini-computer'
+                            src='/Images/my_computer_2.png'
+                            />
+                            My Computer
+                                </div>
+                            
+                            <span>
+
+                            </span>
                         </button>
-                        <button>
+                        {open && (
+                            <ul className='drop-menu'>
+                                <li>My Documents</li>
+                                <li>Nostalgia Documents</li>
+                            </ul>
+                        )}
+                        
+                </div>
+                <button
+                        className='go'
+                        >
                             <img
                             src='/Images/my_computer_green_go_arrow.png'
                             />
                             <p>Go</p>
                             </button>
-                </div>
             </div>
             </div>
              {/*Bottom Part of Page */}
@@ -94,7 +123,8 @@ export default function MyComputerNav(){
                                 Add or remove programs</li>
                             <li>
                                 <img
-                                src='/Images/my_computer_red_check_pencil.png'
+                                className='mini-control-panel'
+                                src='/Images/icon_control_panel.png'
                                 />
                                 Change a setting</li>
                         </ul>
@@ -129,7 +159,8 @@ export default function MyComputerNav(){
                                 Shared Documents</li>
                             <li>
                                 <img
-                                src='/Images/my_computer_red_check_pencil.png'
+                                className='mini-control-panel'
+                                src='/Images/icon_control_panel.png'
                                 />
                                 Control Panel</li>
                         </ul>
@@ -163,7 +194,8 @@ export default function MyComputerNav(){
                             {/*Files Stored on This Computer */}
                         <p>Files Stored on This Computer</p>
                          <div className='deco-line'></div>
-                        <a>
+                         <div className='files-stored-container'>
+                            <a>
                             <img
                             src='/Images/my_computer_folder.png'
                             />
@@ -175,18 +207,24 @@ export default function MyComputerNav(){
                             Admin Documents</a>
                     </div>
 
+
+                         </div>
+                        
                         {/*Hard Disk Drives */}
                     <div className='hard-disk-drives'>
                         <p>
                             
                             Hard Disk Drives</p>
                          <div className='deco-line'></div>
-        
-                        <a>
+                        <div className='hard-disk-container'>
+                            <a>
                             <img
                             src='/Images/my_computer_hard_disk.png'
                             />
                             WDC6400(C:)</a>
+
+                        </div>
+                        
                     </div>
 
                         {/*Devices with Removable Storage */}
@@ -194,7 +232,9 @@ export default function MyComputerNav(){
                         
                         <p>Devices with Removable Storage</p>
                         <div className='deco-line'></div>
-                        <a>
+                        <div className='removable-storage'>
+                            <div className='removable-storage-container'>
+                                <a>
                             <img
                             src='/Images/my_computer_floppy.png'
                             />
@@ -209,6 +249,11 @@ export default function MyComputerNav(){
                             src='/Images/my_computer_cd.png'
                             />
                             CD Drive(E:)</a>
+
+                            </div>
+                            
+                        </div>
+                        
                     </div>
                 </div>
             </div>
