@@ -206,7 +206,7 @@ export default function MyComputerNav(){
                             <img
                             src='/Images/my_computer_folder.png'
                             />
-                            Admin Documents</a>
+                            Nostalgia Documents</a>
                     </div>
 
 

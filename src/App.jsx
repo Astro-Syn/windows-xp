@@ -6,7 +6,7 @@ import '../src/App.css';
 import Limewire from './pages/limewire/Limewire';
 import MyComputer from './pages/my_computer/MyComputer';
 import Msn from './pages/msn/Msn';
-
+import MsnCornerConvo from './pages/msn/msn_corner_convo/MsnCornerConvo';
 
 function App() {
   
@@ -20,6 +20,7 @@ function App() {
       <MyComputer />
       <Limewire />
       <Msn />
+      <MsnCornerConvo/>
       <Footer />
     </BrowserRouter>
   )

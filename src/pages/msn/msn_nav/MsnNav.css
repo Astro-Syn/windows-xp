@@ -17,8 +17,15 @@
 .msn-second-nav {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to top, white, rgb(188, 188, 253), white, rgb(243, 246, 249), rgb(167, 205, 238), white);
-    border: 1px solid rgb(141, 180, 246);
+    background: linear-gradient(to bottom, 
+            rgb(181, 207, 237) 2%, 
+            rgb(255, 255, 255) 20%, 
+            white 75%, 
+            rgb(167, 205, 238) 100%,
+            rgb(243, 246, 249)
+            );
+    border-top: 2px solid white;
+    outline: 1px solid rgb(141, 180, 246);
     border-radius: 5px;
 
 }
@@ -33,7 +40,7 @@
     border-radius: 15px;
     border: 1px solid rgb(31, 56, 115);
     margin: 5px;
-    width: 80px;
+    width: 70px;
 }
 
 .msn-envelope {
@@ -43,12 +50,22 @@
 .first-row {
     display: flex;
     flex-direction: row;
-
 }
 
 .second-row {
     display: flex;
     
+    line-height: 0;
+}
+
+.name-and-status{
+    margin-top: 10px;
+    display: flex;
+    
+}
+.dropdown-status {
+    position: relative;
+    top: -5px;
 }
 
 .down-up-btn {
@@ -61,34 +78,52 @@
 }
 
 .info-container p:last-of-type {
+    margin-top: 2px;
     font-size: 0.8em;
     color: gray;
+    display: flex;
+    align-items: center;
+    
 }
+
+.info-container p:last-of-type p{
+    font-size: 1em;
+    margin-left: 5px;
+    color: black;
+    
+}
+
 
 .name-and-status {
     display: flex;
+    align-items: center;
+    
 }
 
 .name-and-status p:first-child {
     color: black;
-    font-family: 'Segoe UI';
+    font-family: 'Candara';
     font-weight: bold;
+    font-size: 14px;
 }
 
 .dropdown-status {
     display: flex;
+
 }
 
 .drop-btn{
     display: flex;
+    align-items: center;
     background: none;
     border: none;
     color: gray;
+    
 }
 
 .drop-btn p {
-    font-size: 1px;
-    margin: 10px;
+    font-size: small;
+    margin: 5px;
     color: black;
 }
 

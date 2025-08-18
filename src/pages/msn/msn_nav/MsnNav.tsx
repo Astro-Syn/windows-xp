@@ -55,6 +55,7 @@ export default function MsnNav() {
                         {/*Dropdown Section*/}
                         <div className='info-container'>
                             <div className='name-and-status'>
+                                <div></div>
                                 <p>Nomad</p>
                                 <div className='dropdown-status'
                                 ref={dropdownRef}
@@ -62,7 +63,7 @@ export default function MsnNav() {
                                     <button className='drop-btn'
                                     onClick={() => setOpen(!open)}
                                     >(Online)
-                                    <p>▼</p>
+                                    <p>▾</p>
                                     </button>
                                     {open && (
                                         <div className='dropdown-content'>
@@ -76,7 +77,10 @@ export default function MsnNav() {
                                 </div>
                             </div>
                             
-                            <p>Type a personal message</p>
+                            <p>Type a personal message
+                                <p>▾</p>
+                            </p>
+                            
                             <img
                             className='msn-envelope'
                             src='/Images/msn_envelope.png'
