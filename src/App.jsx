@@ -7,7 +7,7 @@ import Limewire from './pages/limewire/Limewire';
 import MyComputer from './pages/my_computer/MyComputer';
 import Msn from './pages/msn/Msn';
 import MsnCornerConvo from './pages/msn/msn_corner_convo/MsnCornerConvo';
-
+import MsnChatWindow from './pages/msn/msn_chat_window/MsnChatWindow';
 function App() {
   
 
@@ -20,6 +20,7 @@ function App() {
       <MyComputer />
       <Limewire />
       <Msn />
+      <MsnChatWindow/>
       <MsnCornerConvo/>
       <Footer />
     </BrowserRouter>
