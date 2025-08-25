@@ -28,6 +28,13 @@ export default function MsnChat() {
   return (
     <div className='messages-container'>
         <div className='messages'>
+            <div className='chat-box-header'>
+                To: <b>Novie</b> Novie1993@hotmail.com
+            </div>
+            <div>
+                Never give out your password or credit card number in an instant message conversation.<br/>
+                ______
+            </div>
             {messages.map((m, i) => (
                 <div key={i} className={`message ${m.from}`}>
             {m.text}
@@ -35,14 +42,32 @@ export default function MsnChat() {
             ))}
         </div>
 
+            <div className='input-bar-container'>
+                <div className='input-bar-options'>
+                <img src='/Images/msn_chat_text.png'/>
+                <img src='/Images/msn_chat_emoji.png'/>
+                <img src='/Images/msn_chat_voice_clip.png'/>
+                <img src='/Images/msn_chat_wink_emoji.png'/>
+                <img src='/Images/msn_chat_picture.png'/>
+                <img src='/Images/msn_chat_gift.png'/>
+                <img src='/Images/msn_chat_nudge.png'/>
+            </div>
         <div className='input-bar'>
+            
             <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && sendMessage()}
             />
-            <button onClick={sendMessage}>Send</button>
+            <div className='send-btn'>
+                <button onClick={sendMessage}>Send</button>
+
+            </div>
+            
         </div>
+
+            </div>
+            
     </div>
   );
 }

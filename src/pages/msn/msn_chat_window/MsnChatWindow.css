@@ -1,20 +1,20 @@
 .msn-chat-window-container {
-    width: 500px;
+    width: 550px;
     height: 500px;
     border: 2px solid blue;
-}
-
-.msn-chat-window {
+    border-radius: 10px;
     background-color: white;
-
+    overflow: hidden;
+    
 }
+
 
 .standard-title-bar {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
     text-shadow: 0 2px 3px rgb(0, 0, 105);
 }
 
-.header-logo-container {
+.msn-chat-window-header-logo-container {
     margin: 5px;
     margin-right: 10px;
     display: flex;
@@ -22,28 +22,22 @@
     flex-direction: row;
 }
 
-.header-logo-container img {
+.msn-chat-window-header-logo-container img {
     margin-top: 10px;
     width: 40px;
     display: block;
     align-self: center;
     height: auto;
     
-    
 }
 
-
-
-.header-line {
-    
-}
 
 .up-down-btn {
     position: absolute;
     top: 50px;
     border: none;
     background: none;
-    margin-top: 5px;
+    margin-top: 10px;
     
 }
 
@@ -54,18 +48,23 @@
 
 .options-buttons-container  {
     position: absolute;
-    top: 57px;
+    top: 65px;
     left: 20px;
-    display: flex;
-    align-items: center;
+    display: flex;   
 }
 
 
 .options-buttons-container button {
-    justify-content: center;
     border: none;
     background: none;
-    margin-right: 4px;
+    margin-right: 13px;
+}
+
+.options-buttons-container p {
+    font-size: 14px;
+    font-family: candara;
+    margin-top: 0;
+    justify-self: center;
 }
 
 .options-buttons-container  button,
@@ -75,8 +74,8 @@
 }
 
 .options-buttons-container  button:first-child img{
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 55px;
 }
 
 .msn-chat-window-logo {
@@ -130,36 +129,78 @@
     background: linear-gradient(to top, rgb(218, 0, 0),  rgb(255, 66, 66), rgb(255, 151, 151));
 }
 
-
-
-.msn-chat-window-content {
-    
-}
-
 .msn-chat-window-header-two {
     background: beige;
+   border-bottom: 1px solid rgb(205, 205, 182);
+   
 }
 
-.msn-chat-window-header-three-container {
-    
+.msn-chat-window-header-two ul{
+     display: flex;
+    flex-direction: row;
 }
 
-.msn-chat-window-header-three-left {
-    background: aqua;
-}
 
 .msn-chat-window-header-three-right {
-    
+    display: flex;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: blue; 
 }
 
 .msn-chat-window-content-container {
+    background-color: aqua;
+    padding: 10px;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    left: 50%;
+    transform: translate(-50%);
+    top: 130px;
+    width: 99%;
+    height: 73%;
+}
+
+.msn-chat-left-content {
+    display: flex;
+    width: 70%;
+    background-color: gray;
+    justify-content: center;
 
 }
 
-.msn-chat-top-content {
-
+.msn-chat-display-picture-container{
+    background: green;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
 }
 
+.msn-chat-display-pic {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(224, 237, 245);
+    padding: 5px;
+    border: 1px solid navy; 
+    border-radius: 10px;
+}
+
+.msn-chat-display-pic img {
+    border: 1px solid navy;
+    border-radius: 10px;
+    width: 110px;
+    margin-bottom: 2px;
+    margin-top: 0;
+}
+
+.msn-chat-display-pic:first-child :last-child {
+    border: none;
+    width: 30px;
+}
 .msn-chat-conversation {
 
 }

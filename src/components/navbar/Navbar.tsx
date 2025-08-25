@@ -8,6 +8,23 @@ export default function Navbar(){
     return (
         <div className='navbar-container'>
 
+            {/*Recycle Bin */}
+            <Link
+            to={'/recycle_bin'}
+            className='nav-item'
+            onClick={() => setSelected ('recycle_bin')}
+            >
+            
+            <img
+            src='/Images/recycle_bin_icon.png'
+            className='nav-icon recycle'
+            alt='recycle bin'
+            />
+            <p className={`icon-name ${selected === "recycle_bin" ? "selected" : ""}`}>Recycle Bin</p>
+            </Link>
+
+
+
             {/*My Computer */}
                 <Link 
                 to='/my_computer' className='nav-item'

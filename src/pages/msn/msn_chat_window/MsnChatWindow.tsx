@@ -64,7 +64,7 @@ style={{
             <div className='standard-title-bar'
             onMouseDown={onMouseDown}
             >
-                <div className='header-logo-container'>
+                <div className='msn-chat-window-header-logo-container'>
                     <img
                     src='/Images/msn_chat_invite.png'
                     />
@@ -90,7 +90,13 @@ style={{
                 </div>
             )}
             <div className='msn-chat-window-header-two'>
-            File, edit, actions, tools
+            <ul>
+                <li>File</li>
+                <li>Edit</li>
+                <li>Actions</li>
+                <li>Tools</li>
+                <li>Help</li>
+            </ul>
             </div>
 
             {/*Curvy Header */}
@@ -101,19 +107,24 @@ style={{
   <svg viewBox="0 500 2200 1000" xmlns="http://www.w3.org/2000/svg">
   
     <defs>
-  <linearGradient id="waveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-    <stop offset="10%" stopColor="#DCEFF5" />
-    <stop offset="50%" stopColor="#A3C5CC" />
-    <stop offset="100%" stopColor="#DCEFF5" />
+  <linearGradient id="waveGradient" x1="10%" y1="30%" x2="40%" y2="100%">
+    <stop offset="5%" stopColor="#eafaffff" />
+    <stop offset="40%" stopColor="#7bc8ffff" />
+    <stop offset="70%" stopColor="#f3fcffff" />
   </linearGradient>
 </defs>
-
     <path
-     d='M 4040 640 Q 1440 640 1200 640 C 1120 640 1120 800 1040 800 Q 880 800 -400 800 C -400 720 -400 560 -400 480 V 480 L 2940 480'
-      fill="url(#waveGradient)"
-      stroke="gray"
-      strokeWidth="5"
-    />
+  d="M 4040 640 
+     Q 1640 640 1400 640 
+     C 1320 640 1320 800 1240 800 
+     Q 1080 800 -200 800 
+     C -200 720 -200 560 -200 480 
+     V 480 L 2940 480"
+  fill="url(#waveGradient)"
+  stroke="gray"
+  strokeWidth="5"
+/>
+
   </svg>
 
   <div className='inner-content'>
@@ -168,11 +179,6 @@ style={{
   </div>
 </div>
 
-
-
-
-
-
                 <div className='msn-chat-window-header-three-right'>
                     Block, customize
                 </div>
@@ -181,17 +187,29 @@ style={{
 
             {/*Content */}
             <div className='msn-chat-window-content-container'>
-                <div className='msn-chat-top-content'>
+                <div className='msn-chat-left-content'>
                     <div className='msn-chat-conversation'>
                     <MsnChat/>
                 </div>
-                <div className='msn-chat-display-picture-box'>
-                    <div className='msn-chat-display-picture'>
-                        <img/>
-                    </div>
-                </div>
+
                 
 
+                </div>
+                <div className='msn-chat-display-picture-container'>
+                    <div className='msn-chat-display-pic'>
+                        <img
+                        src='/Images/login_fish.png'
+                        />
+                        <img
+                        src='/Images/msn_chat_webcam.png'
+                        />
+                    </div>
+                    <div className='msn-chat-display-pic'>
+                        <img
+                        src='/Images/login_duck.png'
+                        />
+                        
+                    </div>
                 </div>
                 
             </div>
