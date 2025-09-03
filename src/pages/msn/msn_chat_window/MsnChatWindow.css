@@ -43,43 +43,64 @@
 }
 
 .options-buttons-container  {
-    
     position: absolute;
-    top: 65px;
+    top: 60px;
     left: 20px;
     display: flex;
     flex-direction: row;
-    gap: 10px;   
+    gap: 5px; 
+    background-color: none;
+    margin-top: 2px;
+    
 }
 
 
 .options-buttons-container button {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 5px;
     border: none;
-    background: red;
-    margin-right: 10px;
-    justify-content: center;
+    background: none;
+    justify-content: space-between;
+    padding: 6px 4px;
     align-items: center;
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
+    width: 55px;
+    height: 55px;
+    background-color: none;
 }
 
-.options-button-container button img {
-    width: 20px;
-    height: 20px;
+.options-buttons-container button img {
+    width: 40px;
+    height: 35px;
     display: block;
+    object-fit: contain;
+    flex: 0 0 auto;
+}
+
+.options-buttons-container button:nth-child(2) img {
+    width: 50px;
+    height: 35px;
+    display: block;
+    object-fit: contain;
+    flex: 0 0 auto;
+}
+
+.options-buttons-container button:first-child img {
+    width: 50px;
+    height: 35px;
+    display: block;
+    object-fit: contain;
+    flex: 0 0 auto;
 }
 
 .options-buttons-container p {
-    font-family: candara;
-    margin-top: 0;
-    width: 40px;
-    background-color: pink;
+    font-family: Tahoma;  
+    margin: 0;
+    width: 55px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
 }
-
 
 .msn-chat-window-logo {
     position: absolute;

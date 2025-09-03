@@ -104,12 +104,12 @@ style={{
                 
 
   <div className="banner">
-  <svg viewBox="0 500 2200 1000" xmlns="http://www.w3.org/2000/svg">
+  <svg viewBox="0 540 2200 1000" xmlns="http://www.w3.org/2000/svg">
   
     <defs>
   <linearGradient id="waveGradient" x1="10%" y1="30%" x2="40%" y2="100%">
     <stop offset="5%" stopColor="#eafaffff" />
-    <stop offset="40%" stopColor="#7bc8ffff" />
+    <stop offset="40%" stopColor="#aec0dbda" />
     <stop offset="70%" stopColor="#f3fcffff" />
   </linearGradient>
 </defs>
