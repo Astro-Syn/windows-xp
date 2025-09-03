@@ -1,38 +1,129 @@
-import React from 'react'
-import '../msn_corner_convo/MsnCornerConvo.css';
+import React, { useEffect, useRef, useState } from 'react';
+import './MsnCornerConvo.css';
 
-export default function MsnCornerConvo() {
+type Props = {
+  title?: string;
+  message?: string;
+  onClose?: () => void;
+  show?: boolean;
+
+  duration?: number;
+
+  inMs?: number;  
+  outMs?: number; 
+  headerIconSrc?: string;
+  avatarSrc?: string;
+  logoSrc?: string;
+};
+
+export default function MsnCornerConvo({
+  title = 'MSN Messenger',
+  message = 'Novie has just signed in.',
+  duration = 5000,
+  onClose,
+  show = true,
+  inMs = 700,
+  outMs = 260,
+  headerIconSrc = '/Images/tiny_msn_full.png',
+  avatarSrc = '/Images/login_fish.png',
+  logoSrc = '/Images/msn_logo.png',
+}: Props) {
+
+  const [mounted, setMounted] = useState(show);
+  const [isVisible, setIsVisible] = useState(show);
+  const timerRef = useRef<number | null>(null);
+
+  
+  useEffect(() => {
+    if (show) {
+      setMounted(true);
+     
+      requestAnimationFrame(() => setIsVisible(true));
+    } else {
+      setIsVisible(false); 
+    }
+  }, [show]);
+
+
+  useEffect(() => {
+    if (!isVisible) return;
+    if (timerRef.current) {
+      window.clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+    timerRef.current = window.setTimeout(() => {
+      setIsVisible(false); 
+    }, duration);
+
+    return () => {
+      if (timerRef.current) {
+        window.clearTimeout(timerRef.current);
+        timerRef.current = null;
+      }
+    };
+  }, [isVisible, duration]);
+
+
+  const pause = () => {
+    if (timerRef.current) {
+      window.clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+  };
+  const resume = () => {
+    if (!isVisible) return;
+    timerRef.current = window.setTimeout(() => setIsVisible(false), 1500);
+  };
+
+  // After OUT animation finishes, unmount + notify parent
+  const handleAnimationEnd: React.AnimationEventHandler<HTMLDivElement> = (e) => {
+    if (e.target !== e.currentTarget) return;
+    if (!isVisible) {
+      setMounted(false);
+      onClose?.();
+    }
+  };
+
+  if (!mounted) return null;
+
+  const boxStyle: React.CSSProperties = {
+    animationDuration: `${isVisible ? inMs : outMs}ms`,
+  };
+
   return (
-    <div>
-      <div className='corner-convo-container'>
-        <div className='corner-convo-box'>
-            <div className='corner-convo-box-header'>
-                <div className='corner-convo-box-header-title'>
-                    <img
-                src='/Images/tiny_msn_full.png'
-                />
-                <p>MSN Messenger</p>
-                </div>
-                
-                <button>×</button>
-            </div>
-            <div className='corner-convo-box-content'>
-                <div className='corner-convo-picture'>
-                    <img
-                    src='/Images/login_fish.png'
-                    />
-                </div>
-                <div className='corner-convo-text-content'>
-                    <p>Options</p>
-                    <p>Novie has just signed in.</p>
-                    <img
-                    src='/Images/msn_logo.png'
-                    />
-                </div>
-            </div>
+    <div className="corner-convo-container" role="status" aria-live="polite">
+      <div
+        className={`corner-convo-box ${isVisible ? 'show' : 'hide'}`}
+        style={boxStyle}
+        onMouseEnter={pause}
+        onMouseLeave={resume}
+        onAnimationEnd={handleAnimationEnd}
+      >
+        <div className="corner-convo-box-header">
+          <div className="corner-convo-box-header-title">
+            <img src={headerIconSrc} alt="" />
+            <p>{title}</p>
+          </div>
+          <button
+            className="corner-convo-close"
+            aria-label="Close notification"
+            onClick={() => setIsVisible(false)}   // slide OUT
+          >
+            ×
+          </button>
+        </div>
 
+        <div className="corner-convo-box-content">
+          <div className="corner-convo-picture">
+            <img src={avatarSrc} alt="" />
+          </div>
+          <div className="corner-convo-text-content">
+            <p className="corner-convo-options">Options</p>
+            <p className="corner-convo-message">{message}</p>
+            <img src={logoSrc} alt="MSN logo" />
+          </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

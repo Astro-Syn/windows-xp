@@ -137,16 +137,12 @@ style={{
         />
     </button>
     <div className='options-buttons-container'>
-            <button>
-        <img
-        src='/Images/msn_chat_invite.png'
-        />
+        <button>
+            <img src='/Images/msn_chat_invite.png'/>
         <p>Invite</p>
     </button>
     <button>
-        <img
-        src='/Images/msn_chat_send_files.png'
-        />
+        <img src='/Images/msn_chat_send_files.png'/>
         <p>Send Files</p>
     </button>
     <button>

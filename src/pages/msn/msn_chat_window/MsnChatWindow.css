@@ -3,14 +3,12 @@
     height: 500px;
     border: 2px solid blue;
     border-radius: 10px;
-    background-color: white;
+    background: linear-gradient(to top, rgb(239, 245, 252), rgba(190, 213, 238, 0.863));
     overflow: hidden;
-    
 }
 
-
 .standard-title-bar {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+    font-family: 'Trebuchet MS Bold', 'Lucida Sans Unicode';
     text-shadow: 0 2px 3px rgb(0, 0, 105);
 }
 
@@ -27,10 +25,8 @@
     width: 40px;
     display: block;
     align-self: center;
-    height: auto;
-    
+    height: auto;    
 }
-
 
 .up-down-btn {
     position: absolute;
@@ -47,36 +43,43 @@
 }
 
 .options-buttons-container  {
+    
     position: absolute;
     top: 65px;
     left: 20px;
-    display: flex;   
+    display: flex;
+    flex-direction: row;
+    gap: 10px;   
 }
 
 
 .options-buttons-container button {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     border: none;
-    background: none;
-    margin-right: 13px;
+    background: red;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.options-button-container button img {
+    width: 20px;
+    height: 20px;
+    display: block;
 }
 
 .options-buttons-container p {
-    font-size: 14px;
     font-family: candara;
     margin-top: 0;
-    justify-self: center;
-}
-
-.options-buttons-container  button,
-.options-buttons-container  button img {
     width: 40px;
-    height: 35px;
+    background-color: pink;
 }
 
-.options-buttons-container  button:first-child img{
-    height: 45px;
-    width: 55px;
-}
 
 .msn-chat-window-logo {
     position: absolute;
@@ -86,7 +89,6 @@
 
 .msn-chat-window-logo img {
     width: 60px;
-
 }
 
 .msn-chat-window-buttons {
@@ -131,15 +133,14 @@
 
 .msn-chat-window-header-two {
     background: beige;
-   border-bottom: 1px solid rgb(205, 205, 182);
-   
+    border-bottom: 1px solid rgb(205, 205, 182);
+    cursor: default;
 }
 
 .msn-chat-window-header-two ul{
      display: flex;
     flex-direction: row;
 }
-
 
 .msn-chat-window-header-three-right {
     display: flex;
@@ -150,7 +151,6 @@
 }
 
 .msn-chat-window-content-container {
-    background-color: aqua;
     padding: 10px;
     display: flex;
     position: absolute;
@@ -165,13 +165,10 @@
 .msn-chat-left-content {
     display: flex;
     width: 70%;
-    background-color: gray;
     justify-content: center;
-
 }
 
 .msn-chat-display-picture-container{
-    background: green;
     width: 30%;
     display: flex;
     justify-content: space-between;

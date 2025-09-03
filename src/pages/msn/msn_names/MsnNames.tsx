@@ -12,11 +12,11 @@ export default function MsnNames() {
                     <li>[♥] 𝓣𝓪𝔂𝓵𝓸𝓻 𝓢𝓶𝓲𝓽𝓱 // 𝓁𝑜𝓋𝑒 𝓎𝑜𝓊 ✨</li>
                     <li>~` Patrick Jordan ♥💀 ~’</li>
                     <li>💔😢 Ｂｒｏｋｅｎ Ｐｒｏｍｉｓｅｓ 😢💔 — all apologies 🎵</li>
-                    <li>Tyler C00k</li>
+                    <li>Dylan K.</li>
                     <li>💙⚡ 𝑆𝑘𝓎 𝑅𝒶𝓋𝑒𝓇 ⚡💙</li>
                     <li>🖤🦇 Chris Of Misery 🦇🖤</li>
                     <li>💜🪩 𝓒𝔂𝓫𝓮𝓻 𝓚𝓲𝓽𝓽𝔂 🪩💜</li>
-                    <li></li>
+                    <li>GeneralTK</li>
                     <li>🌸✨ Ｒａｖｅ Ｓａｋｕｒａ ✨🌸 — 桜は永遠に</li>
                     <li>Chris Lot</li>
                     <li>🎧🌸 Ｃｈｉｉｉｉｉｉｉ 🌸🎧 — かわいいすぎ</li>
