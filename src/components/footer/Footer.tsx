@@ -5,6 +5,7 @@ import { IoIosArrowBack } from "react-icons/io";
 
 export default function Footer(){
     const [menu, setMenu] = useState(false);
+    const [programs, setPrograms] = useState(false);
     return (
         <div className='footer-container'>
             <div className='footer-gradient'></div>
@@ -142,12 +143,54 @@ export default function Footer(){
                                 </ul>
                                 <span className='divider'></span>
 
-                                <div className='all-programs'>
-                                    <p>All Programs</p>
+
+                                    {
+                                        programs && (
+                                            <div className='programs-menu'>
+                                                <div className='programs-menu-top'>
+                                                    <ul>
+                                                        <li>Windows Catalog</li>
+                                                        <li>Windows Update</li>
+                                                    </ul>
+
+                                                </div>
+                                                <div className='programs-menu-bottom'>
+                                                    <ul>
+                                                        <li>Accessories</li>
+                                                        <li>Games</li>
+                                                        <li>Jasc Software</li>
+                                                        <li>Microsoft Office</li>
+                                                        <li>Startup</li>
+                                                        <li>Internet Explorer</li>
+                                                        <li>MSN Explorer</li>
+                                                        <li>Outlook Express</li>
+                                                        <li>Remote Assistance</li>
+                                                        <li>Windows Media Player</li>
+                                                        <li>Windows Messenger</li>
+                                                        <li>Windows Movie Maker</li>
+
+    
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        )
+                                    }
+
+                                    {/*All Programs Button */}
+                                    <button className='all-programs'
+                                    onClick={() => setPrograms(!programs)}
+                                    >
+                                        <p>All Programs</p>
                                     <img 
                                     className='green-arrow'
-                                    src='/Images/icon_green_arrow.png'
+                                    src='/Images/green_arrow_all_programs.png'
                                     />
+                                    </button>
+
+
+                                <div >
+                                    
                                 </div>
                             </div>
                             <div className='col-two'>
@@ -255,7 +298,7 @@ export default function Footer(){
                                         <div className='shut-down'>
                                             <img
                                             className='log-icons'
-                                            src='/Images/icon_turn_off.png'
+                                            src='/Images/turn_off_computer_button.png'
                                             />
                                         <p>Turn Off Computer</p>
                                         </div>

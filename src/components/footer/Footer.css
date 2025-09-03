@@ -92,7 +92,7 @@ body{
     text-shadow: 1px 2px 4px rgb(5, 20, 0);
     letter-spacing: 1px;
     font-family: tahoma;
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-style: italic;
     border-top-right-radius: 9px;
     border-bottom-right-radius: 12px;
@@ -105,10 +105,10 @@ body{
 
 
 .win-logo{
-    width: 22px;
+    width: 25px;
     height: 18px;
-    padding: 2px 5px 5px 5px;
     align-items: center;
+    padding: 1px;
 }
 
 .start-menu {
@@ -255,13 +255,13 @@ ul li:hover {
 
 
 .menu-icons{
-    width: 32px;
+    width: 37px;
     height: 32px;
     padding-right: 5px;
 }
 
 .menu-icons-two {
-  width: 27px;
+  width: 30px;
   height: 27px;
 }
 
@@ -275,13 +275,7 @@ ul li:hover {
     justify-content: space-between;
     padding: 10px;
 }
-.all-programs{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    line-height: 0.5;
-}
+
 .green-arrow{
     width: 25px;
     height: 25px;
@@ -328,3 +322,60 @@ ul li:hover {
 
 }
 
+.all-programs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    line-height: 0.5;
+    background: none;
+    border: none;
+}
+
+.all-programs:hover {
+    background-color: #0c79ff;
+}
+
+.all-programs img {
+    width: 30px;
+    height: 30px;
+}
+
+.programs-menu {
+    position: absolute;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    outline: 1px solid rgb(51, 133, 255);
+    border-left: 5px solid rgb(3, 83, 255);
+    background: white;
+    font-family: tahoma;
+    font-size: 0.8em;
+    line-height: 0;
+    width: 210px;
+    height: 300px;
+    overflow: hidden;
+    box-shadow: 4px 2px 11px 5px rgba(0, 20, 75, 0.534);
+    z-index: 40;
+}
+
+.programs-menu-top {
+    
+}
+
+.programs-menu-top ul li {
+    padding: 10px;
+    cursor: default;
+    
+}
+
+.programs-menu-bottom {
+   
+}
+
+.programs-menu-bottom ul li {
+    padding: 10px;
+    cursor: default;
+}
