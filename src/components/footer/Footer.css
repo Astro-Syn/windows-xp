@@ -314,12 +314,29 @@ ul li:hover {
     margin-right: 15px;
 }
 
+
 .shut-down{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 15px;
+    
+}
 
+.shut-down-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+}
+.shut-down img {
+    width: 33px;
+    height: 33px;
+    object-fit: cover;
+    
 }
 
 .all-programs{
@@ -343,11 +360,10 @@ ul li:hover {
 
 .programs-menu {
     position: absolute;
-    left: 50px;
+    left: 180px;
+    bottom: 65px;
     display: flex;
     flex-direction: column;
-    
-    gap: 10px;
     outline: 1px solid rgb(51, 133, 255);
     border-left: 5px solid rgb(3, 83, 255);
     background: white;
@@ -371,7 +387,8 @@ ul li:hover {
 }
 
 .programs-menu-bottom {
-   
+    margin-top: 20px;
+   align-self: flex-end;
 }
 
 .programs-menu-bottom ul li {
@@ -396,4 +413,24 @@ ul li:hover {
 
 .programs-images {
     width: 22px;
+}
+
+.all-programs-container {
+  position: relative;
+  display: inline-block;
+}
+
+.programs-menu {
+  display: none;
+  position: absolute;
+  bottom: 70%;
+  left: 150px;
+  background: #fff;
+  border: 1px solid #ccc;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+.all-programs-container:hover .programs-menu {
+  display: block;
 }

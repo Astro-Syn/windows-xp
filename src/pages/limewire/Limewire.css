@@ -15,7 +15,8 @@
 }
 
 .limewire-title {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
     text-shadow: 0 2px 3px rgb(0, 0, 105);
 }
 

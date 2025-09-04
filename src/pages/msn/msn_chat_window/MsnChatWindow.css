@@ -8,7 +8,8 @@
 }
 
 .standard-title-bar {
-    font-family: 'Trebuchet MS Bold', 'Lucida Sans Unicode';
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
     text-shadow: 0 2px 3px rgb(0, 0, 105);
 }
 
@@ -21,8 +22,8 @@
 }
 
 .msn-chat-window-header-logo-container img {
-    margin-top: 10px;
-    width: 40px;
+    margin-top: 15px;
+    width: 42px;
     display: block;
     align-self: center;
     height: auto;    
@@ -77,6 +78,18 @@
     flex: 0 0 auto;
 }
 
+.options-buttons-container button:first-child img {
+    width: 50px;
+    height: 50px;
+    
+}
+
+.options-buttons-container button:first-child p {
+    margin: 0;
+    position: relative;
+    bottom: 15px;
+}
+
 .options-buttons-container button:nth-child(2) img {
     width: 50px;
     height: 35px;
@@ -85,13 +98,6 @@
     flex: 0 0 auto;
 }
 
-.options-buttons-container button:first-child img {
-    width: 50px;
-    height: 35px;
-    display: block;
-    object-fit: contain;
-    flex: 0 0 auto;
-}
 
 .options-buttons-container p {
     font-family: Tahoma;  
