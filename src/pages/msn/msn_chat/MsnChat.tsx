@@ -29,7 +29,7 @@ export default function MsnChat() {
     <div className='messages-container'>
         <div className='messages'>
             <div className='chat-box-header'>
-                To: <b>Novie</b> Novie1993@hotmail.com
+                <p>To: <b>Novie</b></p><p>Novie1993@hotmail.com</p>
             </div>
             <div>
                 Never give out your password or credit card number in an instant message conversation.<br/>
@@ -44,13 +44,19 @@ export default function MsnChat() {
 
             <div className='input-bar-container'>
                 <div className='input-bar-options'>
-                <img src='/Images/msn_chat_text.png'/>
-                <img src='/Images/msn_chat_emoji.png'/>
-                <img src='/Images/msn_chat_voice_clip.png'/>
-                <img src='/Images/msn_chat_wink_emoji.png'/>
-                <img src='/Images/msn_chat_picture.png'/>
-                <img src='/Images/msn_chat_gift.png'/>
-                <img src='/Images/msn_chat_nudge.png'/>
+                    <img 
+                    className='text-input-bar'
+                    src='/Images/msn_chat_text.png'/>
+                    <img src='/Images/msn_chat_emoji.png'/>
+                    <button>
+                        <img src='/Images/msn_chat_voice_clip.png'/>
+                        <p>Voice Clip</p>
+                    </button>
+                    
+                    <img src='/Images/msn_chat_wink_emoji.png'/>
+                    <img src='/Images/msn_chat_picture.png'/>
+                    <img src='/Images/msn_chat_gift.png'/>
+                    <img src='/Images/msn_chat_nudge.png'/>
             </div>
         <div className='input-bar'>
             
