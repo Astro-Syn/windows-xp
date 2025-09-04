@@ -3,7 +3,11 @@ import MsnChat from '../msn_chat/MsnChat';
 import '../msn_chat_window/MsnChatWindow.css';
 
 
+
 export default function MsnChatWindow() {
+
+   
+
     const [isVisible, setIsVisible] = useState(true);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isMaximized, setIsMaximized] = useState(false);
@@ -175,9 +179,49 @@ style={{
   </div>
 </div>
 
+            <div className='banner-two'>
                 <div className='msn-chat-window-header-three-right'>
-                    Block, customize
+                    
+                    <svg width='220' height='180' viewBox='0 0 280 490' xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="waveGradient2" x1="40%" y1="30%" x2="40%" y2="100%">
+                                <stop offset="1%" stopColor="#aec0dbda" />
+                                <stop offset="70%" stopColor="#f3fcffff" />
+                                <stop offset="100%"  stopColor="#aec0dbda"/>
+                            </linearGradient>
+                        </defs>
+                        <path
+                    d="M 52 0
+                    L 288 0
+                    Q 300 0 296.21 11.39
+                    L 263.79 108.61
+                    Q 260 120 248 120
+                    L 12 120
+                    Q 0 120 3.79 108.61
+                    L 36.21 11.39
+                    Q 40 0 52 0
+                    Z"
+                fill="url(#waveGradient2)"
+                stroke="gray"
+                strokeWidth="5"
+                />
+                
+                    </svg>
+                
+
                 </div>
+                <div className='banner-two-button-container'>
+                    <button className='banner-two-button'>
+                        <img src='Images/msn_chat_block.png'/>
+                    </button>
+                    <button className='banner-two-button'>
+                        <img src='Images/msn_chat_customize.png'/>
+                    </button>
+                </div>
+                
+            </div>
+
+                
 
             </div>
 

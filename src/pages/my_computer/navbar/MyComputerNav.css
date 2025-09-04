@@ -47,6 +47,12 @@
     padding: 2px;
 }
 
+.my-computer-second-nav button:hover{
+    outline: 1px solid rgb(219, 219, 196);
+    border-radius: 3px;
+}
+
+
 .my-computer-second-nav button:nth-child(4),
 .my-computer-second-nav button:nth-child(6) {
     border-right: 2px solid rgb(204, 204, 181);   

@@ -25,8 +25,14 @@ export default function MyComputerNav(){
             </nav>
             
             <div className='my-computer-second-nav'>
-                <button>Back</button>
-                <button>Forward</button>
+                <button>
+                    <img src='Images/my_computer_back_btn.png'/>
+                    <p>Back</p>
+                </button>
+                <button>
+                    <img src='Images/my_computer_forward_btn.png'/>
+                    
+                </button>
                 <span>
                     <p>▼</p>
                 </span>
