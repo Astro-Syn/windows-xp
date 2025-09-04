@@ -31,9 +31,12 @@ export default function MsnChat() {
             <div className='chat-box-header'>
                 <p>To: <b>Novie</b></p><p>Novie1993@hotmail.com</p>
             </div>
-            <div>
-                Never give out your password or credit card number in an instant message conversation.<br/>
+            <div className='chat-warning'>
+                <p>
+                    <img src='Images/tiny_never_give_out.png'/>Never give out your password or credit card number in an instant message conversation.<br/>
                 ______
+                </p>
+                
             </div>
             {messages.map((m, i) => (
                 <div key={i} className={`message ${m.from}`}>
@@ -52,7 +55,6 @@ export default function MsnChat() {
                         <img src='/Images/msn_chat_voice_clip.png'/>
                         <p>Voice Clip</p>
                     </button>
-                    
                     <img src='/Images/msn_chat_wink_emoji.png'/>
                     <img src='/Images/msn_chat_picture.png'/>
                     <img src='/Images/msn_chat_gift.png'/>
@@ -71,6 +73,22 @@ export default function MsnChat() {
             </div>
             
         </div>
+        {/*Bottom section of Input */}
+        <div className='bottom-option-input-container'>
+                <div className='bottom-option-icons-container'>
+                
+                <div className='bottom-option-icons'>
+                    <button>
+                        <img src='Images/msn_chat_pen_bottom.png'/>
+                    </button>
+                    <button>
+                        <img src='Images/msn_chat_text.png'/>
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+        
 
             </div>
             

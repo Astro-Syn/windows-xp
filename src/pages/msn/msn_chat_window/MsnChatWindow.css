@@ -1,6 +1,6 @@
 .msn-chat-window-container {
     width: 550px;
-    height: 500px;
+    height: 550px;
     border: 2px solid blue;
     border-radius: 10px;
     background: linear-gradient(to top, rgb(239, 245, 252), rgba(190, 213, 238, 0.863));
