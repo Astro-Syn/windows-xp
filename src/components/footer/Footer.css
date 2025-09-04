@@ -346,7 +346,7 @@ ul li:hover {
     left: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    
     gap: 10px;
     outline: 1px solid rgb(51, 133, 255);
     border-left: 5px solid rgb(3, 83, 255);
@@ -356,7 +356,6 @@ ul li:hover {
     line-height: 0;
     width: 210px;
     height: 300px;
-    overflow: hidden;
     box-shadow: 4px 2px 11px 5px rgba(0, 20, 75, 0.534);
     z-index: 40;
 }
@@ -366,7 +365,7 @@ ul li:hover {
 }
 
 .programs-menu-top ul li {
-    padding: 10px;
+    padding: 2px;
     cursor: default;
     
 }
@@ -376,6 +375,25 @@ ul li:hover {
 }
 
 .programs-menu-bottom ul li {
-    padding: 10px;
+    padding: 2px;
     cursor: default;
+}
+
+.programs-divide-line-container{
+    display: flex;
+    justify-content: center;
+}
+
+.programs-divide-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    background: radial-gradient(rgb(170, 170, 170), rgba(255, 255, 255, 0.945));
+}
+
+.programs-images {
+    width: 22px;
 }

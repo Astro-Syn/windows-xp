@@ -149,27 +149,101 @@ export default function Footer(){
                                             <div className='programs-menu'>
                                                 <div className='programs-menu-top'>
                                                     <ul>
-                                                        <li>Windows Catalog</li>
-                                                        <li>Windows Update</li>
+                                                        <li>
+                                                            <img 
+                                                            className='programs-images'
+                                                            src='Images/tiny_windows_catalog.png'/>
+                                                            Windows Catalog
+                                                        </li>
+                                                        <li>
+                                                            <img 
+                                                            className='programs-images'
+                                                            src='Images/tiny_windows_update.png'/>
+                                                            Windows Update
+                                                        </li>
                                                     </ul>
-
+                                                </div>
+                                                <div className='programs-divide-line-container'>
+                                                    <div className='programs-divide-line'>
+                                                        
+                                                    </div>
                                                 </div>
                                                 <div className='programs-menu-bottom'>
                                                     <ul>
-                                                        <li>Accessories</li>
-                                                        <li>Games</li>
-                                                        <li>Jasc Software</li>
-                                                        <li>Microsoft Office</li>
-                                                        <li>Startup</li>
-                                                        <li>Internet Explorer</li>
-                                                        <li>MSN Explorer</li>
-                                                        <li>Outlook Express</li>
-                                                        <li>Remote Assistance</li>
-                                                        <li>Windows Media Player</li>
-                                                        <li>Windows Messenger</li>
-                                                        <li>Windows Movie Maker</li>
-
-    
+                                                        <li>
+                                                            <img 
+                                                            className='programs-images'
+                                                            src='Images/tiny_accessories.png'/>
+                                                            <p>Accessories</p>
+                                                        </li>
+                                                        <li>
+                                                            <img 
+                                                            className='programs-images'
+                                                            src='Images/tiny_accessories.png'/>
+                                                            Games
+                                                        </li>
+                                                        <li>
+                                                            <img 
+                                                            className='programs-images'
+                                                            src='Images/tiny_accessories.png'/>
+                                                            Startup
+                                                        </li>
+                                                        <li>
+                                                            <img 
+                                                            className='programs-images'
+                                                            src=''/>
+                                                            Jasc Software
+                                                        </li>
+                                                        <li>
+                                                            <img 
+                                                            className='programs-images'
+                                                            src=''/>
+                                                            Microsoft Office
+                                                        </li>
+                                                        <li>
+                                                            <img 
+                                                            className='programs-images'
+                                                            src=''/>
+                                                            Internet Explorer
+                                                        </li>
+                                                        <li>
+                                                            <img 
+                                                            className='programs-images'
+                                                            src=''/>
+                                                            MSN Explorer
+                                                        </li>
+                                                        <li>
+                                                            <img 
+                                                            className='programs-images'
+                                                            src='Images/tiny_outlook_express.png'/>
+                                                            Outlook Express
+                                                        </li>
+                                                        <li>
+                                                            <img 
+                                                            className='programs-images'
+                                                            src='Images/tiny_remote_assistance.png'/>
+                                                            Remote Assistance
+                                                        </li>
+                                                        <li>
+                                                            <img
+                                                            className='programs-images'
+                                                            src='Images/tiny_windows_media_player.png'
+                                                            />
+                                                            Windows Media Player
+                                                        </li>
+                                                        <li>
+                                                            <img
+                                                            className=''
+                                                            src=''
+                                                            />
+                                                            Windows Messenger
+                                                        </li>
+                                                        <li>
+                                                            <img 
+                                                            className='programs-images'
+                                                            src=''/>
+                                                            Windows Movie Maker
+                                                        </li>    
                                                     </ul>
                                                 </div>
 
