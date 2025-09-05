@@ -2,15 +2,7 @@
     width: 350px;
     height: 100%;
     
-}
-
-.messages {
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    height: 60%;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border: 1px solid navy;
+    
 }
 
 .chat-box-header {
@@ -24,6 +16,27 @@
     padding-left: 10px;
     height: 30px;
 }
+
+.messages {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 60%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border: 1px solid navy;   
+    overflow: hidden;
+}
+
+.message-content {
+    position: relative;
+    padding: 10px;
+    background-color: #ffffff;
+    height: 85%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+}
+
 
 .chat-box-header p:nth-child(2) {
     margin-left: 10px;

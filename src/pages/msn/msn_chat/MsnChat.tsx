@@ -6,13 +6,13 @@ export default function MsnChat() {
     const [input, setInput] = useState("");
 
     const botReply = (input: string) => {
-            if(input.toLowerCase().includes("hello")) return "Hey! Long time to talk, what year is it?";
-            if(input.toLowerCase().includes("2025")) return "Wow! I never knew it's been THAT long.";
+            if(input.toLowerCase().includes("hello") || (input.toLowerCase().includes("hey"))) return "Hey! Long time to talk, what year is it?";
+            if(input.toLowerCase().includes("2025") || (input.toLowerCase().includes("2026") || (input.toLowerCase().includes("2026")))) return "Wow! I never knew it's been THAT long.";
             return "What should we talk about?";
         };
 
     const sendMessage = () => {
-        if (input.trim()) return;
+        if (!input.trim()) return;
 
         setMessages([...messages, {from: "me", text: input}]);
 
@@ -31,7 +31,9 @@ export default function MsnChat() {
             <div className='chat-box-header'>
                 <p>To: <b>Novie</b></p><p>Novie1993@hotmail.com</p>
             </div>
-            <div className='chat-warning'>
+
+            <div className='message-content'>
+                <div className='chat-warning'>
                 <p>
                     <img src='Images/tiny_never_give_out.png'/>Never give out your password or credit card number in an instant message conversation.<br/>
                 ______
@@ -43,6 +45,9 @@ export default function MsnChat() {
             {m.text}
           </div>
             ))}
+
+            </div>
+            
         </div>
 
             <div className='input-bar-container'>

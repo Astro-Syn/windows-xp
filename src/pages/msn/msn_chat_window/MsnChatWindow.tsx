@@ -240,14 +240,20 @@ style={{
                         <img
                         src='/Images/login_fish.png'
                         />
-                        <img
-                        src='/Images/msn_chat_webcam.png'
-                        />
+                        <div className='webcam-arrow-container'>
+                        <img 
+                        className='webcam-pic'
+                        src='/Images/msn_chat_webcam.png'/>
+                        <p>▼</p>
+
+                        </div>
+                        
                     </div>
                     <div className='msn-chat-display-pic'>
                         <img
                         src='/Images/login_duck.png'
                         />
+                        <p>▼</p>
                         
                     </div>
                 </div>

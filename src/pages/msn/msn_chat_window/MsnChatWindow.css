@@ -112,6 +112,7 @@
     position: absolute;
     right: 10px;
     top: 60px;
+    margin-right: 50px;
 }
 
 .msn-chat-window-logo img {
@@ -242,18 +243,46 @@
     border-radius: 10px;
 }
 
-.msn-chat-display-pic img {
+.msn-chat-display-pic > img {
     border: 1px solid navy;
     border-radius: 10px;
-    width: 110px;
-    margin-bottom: 2px;
-    margin-top: 0;
+}
+
+.webcam-pic {
+    border: none;
 }
 
 .msn-chat-display-pic:first-child :last-child {
     border: none;
     width: 30px;
 }
+
+.webcam-arrow-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.webcam-arrow-container img {
+    width: 27px;
+    height: 20px;
+    margin-right: 60px;
+    
+
+}
+
+.webcam-arrow-container p {
+    font-size: 10px;
+    color: rgb(18, 50, 138);
+}
+
+.msn-chat-display-pic p {
+    font-size: 10px;
+    color: rgb(18, 50, 138);
+
+}
+
 
 .msn-chat-conversation {
     
