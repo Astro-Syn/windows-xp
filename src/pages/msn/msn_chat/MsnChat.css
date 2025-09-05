@@ -34,7 +34,6 @@
     height: 85%;
     overflow-y: scroll;
     overflow-x: hidden;
-    
 }
 
 
@@ -45,37 +44,59 @@
 
 .input-bar-container {
     border: 1px solid navy;
-    height: 140px;
+    height: 150px;
     margin-top: 10px;
     border-radius: 7px;
     object-fit: contain;
     overflow: hidden;
 }
 
-
 .input-bar-options {
+    padding: 3px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     background: linear-gradient(to top, rgb(206, 206, 242), white, rgb(206, 206, 242));
     position:relative;
     width: 100%;
-    height: 22px;
+    height: 30px;
     border-bottom: 1px solid navy;
     border-top-left-radius: 7px;
     border-top-right-radius: 15px;
 }
 
-.input-bar-options img {
-    width: 37px;
-    height: auto;
-    margin: 1px 2px 0 9px;
-        
+.input-bar-options button {
+    width: 40px;
+    margin-right: 5px;
+    border: none;
+    background: none;
+    display: flex;
+    line-height: 0;
+
 }
 
-.input-bar-options img:first-child{
-    width: 22px;
+.input-bar-options button img {
+    justify-self: center;
+    align-self: center;
+    width: 34px;
+    height: 24px;
+    object-fit:cover;
 }
+
+.input-bar-options button:first-child img{
+    width: 20px;
+}
+
+
+
+.input-bar-options button:hover {
+    background: linear-gradient(to bottom, #ffffff, #dbe7f4); 
+  outline: 1px solid #7a9abf;  
+  border-radius: 1px;
+  box-shadow: inset 0 1px 0 #ffffff,
+              inset 0 -1px 0 #515d68; 
+}
+
 
 .input-bar-options button:nth-child(3){
     display: flex;
@@ -98,6 +119,7 @@
 .input-bar-options button:nth-child(3) p {
     white-space: nowrap;
 }
+
 
 .input-bar {
     display: flex;
@@ -167,7 +189,6 @@
 .bottom-option-icons {
     display: flex;
     flex-direction: row;
-    
     margin-right: 10px;
 }
 
@@ -179,6 +200,16 @@
     border: 1px solid gray;
     overflow: hidden;
     background: rgb(230, 241, 255);
+}
+
+.bottom-option-icons button:last-child{
+    background: white;
+    border-top: 2px solid white;
+    box-shadow: inset 0 -2px 0 0 orange;
+    z-index: 50;
+    position: relative;
+    top: -1px;
+    height: 24px;
 }
 
 .bottom-option-icons button:active {

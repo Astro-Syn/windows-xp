@@ -52,18 +52,34 @@ export default function MsnChat() {
 
             <div className='input-bar-container'>
                 <div className='input-bar-options'>
-                    <img 
+                    <button>
+                        <img 
                     className='text-input-bar'
                     src='/Images/msn_chat_text.png'/>
-                    <img src='/Images/msn_chat_emoji.png'/>
+                    </button>
+                    
+                    <button>
+                        <img src='/Images/msn_chat_emoji.png'/>
+                    </button>
+                    
                     <button>
                         <img src='/Images/msn_chat_voice_clip.png'/>
                         <p>Voice Clip</p>
                     </button>
-                    <img src='/Images/msn_chat_wink_emoji.png'/>
-                    <img src='/Images/msn_chat_picture.png'/>
-                    <img src='/Images/msn_chat_gift.png'/>
-                    <img src='/Images/msn_chat_nudge.png'/>
+                    <button>
+                        <img src='/Images/msn_chat_wink_emoji.png'/>
+                    </button>
+                    
+                    <button>
+                        <img src='/Images/msn_chat_picture.png'/>
+                    </button>
+                    <button>
+                        <img src='/Images/msn_chat_gift.png'/>
+                    </button>
+                    <button>
+                        <img src='/Images/msn_chat_nudge.png'/>
+                    </button>
+                    
             </div>
         <div className='input-bar'>
             
