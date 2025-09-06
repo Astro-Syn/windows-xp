@@ -434,3 +434,29 @@ ul li:hover {
 .all-programs-container:hover .programs-menu {
   display: block;
 }
+
+.footer-pages-container {
+    margin-left: 30px;
+}
+
+.footer-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(70, 120, 255);
+    position: relative;
+    height: 100%;
+    padding: 0px 5px 0px 5px;
+    font-size: 12px;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid rgb(64, 115, 255);
+    font-family: tahoma;
+    cursor: default;
+}
+
+.footer-page img {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}

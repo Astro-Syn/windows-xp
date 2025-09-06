@@ -22,11 +22,21 @@ export default function MsnNav() {
             <div className='msn-nav-container'>
                 <nav className='msn-first-nav'>
                     <ul>
-                        <li>File</li>
-                        <li>Contacts</li>
-                        <li>Actions</li>
-                        <li>Tools</li>
-                        <li>Help</li>
+                        <li>
+                            <p><u>F</u>ile</p>
+                        </li>
+                        <li>
+                            <p><u>C</u>ontacts</p>
+                        </li>
+                        <li>
+                            <p><u>A</u>ctions</p>
+                        </li>
+                        <li>
+                            <p><u>T</u>ools</p>
+                        </li>
+                        <li>
+                            <p><u>H</u>elp</p>
+                        </li>
                     </ul>
                 </nav>
                 <nav className='msn-second-nav'>

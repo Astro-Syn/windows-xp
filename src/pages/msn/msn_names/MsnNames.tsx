@@ -7,34 +7,123 @@ export default function MsnNames() {
 
             </div>
             <div className='msn-names-container'>
+
+            {/*ONLINE SECTION */}
+                <div className='online-section'>
+                <div className='status-header'>
+                    <button>-</button>
+                    <p>Online</p>
+                </div>
                 <ul>
-                    <li>✿☆ Melissa ☆✿ 💫💜</li>
-                    <li>[♥] 𝓣𝓪𝔂𝓵𝓸𝓻 𝓢𝓶𝓲𝓽𝓱 // 𝓁𝑜𝓋𝑒 𝓎𝑜𝓊 ✨</li>
-                    <li>~` Patrick Jordan ♥💀 ~’</li>
-                    <li>💔😢 Ｂｒｏｋｅｎ Ｐｒｏｍｉｓｅｓ 😢💔 — all apologies 🎵</li>
-                    <li>Dylan K.</li>
-                    <li>💙⚡ 𝑆𝑘𝓎 𝑅𝒶𝓋𝑒𝓇 ⚡💙</li>
-                    <li>🖤🦇 Chris Of Misery 🦇🖤</li>
-                    <li>💜🪩 𝓒𝔂𝓫𝓮𝓻 𝓚𝓲𝓽𝓽𝔂 🪩💜</li>
-                    <li>GeneralTK</li>
-                    <li>🌸✨ Ｒａｖｅ Ｓａｋｕｒａ ✨🌸 — 桜は永遠に</li>
-                    <li>Chris Lot</li>
-                    <li>🎧🌸 Ｃｈｉｉｉｉｉｉｉ 🌸🎧 — かわいいすぎ</li>
-                    <li>Cloud Strife</li>
-                    <li>🌈💖 Ｎｅｏｎ Ｃｈｉｂｉ 💖🌈</li>
-                    <li>Sera Farron 🌸</li>
-                    <li>Jack</li>
-                    <li>S o r a</li>
-                    <li>Reno + Rude</li>
-                    <li>Snow Villers</li>
-                    <li>Misti</li>
-                    <li>🌧️🕸️ 𝔇𝔯𝔢𝔞𝔪𝔩𝔢𝔰𝔰 𝔑𝔦𝔤𝔥𝔱𝔰 🕸️🌧️ — ❝ι ℓινє ιи тнє sнα∂σω❞</li>
-                    <li>🖤彡[Ｂｌｅｅｄｉｎｇ Ｈｅａｒｔ]彡🖤</li>
-                    <li>★彡[𝓐𝓵𝓮𝔁 𝓢𝓽𝓸𝓷𝓮]彡★ — rawr XD 🖤</li>
-                    <li>💎💜 Ｍｅｌｉｓｓａ Ｒｉｖｅｒｓ xoxo 💜💎</li>
-                    <li>✧(づ｡◕‿‿◕｡)づ✧ — Sᴀᴍ Cᴀʀᴛᴇʀ 💋💔</li>
-                    <li>😎😈 Ｓａｒａｈ Ｃｏｌｅ 😈😎 — "BRB eating 🍕"</li>
+                    <li>
+                        <img src='Images/tiny_msn_online.png'/>
+                        Novie
+                    </li>
+                    <li>
+                        <img src='Images/tiny_msn_away.png'/>
+                        Rein
+                    </li>
+                    
                 </ul>
+                
+
+                </div>
+               
+                 {/*OFFLINE SECTION */}
+                <div className='offline-section'>
+                <div className='status-header'>
+                    <button>-</button>
+                    <p>Offline</p>
+                 </div>   
+                
+                <ul>
+                    <li>
+                        <img src='Images/tiny_msn_offline.png'/>
+                        ✧Snow ViLLarS✧
+                    </li>
+                    <li>
+                        <img src='Images/tiny_msn_offline.png'/>
+                        [♥] ¤ Sєяα Fαяяση ¤ ✨
+                    </li>
+                    <li>
+                        <img src='Images/tiny_msn_offline.png'/>
+                        ··¤(¯´☆´¯)¤·· ClOuD StRiFe
+                    </li>
+                    <li>
+                        <img src='Images/tiny_msn_offline.png'/>
+                        † Vєяgíl †
+                    </li>
+                    <li>
+                        <img src='Images/tiny_msn_offline.png'/>
+                        Dylan K.
+                    </li>
+                    <li>
+                        <img src='Images/tiny_msn_offline.png'/>
+                        💙⚡ [Rєиσ™] ☆彡 ⚡💙
+                    </li>
+                    <li>
+                        <img src='Images/tiny_msn_offline.png'/>
+                        🖤🦇 Nero 🦇🖤
+                    </li>
+                    <li>
+                        <img src='Images/tiny_msn_offline.png'/>
+                        💜🪩 𝓒𝔂𝓫𝓮𝓻 𝓚𝓲𝓽𝓽𝔂 🪩💜
+                    </li>
+                    <li>
+                        <img src='Images/tiny_msn_offline.png'/>
+                        GeneralTK
+                    </li>
+                    <li>
+                        <img src='Images/tiny_msn_offline.png'/>
+                        «Balthier»
+                    </li>
+                    <li>
+                        <img src='Images/tiny_msn_offline.png'/>
+                        GøЯø ☯
+                    </li>
+                    <li>
+                        <img src='Images/tiny_msn_offline.png'/>
+                        Mïsty ✿ ღ WαterFαiry ღ
+                    </li>
+                    <li>
+                        <img src='Images/tiny_msn_offline.png'/>
+                        •.¸(¯•.¸Luna_Scythe¸.•´¯)¸.•´`
+                    </li>
+                    <li>
+                        <img src='Images/tiny_msn_offline.png'/>
+                        мαтт «»
+                    </li>
+                    <li>
+                        <img src='Images/tiny_msn_offline.png'/>
+                        Davis
+                    </li>
+                    <li>
+                        <img src='Images/tiny_msn_offline.png'/>
+                        Taιls™ FσxBøtZ ✧
+                    </li>
+                    <li>
+                        <img src='Images/tiny_msn_offline.png'/>
+                        Tαι☯
+                    </li>
+                    <li>
+                        <img src='Images/tiny_msn_offline.png'/>
+                        ★彡[𝓐𝓵𝓮𝔁 𝓢𝓽𝓸𝓷𝓮]彡★ — rawr XD 🖤</li>
+                    <li>
+                        <img src='Images/tiny_msn_offline.png'/>
+                        «·´¯·. Gary Ōαк .·´¯·» 🌿
+                    </li>
+                    <li>
+                        <img src='Images/tiny_msn_offline.png'/>
+                        [[TK∞HopeBringer]] ✞
+                    </li>
+                    <li>
+                        <img src='Images/tiny_msn_offline.png'/>
+                        ¤ Ash™ 🔥 ¤ [PokéM@ster]
+                    </li>
+                </ul>
+
+                </div>
+                 
 
             </div>
         </div>

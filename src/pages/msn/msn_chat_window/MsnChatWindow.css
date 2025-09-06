@@ -71,9 +71,9 @@
 }
 
 .options-buttons-container button:hover {
-    border-radius: 10px;
-    outline: 1px solid rgb(70, 77, 95);
-    background: linear-gradient(140deg, rgb(150, 169, 187), white)
+    border-radius: 1px;
+    box-shadow: inset 2px 2px 2px 2px orange;
+    background: linear-gradient(to top, rgb(224, 235, 245), white)
 }
 
 .options-buttons-container button img {

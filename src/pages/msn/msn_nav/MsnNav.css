@@ -1,11 +1,14 @@
 .msn-first-nav {
     background-color: rgb(250, 250, 230);
-    
 }
 
 .msn-first-nav ul {
     display: flex;
     cursor: default;
+}
+
+.msn-first-nav ul li > p {
+    margin: 0;
 }
 
 .msn-logo{

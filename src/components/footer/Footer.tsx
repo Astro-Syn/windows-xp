@@ -2,6 +2,7 @@ import '../footer/Footer.css';
 import { useState } from 'react';
 import Time from '../time/Time';
 import { IoIosArrowBack } from "react-icons/io";
+import NovieChat from '../footer pages/msn chats/novies chat/NovieChat';
 
 export default function Footer() {
     const [menu, setMenu] = useState(false);
@@ -327,6 +328,13 @@ export default function Footer() {
 
                 <div className='tiny-icons-container'>
                     <img src='/Images/tiny_explorer.png' />
+                </div>
+
+                <div className='footer-pages-container'>
+                        <div className='footer-page'>
+                            <img src='Images/tiny_msn_conversation.png'/>
+                            <NovieChat/>
+                        </div>
                 </div>
             </div>
         </div>
