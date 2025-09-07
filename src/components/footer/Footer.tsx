@@ -331,10 +331,14 @@ export default function Footer() {
                 </div>
 
                 <div className='footer-pages-container'>
-                        <div className='footer-page'>
-                            <img src='Images/tiny_msn_conversation.png'/>
-                            <NovieChat/>
-                        </div>
+                        
+                            
+                            <div className='footer-page'>
+                                <img src='Images/tiny_msn_conversation.png'/>
+                                <NovieChat/>
+                            </div>
+                            
+                        
                 </div>
             </div>
         </div>

@@ -2,15 +2,28 @@ import React, { useState, useRef, useEffect} from 'react';
 import MsnChat from '../msn_chat/MsnChat';
 import '../msn_chat_window/MsnChatWindow.css';
 
+export interface MsnChatWindowProps {
+  onClose: () => void;
+  onMinimize: () => void;
+  onMaximize: () => void;
+  isMinimized: boolean;
+  isMaximized: boolean;
+}
 
 
-export default function MsnChatWindow() {
 
-   
+export default function MsnChatWindow({
+        onClose,
+        onMinimize,
+        onMaximize,
+        isMinimized,
+        isMaximized,
+
+}: MsnChatWindowProps) 
+
+{
 
     const [isVisible, setIsVisible] = useState(true);
-    const [isMinimized, setIsMinimized] = useState(false);
-    const [isMaximized, setIsMaximized] = useState(false);
     const [position, setPosition] = useState({x: 100, y:100});
     const [isDragging, setIsDragging] = useState(false);
 
@@ -82,8 +95,8 @@ style={{
                     </div>
 
                 <div className='msn-chat-window-buttons'>
-                    <button onClick={() => setIsMinimized(!isMinimized)}>-</button>
-                    <button onClick={() => setIsMaximized(!isMaximized)}>🗖</button>
+                     <button onClick={onMinimize}>-</button>
+                    <button onClick={onMaximize}>🗖</button>
                     <button onClick={() => setIsVisible(false)}>×</button>
                 </div>
             </div>

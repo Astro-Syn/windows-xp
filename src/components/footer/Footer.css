@@ -449,14 +449,24 @@ ul li:hover {
     padding: 0px 5px 0px 5px;
     font-size: 12px;
     color: white;
-    border-radius: 5px;
-    border: 1px solid rgb(64, 115, 255);
+    border-radius: 3px;
+    border: 1px solid rgb(83, 129, 255);
     font-family: tahoma;
     cursor: default;
+    text-shadow: 0px 2px 2px 2px black;
+    padding-right: 40px;
 }
 
 .footer-page img {
     width: 25px;
     height: 25px;
     margin-right: 5px;
+}
+
+.footer-page:hover {
+    background: rgb(87, 132, 255);
+}
+
+.novie-box {
+    background: none;
 }
