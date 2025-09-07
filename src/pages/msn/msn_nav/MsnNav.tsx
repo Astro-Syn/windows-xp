@@ -88,7 +88,7 @@ export default function MsnNav() {
                             </div>
                             
                             <p>Type a personal message
-                                <p>▾</p>
+                                ▾
                             </p>
                             
                             <img

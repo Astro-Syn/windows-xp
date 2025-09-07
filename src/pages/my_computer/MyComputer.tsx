@@ -99,36 +99,13 @@ export default function MyComputer(){
                     {/*Render Views */}
                 {currentView === "root" && (
                     <div>
-                        <div
-                        className='folder'
-                        onClick={() => setCurrentView("nostalgia-docs")}
-                        >
-                            nostalgia Documents
-
-                        </div>
-                        <div className='folder'>
-                            Backgrounds
-                        </div>
-                        <div className='folder'>
-                            Display Pictures
-                        </div>
+                        
+                        
                         
                     </div>
                     
                 )}
 
-                 {currentView === "nostalgia-docs" && (
-                    <div className='folder-content'>
-                        <button onClick={() => setCurrentView("root")}> 
-                            ⬅ Back
-                        </button>
-                        <h3>Nostalgia Documents</h3>
-                        <ul>
-                            <li>Wallpapers</li>
-                            <li>Display Pictures</li>
-                        </ul>
-                    </div>
-                 )}
                 </div>
             )}
 

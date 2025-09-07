@@ -2,15 +2,13 @@ import React, { useState, useRef, useEffect} from 'react';
 import MsnChat from '../msn_chat/MsnChat';
 import '../msn_chat_window/MsnChatWindow.css';
 
-export interface MsnChatWindowProps {
+type MsnChatWindowProps = {
   onClose: () => void;
   onMinimize: () => void;
   onMaximize: () => void;
   isMinimized: boolean;
   isMaximized: boolean;
-}
-
-
+};
 
 export default function MsnChatWindow({
         onClose,
@@ -23,7 +21,7 @@ export default function MsnChatWindow({
 
 {
 
-    const [isVisible, setIsVisible] = useState(true);
+   
     const [position, setPosition] = useState({x: 100, y:100});
     const [isDragging, setIsDragging] = useState(false);
 
@@ -61,7 +59,7 @@ export default function MsnChatWindow({
             document.removeEventListener('mouseup', onMouseUp);
         };
     });
-    if (!isVisible) return null;
+   
 
 
   return (
@@ -97,7 +95,7 @@ style={{
                 <div className='msn-chat-window-buttons'>
                      <button onClick={onMinimize}>-</button>
                     <button onClick={onMaximize}>🗖</button>
-                    <button onClick={() => setIsVisible(false)}>×</button>
+                    <button onClick={onClose}>×</button>
                 </div>
             </div>
 
