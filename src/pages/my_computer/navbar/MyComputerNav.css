@@ -169,6 +169,7 @@
 .page-content {
     display: flex;
     background: white;
+    
 }
 
 .mini-control-panel {
@@ -239,6 +240,7 @@
 .details ul li:last-child{
     padding-bottom: 5px;
 }
+
 
 .right-category div p {
     font-weight: bold;

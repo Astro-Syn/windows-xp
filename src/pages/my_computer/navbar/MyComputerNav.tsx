@@ -1,10 +1,26 @@
 import '../navbar/MyComputerNav.css';
 import { useState } from 'react';
 import NostalgiaDocuments from '../../nostalgia/NostalgiaDocuments';
+import DesktopBackgrounds from '../../nostalgia/desktop_backgrounds/DesktopBackgrounds';
+import UserIcons from '../../nostalgia/user_icons/UserIcons';
+
+
+type View = "root" | "nostalgia-docs" | "desktop-backgrounds" | "user-icons";
 
 export default function MyComputerNav() {
   const [open, setOpen] = useState(false);
-  const [currentView, setCurrentView] = useState<"root" | "nostalgia-docs">("root");
+  const [history, setHistory] = useState<View[]>(["root"]);
+
+ 
+  const currentView = history[history.length - 1];
+
+  function goTo(view: View) {
+    setHistory(prev => [...prev, view]);
+  }
+
+  function goBack() {
+    setHistory(prev => (prev.length > 1 ? prev.slice(0, -1) : prev));
+  }
 
   return (
     <div>
@@ -26,7 +42,7 @@ export default function MyComputerNav() {
 
         {/* Second Nav */}
         <div className='my-computer-second-nav'>
-          <button onClick={() => setCurrentView("root")}>
+          <button onClick={goBack}>
             <img src='Images/my_computer_back_btn.png'/>
             <p>Back</p>
           </button>
@@ -56,13 +72,20 @@ export default function MyComputerNav() {
             >
               <div>
                 <img className='mini-computer' src='/Images/my_computer_2.png'/>
-                {currentView === "root" ? "My Computer" : "Nostalgia Documents"}
+                {{
+                  "root": "My Computer",
+                  "nostalgia-docs": "Nostalgia Documents",
+                  "desktop-backgrounds": "Desktop Backgrounds",
+                  "user-icons": "User Icons"
+                }[currentView]}
               </div>
             </button>
             {open && (
               <ul className='drop-menu'>
-                <li onClick={() => setCurrentView("root")}>My Computer</li>
-                <li onClick={() => setCurrentView("nostalgia-docs")}>Nostalgia Documents</li>
+                <li onClick={() => goTo("root")}>My Computer</li>
+                <li onClick={() => goTo("nostalgia-docs")}>Nostalgia Documents</li>
+                <li onClick={() => goTo("desktop-backgrounds")}>Desktop Backgrounds</li>
+                <li onClick={() => goTo("user-icons")}>User Icons</li>
               </ul>
             )}
           </div>
@@ -125,7 +148,7 @@ export default function MyComputerNav() {
                   <a><img src='/Images/my_computer_folder.png'/> Shared Documents</a>
                   <button 
                     className='nostalgia-folder' 
-                    onClick={() => setCurrentView("nostalgia-docs")}
+                    onClick={() => goTo("nostalgia-docs")}
                   >
                     <img src='/Images/my_computer_folder.png'/>
                     Nostalgia Documents
@@ -152,12 +175,11 @@ export default function MyComputerNav() {
           )}
 
           {currentView === "nostalgia-docs" && (
-            <div className='folder-content'>
-              
-              <NostalgiaDocuments/>
-              
-            </div>
+            <NostalgiaDocuments goTo={goTo} goBack={goBack} />
           )}
+
+          {currentView === "desktop-backgrounds" && <DesktopBackgrounds />}
+          {currentView === "user-icons" && <UserIcons />}
         </div>
       </div>
     </div>

@@ -1,50 +1,47 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../nostalgia/NostalgiaDocuments.css';
-import DesktopBackgrounds from './desktop_backgrounds/DesktopBackgrounds';
 
-export default function NostalgiaDocuments() {
+type NostalgiaDocumentsProps = {
+  goTo: (view: "desktop-backgrounds" | "user-icons") => void;
+  goBack: () => void;
+};
 
-    const [currentView, setCurrentView] = useState<"root" | "desktop-backgrounds"> ("root");
-
+export default function NostalgiaDocuments({ goTo, goBack }: NostalgiaDocumentsProps) {
   return (
-    <div>
-      {currentView === "root" && (
-          <div className='folders-container'>
-        <div className='desktop-folder'>
-            <img src='Images/folder_large.png' alt="Folder"/>
-            <div className='folder-images-thumbnail'>
-              <img src='Images/moon_flower.jpg' alt="Moon Flower"/>
-              <img src='Images/ascent.jpg' alt="Ascent"/>
-              <img src='Images/bliss.jpg' alt="Bliss"/>
-              <img src='Images/crystal.jpg' alt="Crystal"/>
-            </div>
-            <button className='desktop-backgrounds-link'
-            onClick={() => setCurrentView("desktop-backgrounds")}
-            >
-              Desktop Backgrounds
-            </button>
-          </div>
-
-        <div className='desktop-folder'>
-          <img src='Images/folder_large.png' alt="Folder"/>
-          <div className='folder-images-thumbnail'>
-            <img src='Images/login_car.png'/>
-            <img src='Images/login_chess.png'/>
-            <img src='Images/login_fish.png'/>
-            <img src='Images/login_snowflake.png'/>
-          </div>
-          <button>User Icons</button>
+    <div className='folders-container'>
+      {/* Desktop Backgrounds Folder */}
+      <div className='desktop-folder'>
+        <img src='Images/folder_large.png' alt="Folder"/>
+        <div className='folder-images-thumbnail'>
+          <img src='Images/moon_flower.jpg' alt="Moon Flower"/>
+          <img src='Images/ascent.jpg' alt="Ascent"/>
+          <img src='Images/bliss.jpg' alt="Bliss"/>
+          <img src='Images/crystal.jpg' alt="Crystal"/>
         </div>
+        <button 
+          className='desktop-backgrounds-link'
+          onClick={() => goTo("desktop-backgrounds")}
+        >
+          Desktop Backgrounds
+        </button>
       </div>
-      )}
 
-      {currentView === "desktop-backgrounds" && (
-        <div className='desktop-backgrounds-container'>
-            <DesktopBackgrounds />
+      {/* User Icons Folder */}
+      <div className='desktop-folder'>
+        <img src='Images/folder_large.png' alt="Folder"/>
+        <div className='folder-images-thumbnail'>
+          <img src='Images/login_car.png' alt="Car"/>
+          <img src='Images/login_chess.png' alt="Chess"/>
+          <img src='Images/login_fish.png' alt="Fish"/>
+          <img src='Images/login_snowflake.png' alt="Snowflake"/>
         </div>
-      )}
-      
-
+        <button 
+          className='user-icons-link' 
+          onClick={() => goTo("user-icons")}
+        >
+          User Icons
+        </button>
+      </div>
     </div>
-  )
+  );
 }
