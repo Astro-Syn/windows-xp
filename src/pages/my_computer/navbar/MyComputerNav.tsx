@@ -1,5 +1,6 @@
 import '../navbar/MyComputerNav.css';
 import { useState } from 'react';
+import NostalgiaDocuments from '../../nostalgia/NostalgiaDocuments';
 
 export default function MyComputerNav() {
   const [open, setOpen] = useState(false);
@@ -123,7 +124,7 @@ export default function MyComputerNav() {
                 <div className='files-stored-container'>
                   <a><img src='/Images/my_computer_folder.png'/> Shared Documents</a>
                   <button 
-                    className='folder' 
+                    className='nostalgia-folder' 
                     onClick={() => setCurrentView("nostalgia-docs")}
                   >
                     <img src='/Images/my_computer_folder.png'/>
@@ -152,11 +153,9 @@ export default function MyComputerNav() {
 
           {currentView === "nostalgia-docs" && (
             <div className='folder-content'>
-              <h3>Nostalgia Documents</h3>
-              <ul>
-                <li>Wallpapers</li>
-                <li>Display Pictures</li>
-              </ul>
+              
+              <NostalgiaDocuments/>
+              
             </div>
           )}
         </div>

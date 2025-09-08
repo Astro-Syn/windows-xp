@@ -1,0 +1,56 @@
+.folders-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    margin: 10px;
+    width: 430px;
+    height: 400px;
+    cursor: default;
+    gap: 40px;
+}
+
+.desktop-folder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 110px;
+    position: relative; 
+    line-height: 0;
+}
+
+.desktop-folder img {
+    width: 100%;
+    display: block;
+}
+
+.desktop-folder button {
+    font-weight: normal !important;
+    font-size: 12px;
+    background: none;
+    border: none;
+}
+
+.desktop-folder button:active {
+    background-color: rgb(35, 130, 255);
+    border: 1px dotted black;
+}
+
+.folder-images-thumbnail {
+    position: absolute;
+    top: 15%;  
+    left: 10%;
+    width: 80%;
+    height: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3px;
+    row-gap: 12px;
+    z-index: 2;
+}
+
+.folder-images-thumbnail img {
+    width: 43px;
+    height: 30px;
+    object-fit: cover;
+}

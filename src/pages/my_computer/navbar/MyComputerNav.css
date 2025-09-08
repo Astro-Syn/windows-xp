@@ -295,4 +295,17 @@
     
 }
 
+.folder {
+    background: none;
+    border: none;
+}
+
+.nostalgia-folder{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+}
 
