@@ -2,7 +2,7 @@ import '../footer/Footer.css';
 import { useState } from 'react';
 import Time from '../time/Time';
 import { IoIosArrowBack } from "react-icons/io";
-import NovieChat from '../footer pages/msn chats/novies chat/NovieChat';
+
 
 export default function Footer() {
     const [menu, setMenu] = useState(false);
@@ -128,7 +128,7 @@ export default function Footer() {
                                         <p>All Programs</p>
                                         <img
                                             className='green-arrow'
-                                            src='/Images/green_arrow_all_programs.png'
+                                            src='/Images/programs_arrow_green.png'
                                         />
                                     </button>
 
@@ -156,13 +156,75 @@ export default function Footer() {
                                         </div>
                                         <div className='programs-menu-bottom'>
                                             <ul>
-                                                <li>
+                                                <li className='accessories-btn'>
                                                     <img className='programs-images' src='Images/tiny_accessories.png' />
                                                     Accessories
+
+                                                    {/*Accessories Menu */}
+                                                    <div className='accessories-menu'>
+                                                        <ul>
+                                                            <li>Accessibility</li>
+                                                            <li>Communications</li>
+                                                            <li>Entertainment</li>
+                                                            <li>System Tools</li>
+                                                            <li>Address Book</li>
+                                                            <li>Command Prompt</li>
+                                                            <li>Notepad</li>
+                                                            <li>Paint</li>
+                                                            <li>Calculator</li>
+                                                            <li>Program Compatibility</li>
+                                                            <li>Remote Desktop Connection</li>
+                                                            <li>Synchronize</li>
+                                                            <li>Tour Windows XP</li>
+                                                            <li>Windows Explorer</li>
+                                                            <li>WordPad</li>
+                                                        </ul>
+
+                                                    </div>
                                                 </li>
-                                                <li>
+                                                <li className='games-btn'>
                                                     <img className='programs-images' src='Images/tiny_accessories.png' />
                                                     Games
+
+                                                        {/*Games Menu */}
+                                                    <div className='games-menu'>
+                                                        <ul>
+                                                            <li>FreeCell</li>
+                                                            <li>Hearts</li>
+                                                            <li>Internet Backgammon</li>
+                                                            <li>Internet Checkers</li>
+                                                            <li>Internet Hearts</li>
+                                                            <li>Internet Reversi</li>
+                                                            <li>Internet Spades</li>
+                                                            <li>Minesweeper</li>
+                                                            <li>Pinball</li>
+                                                            <li>Solitaire</li>
+                                                            <li>Spider Solitaire</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+
+                                                
+                                                <li className='microsoft-btn'>
+                                                    <img className='programs-images' src='Images/tiny_accessories.png' />
+                                                    Microsoft Office
+
+                                                    {/*Microsoft Menu */}
+                                                    <div className='microsoft-menu'>
+                                                        <ul>
+                                                            <li>Microsoft Office Tools</li>
+                                                            <li>Microsoft Office Access 2007</li>
+                                                            <li>Microsoft Office Excel 2007</li>
+                                                            <li>Microsoft Office Groove 2007</li>
+                                                            <li>Microsoft Office InfoPath 2007</li>
+                                                            <li>Microsoft Office OneNote 2007</li>
+                                                            <li>Microsoft Office Outlook 2007</li>
+                                                            <li>Microsoft Office PowerPoint 2007</li>
+                                                            <li>Microsoft Office Publisher 2007</li>
+                                                            <li>Microsoft Office Word 2007</li>
+                                                        </ul>
+
+                                                    </div>
                                                 </li>
                                                 <li>
                                                     <img className='programs-images' src='Images/tiny_accessories.png' />
@@ -334,10 +396,7 @@ export default function Footer() {
                 <div className='footer-pages-container'>
                         
                             
-                            <div className='footer-page'>
-                                <img src='Images/tiny_msn_conversation.png'/>
-                                <NovieChat/>
-                            </div>
+                           
                             
                         
                 </div>

@@ -20,7 +20,7 @@ export default function NostalgiaDocuments({ goTo, goBack }: NostalgiaDocumentsP
         </div>
         <button 
           className='desktop-backgrounds-link'
-          onClick={() => goTo("desktop-backgrounds")}
+          onDoubleClick={() => goTo("desktop-backgrounds")}
         >
           Desktop Backgrounds
         </button>
@@ -37,7 +37,7 @@ export default function NostalgiaDocuments({ goTo, goBack }: NostalgiaDocumentsP
         </div>
         <button 
           className='user-icons-link' 
-          onClick={() => goTo("user-icons")}
+          onDoubleClick={() => goTo("user-icons")}
         >
           User Icons
         </button>

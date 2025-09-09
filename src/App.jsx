@@ -22,7 +22,7 @@ function App() {
       <Msn />
       <MsnChatWindow/>
       <MsnCornerConvo/>
-      <Footer />
+      <Footer windows={[]} onTabClick={() => {}}/>
     </BrowserRouter>
   )
 }

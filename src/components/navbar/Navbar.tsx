@@ -82,6 +82,21 @@ export default function Navbar(){
                     <p>Limewire</p>
                 </span>
                 </Link>
+
+                <Link 
+                to='sims_2'
+                className='nav-item' 
+                onClick = {() => setSelected(
+                    "sims_2"
+                )}
+                >
+                    <img src='Images/desktop_icon_sims_2.png'
+                    className='nav-icon'
+                    />
+                    <span className={`icon-name ${selected === 'sims_2' ? "selected" : ""}`}>
+                        <p>Sims 2</p>
+                    </span>
+                </Link>
         </div>
         
     )

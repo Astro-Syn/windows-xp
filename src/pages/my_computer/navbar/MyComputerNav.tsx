@@ -42,15 +42,21 @@ export default function MyComputerNav() {
 
         {/* Second Nav */}
         <div className='my-computer-second-nav'>
-          <button onClick={goBack}>
-            <img src='Images/my_computer_back_btn.png'/>
-            <p>Back</p>
+          <button className='my-computer-nav-btn' onClick={goBack}>
+            <img src={
+              history.length > 1 ? 'Images/my_computer_back_btn_green.png' : 'Images/my_computer_back_btn.png'
+            }
+            alt="Back"
+            />
+            
+            <p>Back</p><p className='little-arrow'>▼</p>
           </button>
-          <button>
+          <button className='my-computer-nav-btn'>
             <img src='Images/my_computer_forward_btn.png'/>
+            <p className='little-arrow'>▼</p>
           </button>
-          <span><p>▼</p></span>
-          <button><img src='/Images/my_computer_arrow_folder.png'/></button>
+          <span><p></p></span>
+          <button className='arrow-folder'><img src='/Images/my_computer_arrow_folder.png'/></button>
           <button>
             <img src='/Images/icon_search.png'/>
             <p>Search</p>

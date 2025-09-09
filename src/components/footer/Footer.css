@@ -40,14 +40,17 @@ body{
 
 .tiny-icons-container{
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 15px;
-    padding: 5px;
+    margin-right: 10px;
+    padding: 10px;
     
 }
 
 .tiny-icons-container img {
-    width: 90%;
-    
+    width: 20px;
+    margin-right: 10px;
 }
 
 .tiny-img-container{
@@ -123,10 +126,9 @@ body{
     font-family: tahoma;
     font-size: 0.8em;
     line-height: 0;
-    width: 450px;
-    height: 550px;
+    width: 440px;
+    height: 540px;
     z-index: 11;
-    overflow: hidden;
     box-shadow: 5px 5px 5px rgb(0, 49, 114);
 }
 
@@ -228,9 +230,10 @@ ul li {
     display: flex;
     align-items: center;
     gap: 10px; 
-    padding: 5px;
+    padding: 4px;
     font-family: tahoma;
     font-size: 12px;
+    cursor: default;
 }
 
 ul li:hover {
@@ -251,6 +254,7 @@ ul li:hover {
     width: 70%;
     height: 2px;
     background: radial-gradient(circle at center, rgb(174, 174, 174), rgba(225, 225, 225, 0.408));
+    margin-bottom: -1px;
 }
 
 
@@ -288,7 +292,7 @@ ul li:hover {
     background: radial-gradient(circle, rgb(63, 63, 255), rgb(47, 126, 230));
     color: white;
     text-align: end;
-    height: 60px;
+    height: 50px;
 }
 
 .off-buttons-container{
@@ -339,30 +343,42 @@ ul li:hover {
     
 }
 
+.all-programs-container{
+    position: relative;
+    display: inline-block;
+}
+
 .all-programs{
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    line-height: 0.5;
+    line-height: 0;
     background: none;
     border: none;
+    align-self: center;
+    justify-self: center;
 }
 
-.all-programs:hover {
+.all-programs-container:hover {
     background-color: #0c79ff;
 }
 
+.all-programs p {
+    margin: 0;
+}
+
 .all-programs img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
+    margin: 0;
 }
 
 .programs-menu {
     position: absolute;
-    left: 180px;
-    bottom: 65px;
-    display: flex;
+    left: 160px;
+    bottom: 20px;
+    display: none;
     flex-direction: column;
     outline: 1px solid rgb(51, 133, 255);
     border-left: 5px solid rgb(3, 83, 255);
@@ -370,25 +386,89 @@ ul li:hover {
     font-family: tahoma;
     font-size: 0.8em;
     line-height: 0;
+    min-width: 210px;
     width: 210px;
     height: 300px;
     box-shadow: 4px 2px 11px 5px rgba(0, 20, 75, 0.534);
-    z-index: 40;
+    z-index: 400;
 }
 
-.programs-menu-top {
-    
+.all-programs-container:hover .programs-menu {
+  display: flex;
 }
+
+
+.accessories-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 200px;
+    height: 330px;
+    left: 205px;
+    bottom: 220px;
+    outline: 1px solid rgb(51, 133, 255);
+    border-left: 5px solid rgb(3, 83, 255);
+    box-shadow: 4px 2px 11px 5px rgba(0, 20, 75, 0.534);
+    z-index: 500;
+    line-height: 1.5;
+    color: black;
+}
+
+.accessories-btn:hover .accessories-menu,
+.accessories-menu:hover {
+    display: block;
+}
+
+.games-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+     width: 200px;
+    height: 240px;
+    left: 205px;
+    bottom: 195px;
+    outline: 1px solid rgb(51, 133, 255);
+    border-left: 5px solid rgb(3, 83, 255);
+    box-shadow: 4px 2px 11px 5px rgba(0, 20, 75, 0.534);
+    z-index: 500;
+    line-height: 1.5;
+    color: black;
+}
+
+.games-btn:hover .games-menu,
+.games-menu:hover {
+    display: block;
+}
+
+.microsoft-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+     width: 200px;
+    height: 220px;
+    left: 205px;
+    bottom: 170px;
+    outline: 1px solid rgb(51, 133, 255);
+    border-left: 5px solid rgb(3, 83, 255);
+    box-shadow: 4px 2px 11px 5px rgba(0, 20, 75, 0.534);
+    z-index: 500;
+    line-height: 1.5;
+    color: black;
+}
+
+.microsoft-btn:hover .microsoft-menu, 
+.microsoft-menu:hover {
+    display: block;
+}
+
 
 .programs-menu-top ul li {
     padding: 2px;
     cursor: default;
-    
 }
 
 .programs-menu-bottom {
-    margin-top: 20px;
-   align-self: flex-end;
+    margin-top: 10px;
 }
 
 .programs-menu-bottom ul li {
@@ -412,7 +492,8 @@ ul li:hover {
 }
 
 .programs-images {
-    width: 22px;
+    width: 20px;
+    height: 20px;
 }
 
 .all-programs-container {
@@ -420,20 +501,6 @@ ul li:hover {
   display: inline-block;
 }
 
-.programs-menu {
-  display: none;
-  position: absolute;
-  bottom: 70%;
-  left: 150px;
-  background: #fff;
-  border: 1px solid #ccc;
-  min-width: 200px;
-  z-index: 1000;
-}
-
-.all-programs-container:hover .programs-menu {
-  display: block;
-}
 
 .footer-pages-container {
     margin-left: 30px;
@@ -463,10 +530,3 @@ ul li:hover {
     margin-right: 5px;
 }
 
-.footer-page:hover {
-    background: rgb(87, 132, 255);
-}
-
-.novie-box {
-    background: none;
-}

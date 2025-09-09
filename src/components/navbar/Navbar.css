@@ -41,3 +41,8 @@
 .icon-name.selected{
     background-color: rgb(85, 85, 255);
 }
+
+.navbar-container .nav-item:nth-of-type(6) .nav-icon {
+  width: 65px;
+  height: 55px;
+}

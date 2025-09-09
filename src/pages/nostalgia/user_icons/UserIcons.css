@@ -1,0 +1,55 @@
+
+.user-icons-container {
+    margin: 10px;
+    position: absolute;
+    width: 450px;
+    height: 420px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+    grid-auto-rows: 120px;
+    gap: 25px;
+    justify-content: start;
+    align-items: start;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.full-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.full-container p {
+    font-weight: 100 !important;
+    font-size: 12px;
+    margin: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 0;
+    text-align: center;
+}
+
+
+.user-icons-image-container{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(199, 199, 199, 0.685);
+    background: white;
+    margin-bottom: 1px;
+}
+
+
+.user-icons-image-container img {
+    width: 90px;
+    height: 80px;
+}
+
+
+
