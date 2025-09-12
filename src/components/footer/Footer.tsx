@@ -2,6 +2,7 @@ import '../footer/Footer.css';
 import { useState } from 'react';
 import Time from '../time/Time';
 import { IoIosArrowBack } from "react-icons/io";
+import { RiArrowDropRightFill } from "react-icons/ri";
 
 
 export default function Footer() {
@@ -158,33 +159,115 @@ export default function Footer() {
                                             <ul>
                                                 <li className='accessories-btn'>
                                                     <img className='programs-images' src='Images/tiny_accessories.png' />
-                                                    Accessories
+                                                    <div className='programs-further-nav'>Accessories <p><RiArrowDropRightFill /></p></div>
 
                                                     {/*Accessories Menu */}
                                                     <div className='accessories-menu'>
                                                         <ul>
-                                                            <li>Accessibility</li>
-                                                            <li>Communications</li>
-                                                            <li>Entertainment</li>
-                                                            <li>System Tools</li>
-                                                            <li>Address Book</li>
-                                                            <li>Command Prompt</li>
-                                                            <li>Notepad</li>
-                                                            <li>Paint</li>
-                                                            <li>Calculator</li>
-                                                            <li>Program Compatibility</li>
-                                                            <li>Remote Desktop Connection</li>
-                                                            <li>Synchronize</li>
-                                                            <li>Tour Windows XP</li>
-                                                            <li>Windows Explorer</li>
-                                                            <li>WordPad</li>
+                                                            <li>
+                                                                <img className='programs-images' src='Images/tiny_accessories.png'/>
+                                                                <div className='programs-further-nav'>Accessibility<p><RiArrowDropRightFill /></p></div>
+                                                            </li>
+                                                            <li>
+                                                                <img className='programs-images' src='Images/tiny_accessories.png'/>
+                                                                <div className='programs-further-nav'>Communications<p><RiArrowDropRightFill /></p></div>
+                                                                
+                                                            </li>
+                                                            <li>
+                                                                <img className='programs-images' src='Images/tiny_accessories.png'/>
+                                                                <div className='programs-further-nav'>Entertainment<p><RiArrowDropRightFill /></p></div>
+                                                                
+                                                            </li>
+
+                                                            <li>
+                                                                <img className='programs-images' src='Images/tiny_accessories.png'/>
+                                                                <div className='programs-further-nav'>System Tools<p><RiArrowDropRightFill /></p></div>
+                                                                
+                                                            </li>
+                                                            <li>
+                                                                <img 
+                                                                className='programs-images'
+                                                                src='Images/program_icon_address_book.png'/>
+                                                                Address Book
+                                                            </li>
+                                                            <li>
+                                                                <img
+                                                                className='programs-images'
+                                                                src='Images/program_icon_command.png'
+                                                                />
+                                                                Command Prompt
+                                                            </li>
+                                                            <li>
+                                                                <img
+                                                                src='Images/program_icon_notepad.png'
+                                                                className='programs-images'
+                                                                />
+                                                                Notepad
+                                                            </li>
+                                                            <li>
+                                                                <img
+                                                                src='Images/program_icon_paint.png'
+                                                                className='programs-images'
+                                                                />
+                                                                Paint
+                                                            </li>
+                                                            <li>
+                                                                <img
+                                                                src='Images/program_icon_calculator.png'
+                                                                 className='programs-images'
+                                                                />
+                                                                Calculator
+                                                            </li>
+                                                            <li>
+                                                                <img
+                                                                src='Images/program_icon_program_compatibility.png'
+                                                                className='programs-images'
+                                                                />
+                                                                Program Compatibility
+                                                            </li>
+                                                            <li>
+                                                                <img
+                                                                src='Images/program_icon_remote_desktop.png'
+                                                                className='programs-images'
+                                                                />
+                                                                Remote Desktop Connection
+                                                            </li>
+                                                            <li>
+                                                                <img
+                                                                src='Images/program_icon_synchronize.png'
+                                                                className='programs-images'
+                                                                />
+                                                                Synchronize
+                                                            </li>
+                                                            <li>
+                                                                <img
+                                                                src='Images/program_icon_tour_windows.png'
+                                                                className='programs-images'
+                                                                />
+                                                                Tour Windows XP
+                                                            </li>
+                                                            <li>
+                                                                <img
+                                                                src='Images/program_icon_windows_explorer.png'
+                                                                className='programs-images'
+                                                                />
+                                                                Windows Explorer
+                                                            </li>
+                                                            <li>
+                                                                <img
+                                                                src='Images/program_icon_wordpad.png'
+                                                                className='programs-images'
+                                                                />
+                                                                WordPad
+                                                            </li>
                                                         </ul>
 
                                                     </div>
                                                 </li>
                                                 <li className='games-btn'>
                                                     <img className='programs-images' src='Images/tiny_accessories.png' />
-                                                    Games
+                                                    <div className='programs-further-nav'>Games<p><RiArrowDropRightFill /></p></div>
+                                                    
 
                                                         {/*Games Menu */}
                                                     <div className='games-menu'>
@@ -207,7 +290,8 @@ export default function Footer() {
                                                 
                                                 <li className='microsoft-btn'>
                                                     <img className='programs-images' src='Images/tiny_accessories.png' />
-                                                    Microsoft Office
+                                                    <div className='programs-further-nav'>Microsoft Office<p><RiArrowDropRightFill /></p></div>
+                                                    
 
                                                     {/*Microsoft Menu */}
                                                     <div className='microsoft-menu'>
@@ -228,7 +312,8 @@ export default function Footer() {
                                                 </li>
                                                 <li>
                                                     <img className='programs-images' src='Images/tiny_accessories.png' />
-                                                    Startup
+                                                    <div className='programs-further-nav'>Startup<p><RiArrowDropRightFill /></p></div>
+                                                    
                                                 </li>
                                                 <li>
                                                     <img className='programs-images' src='Images/tiny_explorer.png' />
