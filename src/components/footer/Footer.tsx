@@ -164,10 +164,17 @@ export default function Footer() {
                                                     {/*Accessories Menu */}
                                                     <div className='accessories-menu'>
                                                         <ul>
-                                                            <li>
+                                                            <li className='accessibility-btn'>
                                                                 <img className='programs-images' src='Images/tiny_accessories.png'/>
                                                                 <div className='programs-further-nav'>Accessibility<p><RiArrowDropRightFill /></p></div>
+                                                               
                                                             </li>
+                                                            <div className='accessibility-menu'>
+                                                                <ul>
+                                                                    <li>(Empty)</li>
+                                                                </ul>
+                                                            </div>
+                                                             
                                                             <li>
                                                                 <img className='programs-images' src='Images/tiny_accessories.png'/>
                                                                 <div className='programs-further-nav'>Communications<p><RiArrowDropRightFill /></p></div>
@@ -272,17 +279,72 @@ export default function Footer() {
                                                         {/*Games Menu */}
                                                     <div className='games-menu'>
                                                         <ul>
-                                                            <li>FreeCell</li>
-                                                            <li>Hearts</li>
-                                                            <li>Internet Backgammon</li>
-                                                            <li>Internet Checkers</li>
-                                                            <li>Internet Hearts</li>
-                                                            <li>Internet Reversi</li>
-                                                            <li>Internet Spades</li>
-                                                            <li>Minesweeper</li>
-                                                            <li>Pinball</li>
-                                                            <li>Solitaire</li>
-                                                            <li>Spider Solitaire</li>
+                                                            <li>
+                                                                <img 
+                                                                className='programs-images'
+                                                                src='Images/program_ga_free_cell.png'/>
+                                                                FreeCell
+                                                            </li>
+                                                            <li>
+                                                                <img 
+                                                                className='programs-images'
+                                                                src='Images/program_ga_hearts.png'/>
+                                                                Hearts
+                                                            </li>
+                                                            <li>
+                                                                <img 
+                                                                className='programs-images'
+                                                                src='Images/program_ga_internet_back.png'/>
+                                                                Internet Backgammon
+                                                            </li>
+                                                            <li>
+                                                                <img 
+                                                                className='programs-images'
+                                                                src='Images/program_ga_internet_checkers.png'/>
+                                                                Internet Checkers
+                                                            </li>
+                                                            <li>
+                                                                <img 
+                                                                className='programs-images'
+                                                                src='Images/program_ga_internet_hearts.png'/>
+                                                                Internet Hearts
+                                                            </li>
+                                                            <li>
+                                                                <img 
+                                                                className='programs-images'
+                                                                src='Images/program_ga_internet_reversi.png'/>
+                                                                Internet Reversi
+                                                            </li>
+                                                            <li>
+                                                                <img 
+                                                                className='programs-images'
+                                                                src='Images/program_ga_internet_spades.png'/>
+                                                                Internet Spades
+                                                            </li>
+                                                            <li>
+                                                                <img 
+                                                                className='programs-images'
+                                                                src='Images/program_ga_minesweeper.png'/>
+                                                                Minesweeper
+                                                            </li>
+                                                            <li>
+                                                                <img 
+                                                                className='programs-images'
+                                                                src='Images/program_ga_pinball.png'/>
+                                                                Pinball
+                                                            </li>
+                                                            <li>
+                                                                <img 
+                                                                className='programs-images'
+                                                                src='Images/program_ga_solitaire.png'/>
+                                                                Solitaire
+                                                            </li>
+                                                            <li>
+                                                                <img 
+                                                                className='programs-images'
+                                                                src='Images/program_ga_spider_solitaire.png'/>
+                                                                Spider Solitaire
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                 </li>
@@ -296,16 +358,66 @@ export default function Footer() {
                                                     {/*Microsoft Menu */}
                                                     <div className='microsoft-menu'>
                                                         <ul>
-                                                            <li>Microsoft Office Tools</li>
-                                                            <li>Microsoft Office Access 2007</li>
-                                                            <li>Microsoft Office Excel 2007</li>
-                                                            <li>Microsoft Office Groove 2007</li>
-                                                            <li>Microsoft Office InfoPath 2007</li>
-                                                            <li>Microsoft Office OneNote 2007</li>
-                                                            <li>Microsoft Office Outlook 2007</li>
-                                                            <li>Microsoft Office PowerPoint 2007</li>
-                                                            <li>Microsoft Office Publisher 2007</li>
-                                                            <li>Microsoft Office Word 2007</li>
+                                                            <li>
+                                                                <img 
+                                                                className='programs-images'
+                                                                src='Images/micro_office_tools.png'/>
+                                                                Microsoft Office Tools
+                                                            </li>
+                                                            <li>
+                                                                <img 
+                                                                className='programs-images'
+                                                                src='Images/micro_office_access.png'/>
+                                                                Microsoft Office Access 2007
+                                                            </li>
+                                                            <li>
+                                                                <img 
+                                                                className='programs-images'
+                                                                src='Images/micro_office_excel.png'/>
+                                                                Microsoft Office Excel 2007
+                                                            </li>
+                                                            <li>
+                                                                <img 
+                                                                className='programs-images'
+                                                                src='Images/micro_office_groove.png'/>
+                                                                Microsoft Office Groove 2007
+                                                            </li>
+                                                            <li>
+                                                                <img 
+                                                                className='programs-images'
+                                                                src='Images/micro_office_infopath.png'/>
+                                                                Microsoft Office InfoPath 2007
+                                                            </li>
+                                                            <li>
+                                                                <img 
+                                                                className='programs-images'
+                                                                src='Images/micro_office_onenote.png'/>
+                                                                Microsoft Office OneNote 2007
+                                                            </li>
+                                                            <li>
+                                                                <img 
+                                                                className='programs-images'
+                                                                src='Images/micro_office_outlook.png'/>
+                                                                Microsoft Office Outlook 2007
+                                                            </li>
+                                                            <li>
+                                                                <img 
+                                                                className='programs-images'
+                                                                src='Images/micro_office_powerpoint.png'/>
+                                                                Microsoft Office PowerPoint 2007
+                                                            </li>
+                                                            <li>
+                                                                <img 
+                                                                className='programs-images'
+                                                                src='Images/micro_office_publisher.png'/>
+                                                                Microsoft Office Publisher 2007
+                                                            </li>
+                                                            <li>
+                                                                <img 
+                                                                className='programs-images'
+                                                                src='Images/micro_office_word.png'/>
+                                                                Microsoft Office Word 2007
+                                                            </li>
                                                         </ul>
 
                                                     </div>
