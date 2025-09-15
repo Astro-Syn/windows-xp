@@ -360,4 +360,7 @@
     background: none;
     border: none;
 }
-
+.sub-cat ul li:hover {
+    text-decoration: underline;
+    background: none;
+}

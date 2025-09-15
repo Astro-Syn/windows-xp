@@ -1,0 +1,40 @@
+.calculator-window {
+    position: absolute;
+    top: 300px;
+    left: 90vh;
+    background-color: red;
+    width: 400px;
+    height: 300px;
+    outline: 1px solid blue;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.calculator-nav {
+    position: absolute;
+    top: 20px;
+    background: beige;
+    z-index: 10;
+    width: 100%;
+}
+
+.calculator-nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.calculator-nav p {
+    padding: 2px;
+    margin: 0;
+}
+
+.calculator-body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 90%;
+  background: beige; 
+  color: black;
+  z-index: 11;
+}

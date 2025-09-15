@@ -2,7 +2,7 @@ import '../navbar/Navbar.css';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-export default function Navbar(){
+export default function Navbar({ onOpenMyComputer }: {onOpenMyComputer: () => void}){
     const [selected, setSelected] = useState("");
 
     return (
@@ -26,9 +26,12 @@ export default function Navbar(){
 
 
             {/*My Computer */}
-                <Link 
-                to='/my_computer' className='nav-item'
-                onClick={() => setSelected("my_computer")}
+                <div 
+                className='nav-item'
+                onClick = {() => {
+                    setSelected("my_computer");
+                    onOpenMyComputer();
+                }}
                 >
                 <img
                 src='/Images/icon_my_computer.png'
@@ -36,7 +39,7 @@ export default function Navbar(){
                 className='nav-icon'
                 />
                 <p className={`icon-name ${selected === "my_computer" ? "selected" : ""}`}>My Computer</p>
-                </Link>
+                </div>
 
                 {/*My Documents */}
                 <Link to='/my_documents'

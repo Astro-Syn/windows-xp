@@ -2,17 +2,16 @@ import '../my_computer/MyComputer.css';
 import { useRef, useState, useEffect } from 'react';
 import Navbar from '../my_computer/navbar/MyComputerNav';
 
-export default function MyComputer(){
-    const [isVisible, setIsVisible] = useState(true);
+export default function MyComputer({ onClose }: { onClose: () => void }) {
     const [isMinimized, setIsMinimized] = useState(false);
     const [isMaximized, setIsMaximized] = useState(false);
-    const [position, setPosition] = useState({x: 100, y: 100});
+    const [position, setPosition] = useState({ x: 100, y: 100 });
     const [isDragging, setIsDragging] = useState(false);
 
     const [currentView, setCurrentView] = useState<"root" | "nostalgia-docs">("root");
 
     const myComputerRef = useRef<HTMLDivElement>(null);
-    const offsetRef = useRef({ x: 0, y: 0});
+    const offsetRef = useRef({ x: 0, y: 0 });
 
     const onMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
         if (isMaximized) return;
@@ -28,8 +27,8 @@ export default function MyComputer(){
         if (isDragging) {
             setPosition({
                 x: e.clientX - offsetRef.current.x,
-                y: e.clientY - offsetRef.current.y, 
-            })
+                y: e.clientY - offsetRef.current.y,
+            });
         }
     };
 
@@ -39,76 +38,75 @@ export default function MyComputer(){
 
     useEffect(() => {
         document.addEventListener('mousemove', onMouseMove);
-        document. addEventListener('mouseup', onMouseUp);
+        document.addEventListener('mouseup', onMouseUp);
         return () => {
             document.removeEventListener('mousemove', onMouseMove);
-            document.removeEventListener
-            ('mouseup', onMouseUp);
+            document.removeEventListener('mouseup', onMouseUp);
         };
     });
 
-    if (!isVisible) return null;
-
     return (
         <div
-        ref={myComputerRef}
-        className={`my-computer ${isMaximized ? 'maximized' : ''}`}
-        style={{
-            top: isMaximized ? 0 : `${position.y}px`,
-            left: isMaximized ? 0 : `${position.x}px`,
-            position: 'absolute',
-        }}
+            ref={myComputerRef}
+            className={`my-computer ${isMaximized ? 'maximized' : ''}`}
+            style={{
+                top: isMaximized ? 0 : `${position.y}px`,
+                left: isMaximized ? 0 : `${position.x}px`,
+                position: 'absolute',
+            }}
         >
-            <div 
-            className='standard-title-bar'
-            onMouseDown={onMouseDown}>
-                <div
-                className='header-logo-container'>
+            <div className='standard-title-bar' onMouseDown={onMouseDown}>
+                <div className='header-logo-container'>
                     <img
-                    className='my-computer-little-pic'
-                    src='/Images/tiny_my_computer.png'
+                        className='my-computer-little-pic'
+                        src='/Images/tiny_my_computer.png'
                     />
-                    <span
-                    className='my-computer-title'
-                    >
-                        My Computer
-                    </span>
-                    <div 
-                className='header-line'
-                >
+                    <span className='my-computer-title'>My Computer</span>
+                    <div className='header-line'></div>
+                </div>
+                <div className='my-computer-buttons'>
+  <button
+    onClick={(e) => {
+      e.stopPropagation();
+      setIsMinimized(!isMinimized);
+    }}
+  >
+    -
+  </button>
 
-                </div>
-                </div>
-                <div
-                className='my-computer-buttons'
-                >
-                    <button
-                    onClick={() => setIsMinimized (!isMinimized)}
-                    >-</button>
-                    <button onClick={() => setIsMaximized (!isMaximized)}>🗖</button>
-                    <button onClick={() => setIsVisible(false)}>×</button>
-                </div>
+  <button
+    onClick={(e) => {
+      e.stopPropagation();
+      setIsMaximized(!isMaximized);
+    }}
+  >
+    🗖
+  </button>
+
+<button
+  onClick={(e) => {
+    e.stopPropagation();
+    onClose();
+  }}
+>
+  ×
+</button>
+
+</div>
+
             </div>
+
             {!isMinimized && (
-                <div
-                className='my-computer-content'
-                >
-                    
-                    <Navbar/>
-
-                    {/*Render Views */}
-                {currentView === "root" && (
-                    <div>
-                        
-                        
-                        
-                    </div>
-                    
-                )}
-
+                <div className='my-computer-content'>
+                    <Navbar />
+                    {/* Render Views */}
+                    {currentView === "root" && (
+                        <div>
+                            {/* Root contents go here */}
+                        </div>
+                    )}
                 </div>
             )}
-
         </div>
-    )
+    );
 }

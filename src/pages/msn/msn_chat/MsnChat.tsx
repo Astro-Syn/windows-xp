@@ -6,9 +6,9 @@ export default function MsnChat() {
     const [input, setInput] = useState("");
 
     const botReply = (input: string) => {
-            if(input.toLowerCase().includes("hello") || (input.toLowerCase().includes("hey"))) return "Hey! Long time to talk, what year is it?";
-            if(input.toLowerCase().includes("2025") || (input.toLowerCase().includes("2026") || (input.toLowerCase().includes("2026")))) return "Wow! I never knew it's been THAT long.";
-            return "What should we talk about?";
+            if(input.toLowerCase().includes("hello") || (input.toLowerCase().includes("hey"))) return "Hey. What happened to you?";
+            if(input.toLowerCase().includes("2025") || (input.toLowerCase().includes("2026") || (input.toLowerCase().includes("2026")))) return "It's 2007 silly. What did you think it was?";
+            return "Im going to bed.";
         };
 
     const sendMessage = () => {
