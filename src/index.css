@@ -52,10 +52,8 @@
 
 .standard-title-bar {
   .msn-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-     background: linear-gradient(
+      font-family: "Trebuchet MS";
+    background: linear-gradient(
         180deg,
         rgba(9, 151, 255, 1) 0%,
         rgba(0, 83, 238, 1) 8%,
@@ -66,18 +64,15 @@
         rgba(0, 61, 215, 1) 96%,
         rgba(0, 61, 215, 1) 100%
     );
-    border-bottom: 2px solid rgb(0, 53, 211);
+    padding: 3px 5px 3px 3px;
     border-top: 1px solid #0831d9;
     border-left: 1px solid #0831d9;
     border-right: 1px solid #001ea0;
     border-top-left-radius: 8px;
     border-top-right-radius: 7px;
-    color: white;
-    font-weight: 500;
-    cursor: default;
-    padding: 4px;
-    user-select: none;
-    height: 32px;
+    font-size: 13px;
+    text-shadow: 1px 1px #0f1089;
+    height: 28px;
 }
 }
 
