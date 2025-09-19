@@ -34,7 +34,7 @@ export default function Footer() {
     }, [menu]);
 
     const apps = [
-        {id: "Calculator", label: "Calculator", text: "calculator"}
+        {id: "Calculator", label: "Calculator", text: "calculator", img: "Images/tiny_calculator.png"}
     ];
 
   
@@ -42,9 +42,7 @@ export default function Footer() {
     return (
         <>
         <div className="desktop">
-  {openWindows.includes("Calculator") && (
-    <CalculatorWindow onClose={() => toggleWindow("InternetExplorer")} />
-  )}
+ 
   {openWindows.includes("Calculator") && (
     <CalculatorWindow onClose={() => toggleWindow("Calculator")} />
   )}
@@ -96,7 +94,7 @@ export default function Footer() {
                             className={`footer-page ${openWindows.includes(app.id) ? "active" : ""}`}
                             onClick={() => toggleWindow(app.id)}
                             >
-                            <img src={app.text} />
+                            <img src={app.img} />
                             {app.label}
                             </div>
                         ))}

@@ -23,6 +23,33 @@ export default function CalculatorBody() {
             }
         };
 
+        const backSpace = () => {
+            setInput((prev) => prev.slice(0, -1));
+        }
+
+        const handleSqrt = () => {
+            try {
+                const result = Math.sqrt(Number(input));
+                setInput(result.toString());
+            } catch {
+                setInput("Error");
+            }
+        }
+
+            const handleReciprocal = () => {
+                     try {
+            const value = Number(input);
+            if (value === 0) {
+            setInput("Error"); 
+            return;
+            }
+            const result = 1 / value;
+            setInput(result.toString());
+        } catch {
+            setInput("Error");
+        }
+        };
+
       
         const handleMC = () => setMemory(null);
         const handleMR = () => {
@@ -53,9 +80,9 @@ export default function CalculatorBody() {
         {/*Row 1 */}
         <div className='top-row'>
             <span></span>
-            <button className="top-row-btn">Backspace</button>
-            <button className='top-row-btn'>CE</button>
-            <button className='top-row-btn'>C</button>
+            <button className="top-row-btn" onClick={backSpace}>Backspace</button>
+            <button className='top-row-btn' onClick={handleClear}>CE</button>
+            <button className='top-row-btn' onClick={handleClear}>C</button>
 
         </div>
 
@@ -66,7 +93,7 @@ export default function CalculatorBody() {
         <button onClick={() => handleClick("8")}>8</button>
         <button onClick={() => handleClick("9")}>9</button>
         <button className='arith-btn' onClick={() => handleClick("/")}>/</button>
-        <button>sqrt</button>
+        <button onClick={handleSqrt}>sqrt</button>
 
         {/* Row 3 */}
         <button className="mem-btn" onClick={handleMR}>MR</button>
@@ -87,7 +114,7 @@ export default function CalculatorBody() {
         {/* Row 5 */}
         <button className="mem-btn" onClick={handleMPlus}>M+</button>
         <button onClick={() => handleClick("0")}>0</button>
-        <button>+/-</button>
+        <button onClick={handleReciprocal}>+/-</button>
         <button onClick={() => handleClick(".")}>.</button>
         <button className='arith-btn' onClick={() => handleClick("+")}>+</button>
         <button className="equals" onClick={handleEquals}>=</button>

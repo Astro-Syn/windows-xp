@@ -126,23 +126,22 @@ body{
     font-family: tahoma;
     font-size: 0.8em;
     line-height: 0;
-    width: 440px;
-    height: 540px;
-    z-index: 11;
+    width: 430px;
+    height: 520px;
+    z-index: 100;
     box-shadow: 5px 5px 5px rgb(0, 49, 114);
 }
 
 .row-top{
     display: flex;
     align-items: center;
-    gap: 10px;
     border-bottom: 2px solid rgb(0, 0, 167);
     background: radial-gradient(circle, rgb(63, 63, 255), rgb(47, 126, 230));
     color: white;
     font-size: 18px;
     text-shadow: 2px 1px rgba(0, 0, 0, 0.6);
     width: 100%;
-    height: 70px;
+    height: 60px;
     padding: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -160,7 +159,7 @@ body{
 
 .yellow-underline{
     position: absolute;
-    top: 12%;
+    top: 11%;
     width: 100%;
     height: 6px;
     background: radial-gradient(circle at center, orange, rgba(255, 255, 255, 0.303));
@@ -187,24 +186,20 @@ body{
 }
 
 .col-one{
-    display: grid;
     background: white;
-    padding: 10px 10px;
+    padding: 0px 10px;
     border-right: 1px solid #d0d0d0;
     line-height: 0;
-
 }
 
 .col-two{
   background: linear-gradient(to bottom, #dbeeff, #c6e6ff);
   padding: 12px;
   font-size: 13px;
-  
 }
 
 .col-two ul:first-of-type{
     font-weight: bold;
-    
 }
 
 .col-two ul {
@@ -246,6 +241,10 @@ ul li:hover {
     align-items: center;
 }
 
+.cmd-pt {
+    margin-bottom: 50px;
+}
+
 .divider{
     display: flex;
     position: relative;
@@ -254,13 +253,15 @@ ul li:hover {
     width: 70%;
     height: 2px;
     background: radial-gradient(circle at center, rgb(174, 174, 174), rgba(225, 225, 225, 0.408));
-    margin-bottom: -2px;
+    margin-bottom: 2px;
 }
 
 .divider:nth-of-type(2){
     margin: 0 !important;
     padding: 0 !important;
 }
+
+
 
 .menu-icons{
     width: 37px;
@@ -296,7 +297,7 @@ ul li:hover {
     background: radial-gradient(circle, rgb(63, 63, 255), rgb(47, 126, 230));
     color: white;
     text-align: end;
-    height: 50px;
+    height: 45px;
 }
 
 .off-buttons-container{
@@ -328,7 +329,6 @@ ul li:hover {
     justify-content: center;
     align-items: center;
     margin-right: 15px;
-    
 }
 
 .shut-down-image-container {
@@ -344,15 +344,9 @@ ul li:hover {
     width: 33px;
     height: 33px;
     object-fit: cover;
-    
 }
 
 .all-programs-container{
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 0;
-    margin: 0;
     width: 100%;
 }
 
@@ -363,7 +357,6 @@ ul li:hover {
   font-size: 12px;
   font-weight: bold;
   padding: 2px 2px;
-  margin: 0;
   cursor: default;
 }
 
@@ -385,7 +378,7 @@ ul li:hover {
 .programs-menu {
     position: absolute;
     left: 160px;
-    bottom: 20px;
+    bottom: 2px;
     display: none;
     flex-direction: column;
     outline: 1px solid rgb(51, 133, 255);
@@ -520,21 +513,31 @@ ul li:hover {
     background: rgb(70, 120, 255);
     position: relative;
     height: 100%;
-    padding: 0px 5px 0px 5px;
     font-size: 12px;
     color: white;
     border-radius: 3px;
     border: 1px solid rgb(83, 129, 255);
     font-family: tahoma;
     cursor: default;
-    text-shadow: 0px 2px 2px 2px black;
     padding-right: 40px;
 }
 
 .footer-page img {
-    width: 25px;
-    height: 25px;
-    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.footer-page:hover{
+    background: rgb(96, 138, 253);
+}
+
+.footer-page.active{
+    background: rgb(47, 72, 184);
+    border: 1px solid rgb(38, 63, 175);
+}
+
+.footer-page.active:hover {
+    background: rgb(64, 89, 197);
 }
 
 .programs-further-nav {

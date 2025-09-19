@@ -73,10 +73,10 @@ export default function Limewire() {
                     </div>
                 </div>
 
-                <div className="limewire-buttons">
-                    <button onClick={() => setIsMinimized(!isMinimized)}>-</button>
-                    <button onClick={() => setIsMaximized(!isMaximized)}>🗖</button>
-                    <button onClick={() => setIsVisible(false)}>×</button>
+                <div className="nav-buttons">
+                    <button  className='standard-nav-btn-min' onClick={() => setIsMinimized(!isMinimized)}>-</button>
+                    <button className='standard-nav-btn-max' onClick={() => setIsMaximized(!isMaximized)}>🗖</button>
+                    <button className='standard-nav-btn-close' onClick={() => setIsVisible(false)}>×</button>
                 </div>
             </div>
             {!isMinimized && (

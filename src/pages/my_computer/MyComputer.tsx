@@ -64,35 +64,38 @@ export default function MyComputer({ onClose }: { onClose: () => void }) {
                     <span className='my-computer-title'>My Computer</span>
                     <div className='header-line'></div>
                 </div>
-                <div className='my-computer-buttons'>
-  <button
-    onClick={(e) => {
-      e.stopPropagation();
-      setIsMinimized(!isMinimized);
-    }}
-  >
-    -
-  </button>
+                <div className='nav-buttons'>
+                <button
+                    className='standard-nav-btn-min'
+                    onClick={(e) => {
+                    e.stopPropagation();
+                    setIsMinimized(!isMinimized);
+                    }}
+                >
+                    -
+                </button>
 
-  <button
-    onClick={(e) => {
-      e.stopPropagation();
-      setIsMaximized(!isMaximized);
-    }}
-  >
-    🗖
-  </button>
+                <button
+                className='standard-nav-btn-max'
+                    onClick={(e) => {
+                    e.stopPropagation();
+                    setIsMaximized(!isMaximized);
+                    }}
+                >
+                    🗖
+                </button>
 
-<button
-  onClick={(e) => {
-    e.stopPropagation();
-    onClose();
-  }}
->
-  ×
-</button>
+                <button
+                className='standard-nav-btn-close'
+                onClick={(e) => {
+                    e.stopPropagation();
+                    onClose();
+                }}
+                >
+                ×
+                </button>
 
-</div>
+            </div>
 
             </div>
 

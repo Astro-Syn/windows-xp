@@ -96,7 +96,7 @@ export default function StartMenu() {
                                             <p>Notepad</p>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li className='cmd-pt'>
                                         <div className='item-box'>
                                             <img
                                                 className='menu-icons'

@@ -1,4 +1,5 @@
 import '../msn/Msn.css';
+import '../../../src/index.css';
 import MsnNames from '../msn/msn_names/MsnNames';
 import MsnNav from '../msn/msn_nav/MsnNav';
 import MsnAd from '../msn/msn_ad_section/MsnAd';
@@ -83,13 +84,17 @@ export default function Msn(){
                     </span>
                 </div>
                 <div
-                className='msn-buttons'
+                className='nav-buttons'
                 >
-                    <button
+                    <button className='standard-nav-btn-min'
                     onClick={() => setIsMinimized (!isMinimized)}
                     >-</button>
-                    <button onClick={() => setIsMaximized (!isMaximized)}>🗖</button>
-                    <button onClick={() => setIsVisible(false)}>×</button>
+                    <button 
+                    className='standard-nav-btn-max'
+                    onClick={() => setIsMaximized (!isMaximized)}>🗖</button>
+                    <button 
+                    className='standard-nav-btn-close'
+                    onClick={() => setIsVisible(false)}>×</button>
                 </div>
             </div>
             {!isMinimized && (

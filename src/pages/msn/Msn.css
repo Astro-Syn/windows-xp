@@ -15,33 +15,6 @@
     z-index: 60;
 }
 
-.standard-title-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-     background: linear-gradient(
-        180deg,
-        rgba(9, 151, 255, 1) 0%,
-        rgba(0, 83, 238, 1) 8%,
-        rgba(0, 80, 238, 1) 40%,
-        rgba(0, 102, 255, 1) 88%,
-        rgba(0, 102, 255, 1) 93%,
-        rgba(0, 91, 255, 1) 95%,
-        rgba(0, 61, 215, 1) 96%,
-        rgba(0, 61, 215, 1) 100%
-    );
-    border-bottom: 2px solid rgb(0, 53, 211);
-    border-top: 1px solid #0831d9;
-    border-left: 1px solid #0831d9;
-    border-right: 1px solid #001ea0;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 7px;
-    color: white;
-    cursor: default;
-    padding: 4px;
-    user-select: none;
-    height: 32px;
-}
 
 .header-line {
     width: 98%;
@@ -65,55 +38,11 @@
 
 }
 
-.msn-buttons{
-    display: flex;
-    justify-content: center;
-}
 
-.msn-buttons button {
-    margin-left: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25px;
-    height: 25px;
-    border: 1px solid rgb(220, 229, 255);
-    color: white;
-    font-size: 1.1rem;
-    cursor: default;
-    overflow: none;
-    border-radius: 5px;
-}
 
-.msn-buttons button:first-child{
-     background: linear-gradient(to top, rgb(15, 71, 150),  rgb(35, 123, 246), rgb(95, 146, 246));
-     padding-top: 10px;
-     padding-bottom: 4px;
-     padding-right: 10px;
-     font-size: 27px;
-}
-
-.msn-buttons button:nth-child(2){
-    padding-bottom: 4px;
-    line-height: 9px;
-    font-size: 19px;
-    background: linear-gradient(to top, rgb(15, 71, 150),  rgb(35, 123, 246), rgb(95, 146, 246));
-}
-
-.msn-buttons button:nth-child(3){
-    font-size: 33px;
-    background: linear-gradient(to top, rgb(218, 0, 0),  rgb(255, 66, 66), rgb(255, 151, 151));
-}
 
 .msn-title {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
     text-shadow: 0 2px 3px rgb(0, 0, 105);
 }
 
-.msn-buttons {
-
-}
-
-.msn-content {
-
-}

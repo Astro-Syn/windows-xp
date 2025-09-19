@@ -92,10 +92,10 @@ style={{
 
                     </div>
 
-                <div className='msn-chat-window-buttons'>
-                     <button onClick={onMinimize}>-</button>
-                    <button onClick={onMaximize}>🗖</button>
-                    <button onClick={onClose}>×</button>
+                <div className='nav-buttons'>
+                     <button className='standard-nav-btn-min' onClick={onMinimize}>-</button>
+                    <button  className='standard-nav-btn-max' onClick={onMaximize}>🗖</button>
+                    <button className='standard-nav-btn-close' onClick={onClose}>×</button>
                 </div>
             </div>
 
