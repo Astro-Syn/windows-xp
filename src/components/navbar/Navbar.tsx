@@ -1,9 +1,11 @@
 import '../navbar/Navbar.css';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import InsertDisc from '../popups/disc/InsertDisc';
 
 export default function Navbar({ onOpenMyComputer }: {onOpenMyComputer: () => void}){
     const [selected, setSelected] = useState("");
+    const [showInsertDisc, setShowInsertDisc] = useState(false);
 
     return (
         <div className='navbar-container'>
@@ -86,20 +88,27 @@ export default function Navbar({ onOpenMyComputer }: {onOpenMyComputer: () => vo
                 </span>
                 </Link>
 
-                <Link 
-                to='sims_2'
+                {/*Sims 2 */}
+
+                <div
                 className='nav-item' 
-                onClick = {() => setSelected(
-                    "sims_2"
-                )}
+                onClick = {() => {
+                    setSelected("sims_2")
+                    setShowInsertDisc(true);
+                    
+                }}
                 >
                     <img src='Images/desktop_icon_sims_2.png'
-                    className='nav-icon'
+                    className='nav-icon sims'
                     />
                     <span className={`icon-name ${selected === 'sims_2' ? "selected" : ""}`}>
                         <p>Sims 2</p>
                     </span>
-                </Link>
+                </div>
+
+                {showInsertDisc && (
+                    <InsertDisc onClose={() => setShowInsertDisc(false)} />
+                )}
         </div>
         
     )
