@@ -1,14 +1,15 @@
 .corner-convo-container {
   position: fixed;
-  bottom: 30px;
   right: 20px;
+  bottom: 30px;
   z-index: 9999;
   display: flex;
+  flex-direction: column-reverse; /* newest at bottom */
+  gap: 10px; /* spacing between popups */
 }
 
-
 .corner-convo-box {
-  pointer-events: auto;       
+  pointer-events: auto;
   width: 280px;
   height: 160px;
   background-color: rgb(173, 222, 249);
@@ -18,30 +19,8 @@
   border: 2px solid rgb(65, 129, 233);
   padding: 0;
   opacity: 0;
-  transform: translateY(100%);
 }
 
-
-.corner-convo-box.show {
- 
-  animation: pop-in 700ms cubic-bezier(.22, 1, .36, 1) forwards;
-}
-
-.corner-convo-box.hide {
-  animation: pop-out var(--msn-out, 260ms) cubic-bezier(.4, 0, 1, 1) forwards;
-}
-
-@keyframes pop-in {
-  0%   { opacity: 0; transform: translateY(100%); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes pop-out {
-  0%   { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(100%); }
-}
-
-/* ===== Header ===== */
 .corner-convo-box-header {
   display: flex;
   flex-direction: row;
@@ -68,7 +47,7 @@
   height: 20px;
 }
 
-/* Close button */
+
 .corner-convo-close {
   display: flex;
   align-items: center;
@@ -89,7 +68,8 @@
 .corner-convo-close:hover { filter: brightness(1.08); }
 .corner-convo-close:active { transform: translateY(1px); }
 
-/* ===== Content ===== */
+
+
 .corner-convo-box-content {
   display: flex;
   height: 125px;
@@ -139,12 +119,33 @@
 .corner-convo-message { margin: 4px 0 0 0; color: #0a1b2e; }
 
 
-@media (prefers-reduced-motion: reduce) {
-  .corner-convo-box,
-  .corner-convo-box.show,
-  .corner-convo-box.hide {
-    animation: none !important;
+.corner-convo-box.show {
+  animation: convoIn forwards;
+}
+
+.corner-convo-box.hide {
+  animation: convoOut forwards;
+}
+
+
+@keyframes convoIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); 
+  }
+  100% {
     opacity: 1;
-    transform: none;
+    transform: translateY(0);
+  }
+}
+
+@keyframes convoOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(30px); /* slide down */
   }
 }

@@ -2,10 +2,16 @@ import '../navbar/Navbar.css';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import InsertDisc from '../popups/disc/InsertDisc';
+import Limewire from '../../pages/limewire/Limewire';
+import MyComputer from '../../pages/my_computer/MyComputer';
+
+
 
 export default function Navbar({ onOpenMyComputer }: {onOpenMyComputer: () => void}){
     const [selected, setSelected] = useState("");
     const [showInsertDisc, setShowInsertDisc] = useState(false);
+    const [showLimewire, setShowLimewire] = useState(false);
+    const [showMyComputer, setShowMyComputer] = useState(false);
 
     return (
         <div className='navbar-container'>
@@ -32,7 +38,7 @@ export default function Navbar({ onOpenMyComputer }: {onOpenMyComputer: () => vo
                 className='nav-item'
                 onClick = {() => {
                     setSelected("my_computer");
-                    onOpenMyComputer();
+                    setShowMyComputer(true);
                 }}
                 >
                 <img
@@ -42,6 +48,9 @@ export default function Navbar({ onOpenMyComputer }: {onOpenMyComputer: () => vo
                 />
                 <p className={`icon-name ${selected === "my_computer" ? "selected" : ""}`}>My Computer</p>
                 </div>
+                {showMyComputer && (
+                    <MyComputer onClose={() => setShowMyComputer(false)}/>
+                )}
 
                 {/*My Documents */}
                 <Link to='/my_documents'
@@ -72,11 +81,12 @@ export default function Navbar({ onOpenMyComputer }: {onOpenMyComputer: () => vo
                 </Link>
 
                 {/*Limewire */}
-                <Link to='/limewire'
+                <div 
                 className='nav-item'
-                onClick = {() => setSelected(
-                    "limewire"
-                )}
+                onClick = {() => {
+                    setSelected("limewire")
+                    setShowLimewire(true);
+                }}
                 >
                 <img
                 src='/Images/icon_limewire.png'
@@ -86,13 +96,16 @@ export default function Navbar({ onOpenMyComputer }: {onOpenMyComputer: () => vo
                 <span className={`icon-name ${selected === 'limewire' ? "selected" : ""}`}>
                     <p>Limewire</p>
                 </span>
-                </Link>
+                </div>
+                {showLimewire && (
+                    <Limewire  onClose={() => setShowLimewire(false)}/>
+                )}
 
                 {/*Sims 2 */}
 
                 <div
                 className='nav-item' 
-                onClick = {() => {
+                onDoubleClick = {() => {
                     setSelected("sims_2")
                     setShowInsertDisc(true);
                     

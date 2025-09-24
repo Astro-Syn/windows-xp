@@ -6,9 +6,7 @@ type Props = {
   message?: string;
   onClose?: () => void;
   show?: boolean;
-
   duration?: number;
-
   inMs?: number;  
   outMs?: number; 
   headerIconSrc?: string;
@@ -19,21 +17,24 @@ type Props = {
 export default function MsnCornerConvo({
   title = 'MSN Messenger',
   message = 'Novie has just signed in.',
-  duration = 5000,
+  duration = 10000,
   onClose,
   show = true,
-  inMs = 700,
-  outMs = 260,
+  inMs = 900,
+  outMs = 860,
   headerIconSrc = '/Images/tiny_msn_full.png',
   avatarSrc = '/Images/login_fish.png',
   logoSrc = '/Images/msn_logo.png',
 }: Props) {
 
-  const [mounted, setMounted] = useState(show);
-  const [isVisible, setIsVisible] = useState(show);
+  const [mounted, setMounted] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const timerRef = useRef<number | null>(null);
 
   
+
+
+
   useEffect(() => {
     if (show) {
       setMounted(true);
@@ -54,6 +55,7 @@ export default function MsnCornerConvo({
     timerRef.current = window.setTimeout(() => {
       setIsVisible(false); 
     }, duration);
+    
 
     return () => {
       if (timerRef.current) {
@@ -75,7 +77,7 @@ export default function MsnCornerConvo({
     timerRef.current = window.setTimeout(() => setIsVisible(false), 1500);
   };
 
-  // After OUT animation finishes, unmount + notify parent
+  
   const handleAnimationEnd: React.AnimationEventHandler<HTMLDivElement> = (e) => {
     if (e.target !== e.currentTarget) return;
     if (!isVisible) {
@@ -107,7 +109,7 @@ export default function MsnCornerConvo({
           <button
             className="corner-convo-close"
             aria-label="Close notification"
-            onClick={() => setIsVisible(false)}   // slide OUT
+            onClick={() => setIsVisible(false)}   
           >
             ×
           </button>

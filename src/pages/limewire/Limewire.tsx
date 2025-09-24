@@ -4,8 +4,12 @@ import LimewireNav from './LimewireNav';
 import LimewireNavTwo from './LimewireNavTwo';
 import LimewireSearch from './search/LimewireSearch';
 
-export default function Limewire() {
-    const [isVisible, setIsVisible] = useState(true);
+type LimewireProps = {
+    onClose: () => void;
+}
+
+export default function Limewire({ onClose }: LimewireProps) {
+    
     const [isMinimized, setIsMinimized] = useState(false);
     const [isMaximized, setIsMaximized] = useState(false);
     const [position, setPosition] = useState({ x: 100, y: 100 });
@@ -15,6 +19,7 @@ export default function Limewire() {
     const offsetRef = useRef({ x: 0, y: 0 });
 
     const onMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+        if((e.target as HTMLElement).closest(".nav-buttons")) return;
         if (isMaximized) return;
         setIsDragging(true);
         const rect = limewireRef.current?.getBoundingClientRect();
@@ -46,7 +51,7 @@ export default function Limewire() {
         };
     });
 
-    if (!isVisible) return null;
+    
 
     return (
         <div
@@ -76,7 +81,7 @@ export default function Limewire() {
                 <div className="nav-buttons">
                     <button  className='standard-nav-btn-min' onClick={() => setIsMinimized(!isMinimized)}>-</button>
                     <button className='standard-nav-btn-max' onClick={() => setIsMaximized(!isMaximized)}>🗖</button>
-                    <button className='standard-nav-btn-close' onClick={() => setIsVisible(false)}>×</button>
+                    <button className='standard-nav-btn-close' onClick={onClose}>×</button>
                 </div>
             </div>
             {!isMinimized && (
