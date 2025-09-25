@@ -19,9 +19,7 @@ function App() {
       />
       <Background />
       <MyComputer />
-      <Limewire />
       <Msn />
-      <MsnChatWindow/>
       <MsnCornerConvo/>
       <MsnCornerConvo2/>
       <Footer windows={[]} onTabClick={() => {}}/>

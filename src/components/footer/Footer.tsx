@@ -5,6 +5,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { RiArrowDropRightFill } from "react-icons/ri";
 import StartMenu from './start menu/StartMenu';
 import CalculatorWindow from '../footer pages/calculator/CalculatorWindow';
+import MsnCornerConvo2 from '../../pages/msn/msn_corner_convo/MsnCornerConvo';
 
 
 export default function Footer() {
@@ -34,7 +35,8 @@ export default function Footer() {
     }, [menu]);
 
     const apps = [
-        {id: "Calculator", label: "Calculator", text: "calculator", img: "Images/tiny_calculator.png"}
+        {id: "Calculator", label: "Calculator", text: "calculator", img: "Images/tiny_calculator.png"},
+        {id: "Novie Chat", label: "Novie Chat", text: 'Novie Chat', img: "Images/tiny_msn_conversation.png"}
     ];
 
   
@@ -45,6 +47,10 @@ export default function Footer() {
  
   {openWindows.includes("Calculator") && (
     <CalculatorWindow onClose={() => toggleWindow("Calculator")} />
+  )}
+
+  {openWindows.includes("Novie Chat") && (
+    <MsnCornerConvo2 onClose={() => toggleWindow("Novie Chat")}/>
   )}
 </div>
            

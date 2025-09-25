@@ -5,6 +5,10 @@
     
 }
 
+.message.bot {
+    white-space: pre-line;
+}
+
 .chat-box-header {
     display: flex;
     align-items: center;

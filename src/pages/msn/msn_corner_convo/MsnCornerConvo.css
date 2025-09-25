@@ -4,8 +4,18 @@
   bottom: 30px;
   z-index: 9999;
   display: flex;
-  flex-direction: column-reverse; /* newest at bottom */
-  gap: 10px; /* spacing between popups */
+  flex-direction: column-reverse; 
+  gap: 10px; 
+}
+
+.corner-convo-container2{
+  position: fixed;
+  right: 20px;
+  bottom: 190px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column-reverse; 
+  gap: 10px; 
 }
 
 .corner-convo-box {
@@ -115,6 +125,12 @@
   right: 0;
 }
 
+.corner-convo-message2{
+ line-height: 1.5;
+ white-space: pre-line;
+  text-align: center;
+}
+
 .corner-convo-options { color: #1b3f8a; text-decoration: underline; margin: 0; }
 .corner-convo-message { margin: 4px 0 0 0; color: #0a1b2e; }
 
@@ -146,6 +162,6 @@
   }
   100% {
     opacity: 0;
-    transform: translateY(30px); /* slide down */
+    transform: translateY(30px); 
   }
 }

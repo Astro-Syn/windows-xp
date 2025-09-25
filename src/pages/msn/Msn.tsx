@@ -12,7 +12,7 @@ export default function Msn(){
     const [isVisible, setIsVisible] = useState(true);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isMaximized, setIsMaximized] = useState(false);
-    const [position, setPosition] = useState({x: 100, y: 100});
+    const [position, setPosition] = useState({x: 2000, y: 100});
     const [isDragging, setIsDragging] = useState(false);
 
     const msnRef = useRef<HTMLDivElement>(null);

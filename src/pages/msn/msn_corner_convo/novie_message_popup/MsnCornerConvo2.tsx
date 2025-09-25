@@ -16,9 +16,9 @@ type Props = {
 
 export default function MsnCornerConvo2({
     title = 'MSN Messenger',
-    message = 'Hey!',
+    message = 'Novie says: \n Hey!',
     onClose,
-    duration = 1000,
+    duration = 2000,
     show = true,
     inMs = 900,
     outMs = 860,
@@ -86,7 +86,7 @@ export default function MsnCornerConvo2({
     };
 
   return (
-    <div className="corner-convo-container" role="status" aria-live="polite">
+    <div className="corner-convo-container2" role="status" aria-live="polite">
       <div
         className={`corner-convo-box ${isVisible ? 'show' : 'hide'}`}
         style={boxStyle}
@@ -109,12 +109,17 @@ export default function MsnCornerConvo2({
         </div>
 
         <div className="corner-convo-box-content">
-          <div className="corner-convo-picture">
-            <img src={avatarSrc} alt="" />
-          </div>
+          
           <div className="corner-convo-text-content">
             <p className="corner-convo-options">Options</p>
-            <p className="corner-convo-message">{message}</p>
+            <p className="corner-convo-message2">
+              {message.split('\n').map((line, i) => (
+                <React.Fragment key={i}>
+                  {i === 0 ? <span>{line}</span> :line}
+                  <br />
+                </React.Fragment>
+              ))}
+            </p>
             <img src={logoSrc} alt="MSN logo" />
           </div>
         </div>

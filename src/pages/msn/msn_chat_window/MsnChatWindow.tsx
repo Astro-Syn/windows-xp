@@ -11,13 +11,12 @@ type MsnChatWindowProps = {
 };
 
 export default function MsnChatWindow({
-        onClose,
-        onMinimize,
-        onMaximize,
-        isMinimized,
-        isMaximized,
-
-}: MsnChatWindowProps) 
+  onClose,
+  onMinimize = () => {},
+  onMaximize = () => {},
+  isMinimized = false,
+  isMaximized = false,
+}: MsnChatWindowProps)
 
 {
 

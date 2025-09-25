@@ -1,9 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "../msn_chat/MsnChat.css";
 
 export default function MsnChat() {
-    const [messages, setMessages] = useState<{ from: "me" | "bot"; text: string}[]>([]);
+    const [messages, setMessages] = useState<{ from: "me" | "bot"; text: React.ReactNode }[]>([]);
     const [input, setInput] = useState("");
+
+    useEffect(() => {
+        setMessages([{ from: "bot", text: (
+            <>
+            <span style={{color: "#5A5A5A"}}>Novie says:</span>
+            <br />
+            <span style={{ color: "black"}}>hey!</span>
+            </>
+        )}])
+    }, [])
 
     const botReply = (input: string) => {
             if(input.toLowerCase().includes("hello") || (input.toLowerCase().includes("hey"))) return "Hey. What happened to you?";

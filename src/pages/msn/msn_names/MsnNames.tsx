@@ -1,6 +1,12 @@
+import {useState} from 'react';
+import {createPortal} from 'react-dom';
 import '../msn_names/MsnNames.css';
+import MsnChatWindow from '../msn_chat_window/MsnChatWindow';
+
+
 
 export default function MsnNames() {
+    const [showMsnChat, setShowMsnChat] = useState(false);
     return (
         <div className='msn-names-master'>
             <div className='bottom-left-border'>
@@ -15,10 +21,25 @@ export default function MsnNames() {
                     <p>Online</p>
                 </div>
                 <ul>
-                    <li>
+                    <li onClick={() => {
+                        setShowMsnChat(true);
+                    }}>
                         <img src='Images/tiny_msn_online.png'/>
                         Novie
                     </li>
+                    {showMsnChat && 
+                    createPortal
+                    (
+                        <MsnChatWindow 
+                        onClose={() => setShowMsnChat(false)}
+                        onMinimize={() => {}}
+                        onMaximize={() => {}}
+                        isMinimized={false}
+                        isMaximized={false}
+                        />,
+                        document.body
+                    )
+                    }
                     <li>
                         <img src='Images/tiny_msn_away.png'/>
                         Rein

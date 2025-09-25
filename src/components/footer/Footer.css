@@ -503,13 +503,15 @@ ul li:hover {
 
 
 .footer-pages-container {
-    margin-left: 30px;
+    display: flex;
+    gap: 4px;
 }
 
 .footer-page {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 6px;
     background: rgb(70, 120, 255);
     position: relative;
     height: 100%;
@@ -519,7 +521,8 @@ ul li:hover {
     border: 1px solid rgb(83, 129, 255);
     font-family: tahoma;
     cursor: default;
-    padding-right: 40px;
+     min-width: 120px;
+    padding: 0 12px;
 }
 
 .footer-page img {

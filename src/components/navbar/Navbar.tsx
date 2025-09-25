@@ -13,6 +13,15 @@ export default function Navbar({ onOpenMyComputer }: {onOpenMyComputer: () => vo
     const [showLimewire, setShowLimewire] = useState(false);
     const [showMyComputer, setShowMyComputer] = useState(false);
 
+
+    const playErrorSound = () => {
+        const audio = new Audio('/sounds/Windows XP Error Sound.mp3');
+        audio.play().catch((err) => {
+            console.warn('Sound playback prevented:', err);
+        })
+    }
+
+
     return (
         <div className='navbar-container'>
 
@@ -106,6 +115,7 @@ export default function Navbar({ onOpenMyComputer }: {onOpenMyComputer: () => vo
                 <div
                 className='nav-item' 
                 onDoubleClick = {() => {
+                    playErrorSound();
                     setSelected("sims_2")
                     setShowInsertDisc(true);
                     
