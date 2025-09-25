@@ -705,3 +705,13 @@ ul li:hover {
 .system-menu:hover {
   display: block;
 }
+
+.footer-page.flash {
+    animation: flash-bg 1s infinite;
+}
+
+@keyframes flash-bg {
+    0% {background: rgb(70, 120, 255);}
+    50% {background: orange; }
+    100% {background: rgb(70, 120, 255);}
+}

@@ -6,6 +6,7 @@ import { RiArrowDropRightFill } from "react-icons/ri";
 import StartMenu from './start menu/StartMenu';
 import CalculatorWindow from '../footer pages/calculator/CalculatorWindow';
 import MsnCornerConvo2 from '../../pages/msn/msn_corner_convo/MsnCornerConvo';
+import MsnChatWindow from '../../pages/msn/msn_chat_window/MsnChatWindow';
 
 
 export default function Footer() {
@@ -49,9 +50,17 @@ export default function Footer() {
     <CalculatorWindow onClose={() => toggleWindow("Calculator")} />
   )}
 
-  {openWindows.includes("Novie Chat") && (
-    <MsnCornerConvo2 onClose={() => toggleWindow("Novie Chat")}/>
+
+        {openWindows.includes("Novie Chat") && (
+    <MsnChatWindow 
+    onMinimize={() => console.log("minimize Novie Chat")}
+    onMaximize={() => console.log("maximize Novie Chat")}
+    isMaximized={false}
+    isMinimized={false}
+    onClose={() => toggleWindow("Novie Chat")}/>
   )}
+
+  
 </div>
            
         <div className='footer-container'>
@@ -97,7 +106,9 @@ export default function Footer() {
                             {apps.map(app => (
                             <div
                             key={app.id}
-                            className={`footer-page ${openWindows.includes(app.id) ? "active" : ""}`}
+                            className={`footer-page ${openWindows.includes(app.id) ? "active" : ""}
+                            ${app.id === "Novie Chat" ? "flash" : ""}`}
+                            
                             onClick={() => toggleWindow(app.id)}
                             >
                             <img src={app.img} />
