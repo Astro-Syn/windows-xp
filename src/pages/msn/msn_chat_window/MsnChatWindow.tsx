@@ -20,7 +20,6 @@ export default function MsnChatWindow({
 
 {
 
-   
     const [position, setPosition] = useState({x: 100, y:100});
     const [isDragging, setIsDragging] = useState(false);
 
@@ -270,8 +269,12 @@ style={{
                 
             </div>
         </div>
+        <div className='corner-img-container'>
+            <img src='/Images/msn_chat_corner.png'/>
+    </div>
       
     </div>
+    
 </div>
   )
 }

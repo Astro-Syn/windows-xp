@@ -3,8 +3,18 @@
     height: 550px;
     border: 2px solid blue;
     border-radius: 10px;
-    background: linear-gradient(to top, rgb(239, 245, 252), rgba(190, 213, 238, 0.863));
+    background: linear-gradient(to top, rgb(239, 245, 252), rgba(190, 213, 238, 0.863), white);
     overflow: hidden;
+}
+
+.corner-img-container{
+    position: absolute;
+    bottom: 0;
+    right: 4px;
+}
+
+.corner-img-container img {
+    width: 22px;
 }
 
 .standard-title-bar {
@@ -45,7 +55,7 @@
 
 .options-buttons-container  {
     position: absolute;
-    top: 60px;
+    top: 58px;
     left: 20px;
     display: flex;
     flex-direction: row;
@@ -66,14 +76,20 @@
     padding: 6px 4px;
     align-items: center;
     width: 58px;
-    height: 58px;
+    height: 56px;
     background-color: none;
 }
 
 .options-buttons-container button:hover {
     border-radius: 1px;
-    box-shadow: inset 2px 2px 2px 2px orange;
+    box-shadow: inset 0 0 1px 1px rgb(122, 128, 143);
     background: linear-gradient(to top, rgb(224, 235, 245), white)
+}
+
+.options-buttons-container button:active{
+    background: linear-gradient(to top, rgb(238, 245, 252), white);
+    box-shadow: inset 1px 1px 0 0 rgba(22, 29, 36, 0.548);
+    transform: translateY(1px);
 }
 
 .options-buttons-container button img {
@@ -202,9 +218,11 @@
     justify-content: space-between;
     left: 50%;
     transform: translate(-50%);
-    top: 130px;
-    width: 99%;
+    top: 132px;
+    width: 97%;
     height: 73%;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 2px rgba(95, 95, 143, 0.712);
 }
 
 .msn-chat-left-content {
@@ -223,7 +241,7 @@
 }
 
 .msn-chat-display-pic {
-    height: 150px;
+    height: 146px;
     display: flex;
     flex-direction: column;
     background-color: rgb(224, 237, 245);
@@ -238,7 +256,6 @@
     border-radius: 10px;
 }
 
-
 .msn-chat-display-pic:first-child :last-child {
     border: none;
     width: 30px;
@@ -248,11 +265,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    
 }
 
 .webcam-arrow-container img {
     width: 30px;
-    height: 20px;
+    height: 18px;
+    padding-bottom: 2px;
     margin-right: 60px;
 }
 

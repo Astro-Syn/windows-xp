@@ -7,6 +7,7 @@ type Props = {
     onClose?: () => void;
     show?: boolean;
     duration?: number;
+    delay?: number;
     inMs?: number;
     outMs?: number;
     headerIconSrc?: string;
@@ -19,6 +20,7 @@ export default function MsnCornerConvo2({
     message = 'Novie says: \n Hey!',
     onClose,
     duration = 2000,
+    delay= 7000,
     show = true,
     inMs = 900,
     outMs = 860,
@@ -32,15 +34,18 @@ export default function MsnCornerConvo2({
     const timerRef = useRef<number | null>(null);
 
 
-    useEffect(() => {
-        if(show) {
-            setMounted(true);
 
-            requestAnimationFrame(() => setIsVisible(true));
-        } else {
-            setIsVisible(false);
-        }
-    }, [show]);
+    useEffect(() => {
+      if(show) {
+        const delayTimer = window.setTimeout(() => {
+          setMounted(true);
+          requestAnimationFrame(() => setIsVisible(true));
+        }, delay);
+        return () => window.clearTimeout(delayTimer);
+      } else {
+        setIsVisible(false);
+      }
+    }, [show, delay]);
 
     useEffect(() => {
         if(!isVisible) return;
@@ -59,6 +64,8 @@ export default function MsnCornerConvo2({
             }
         };
     }, [isVisible, duration]);
+
+
 
     const pause = () => {
         if(timerRef.current) {
