@@ -54,3 +54,11 @@
     height: 30px;
     object-fit: cover;
 }
+
+.desktop-folder.old-web{
+    width: 90px;
+}
+
+.desktop-folder.old-web img {
+    margin-bottom: 15px;
+}

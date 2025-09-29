@@ -2,7 +2,7 @@ import React from 'react';
 import '../nostalgia/NostalgiaDocuments.css';
 
 type NostalgiaDocumentsProps = {
-  goTo: (view: "desktop-backgrounds" | "user-icons") => void;
+  goTo: (view: "desktop-backgrounds" | "user-icons" | "old-web") => void;
   goBack: () => void;
 };
 
@@ -42,6 +42,13 @@ export default function NostalgiaDocuments({ goTo, goBack }: NostalgiaDocumentsP
           User Icons
         </button>
       </div>
+      {/*Old Web Folder*/}
+        <div className='desktop-folder old-web'>
+            <img src='/Images/icon_my_pictures.png'/>
+            <button
+            onDoubleClick={() => goTo("old-web")}
+            >Old Web Archive</button>
+        </div>
     </div>
   );
 }

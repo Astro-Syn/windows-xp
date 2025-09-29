@@ -491,10 +491,15 @@ ul li:hover {
     background: radial-gradient(rgb(170, 170, 170), rgba(255, 255, 255, 0.945));
 }
 
+
+
 .programs-images {
+    display: inline-block;
     width: 20px;
     height: 20px;
 }
+
+
 
 .all-programs-container {
   position: relative;
@@ -714,4 +719,39 @@ ul li:hover {
     0% {background: rgb(70, 120, 255);}
     50% {background: orange; }
     100% {background: rgb(70, 120, 255);}
+}
+
+.pro-img-container{
+    width: 20px;
+    
+}
+
+.pro-img-container img {
+    width: 18px;
+    height: 18px;
+}
+
+.pro-img-container-media{
+    width: 20px;
+}
+
+.pro-img-container-media img{
+    width: 25px;
+}
+
+.programs-images-mic{
+    width: 20px;
+}
+
+.mic-container {
+    display: flex;
+    width: 15px;
+}
+
+.mic-container img {
+    width: 18px;
+}
+
+.mic-container:first-child img {
+    width: 20px;
 }

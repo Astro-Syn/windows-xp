@@ -1,16 +1,40 @@
 import '../navbar/MyComputerNav.css';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import NostalgiaDocuments from '../../nostalgia/NostalgiaDocuments';
 import DesktopBackgrounds from '../../nostalgia/desktop_backgrounds/DesktopBackgrounds';
 import UserIcons from '../../nostalgia/user_icons/UserIcons';
+import OldWeb from '../../nostalgia/old_web_photos/OldWeb';
+import Neopets from '../../nostalgia/old_web_photos/neopets/Neopets';
+import HabboHotel from '../../nostalgia/old_web_photos/habbo_hotel/HabboHotel';
+import Myspace from '../../nostalgia/old_web_photos/myspace/Myspace';
 
 
-type View = "root" | "nostalgia-docs" | "desktop-backgrounds" | "user-icons";
+
+type View = "root" | "nostalgia-docs" | "desktop-backgrounds" | "user-icons" | "old-web" | "neopets" | "myspace" | "habbo-hotel";
 
 export default function MyComputerNav() {
   const [open, setOpen] = useState(false);
   const [history, setHistory] = useState<View[]>(["root"]);
 
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
+
+  const navTo = (view: string) => {
+    console.log("Navigating to:", view);
+    setOpen(false);
+  }
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if(dropdownRef.current && !dropdownRef.current.contains(event.target as Node)){
+         setOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+  }, [])
  
   const currentView = history[history.length - 1];
 
@@ -71,20 +95,32 @@ export default function MyComputerNav() {
         {/* Dropdown */}
         <div className='dropdown-container'>
           <p>A<u>d</u>dress</p>
-          <div className='dropdown'>
+          <div className='dropdown' ref={dropdownRef}>
+            
             <button 
               onClick={() => setOpen(!open)}
               className='my-comp-dropdown'
             >
-              <div>
+            
+              <div className='dropdown-pages-list'>
                 <img className='mini-computer' src='/Images/my_computer_2.png'/>
                 {{
                   "root": "My Computer",
                   "nostalgia-docs": "Nostalgia Documents",
                   "desktop-backgrounds": "Desktop Backgrounds",
-                  "user-icons": "User Icons"
+                  "user-icons": "User Icons",
+                  "old-web" : "Old Web Archive",
+                  "neopets" : "Neopets",
+                  "myspace" : "Myspace",
+                  "habbo-hotel" : "Habbo Hotel"
                 }[currentView]}
               </div>
+              <span className='down-btn-container'>
+                  <img
+            src='Images/scrollbar-down-arrow.png'
+            />
+              </span>
+                
             </button>
             {open && (
               <ul className='drop-menu'>
@@ -92,6 +128,10 @@ export default function MyComputerNav() {
                 <li onClick={() => goTo("nostalgia-docs")}>Nostalgia Documents</li>
                 <li onClick={() => goTo("desktop-backgrounds")}>Desktop Backgrounds</li>
                 <li onClick={() => goTo("user-icons")}>User Icons</li>
+                <li onClick={() => goTo("old-web")}>Old Web Archive</li>
+                <li onClick={() => goTo("myspace")}>Myspace</li>
+                <li onClick={() => goTo("neopets")}>Neopets</li>
+                <li onClick={() => goTo("habbo-hotel")}>Habbo Hotel</li>
               </ul>
             )}
           </div>
@@ -186,6 +226,14 @@ export default function MyComputerNav() {
 
           {currentView === "desktop-backgrounds" && <DesktopBackgrounds />}
           {currentView === "user-icons" && <UserIcons />}
+          {currentView === "old-web" && <OldWeb  goTo={goTo} 
+    goBack={goBack} />}
+          {currentView === "neopets" && <Neopets  goTo={goTo} 
+    goBack={goBack} />}
+          {currentView === "myspace" && <Myspace  goTo={goTo} 
+    goBack={goBack} />}
+          {currentView === "habbo-hotel" && <HabboHotel goTo={goTo} 
+    goBack={goBack} />}
         </div>
       </div>
     </div>

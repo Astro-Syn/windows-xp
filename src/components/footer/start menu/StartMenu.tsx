@@ -123,14 +123,14 @@ export default function StartMenu() {
                                             <ul>
                                                 <li>
                                                     <img
-                                                        className='programs-images'
+                                                        className='programs-images win-cat'
                                                         src='Images/tiny_windows_catalog.png'
                                                     />
                                                     Windows Catalog
                                                 </li>
                                                 <li>
                                                     <img
-                                                        className='programs-images'
+                                                        className='programs-images win-update'
                                                         src='Images/tiny_windows_update.png'
                                                     />
                                                     Windows Update
@@ -360,63 +360,83 @@ export default function StartMenu() {
                                                     <div className='microsoft-menu'>
                                                         <ul>
                                                             <li>
+                                                                <span className='mic-container'>
                                                                 <img 
                                                                 className='programs-images'
-                                                                src='Images/micro_office_tools.png'/>
+                                                                src='Images/tiny_accessories.png'/>
+                                                                </span>
                                                                 Microsoft Office Tools
                                                             </li>
                                                             <li>
+                                                                <span className='mic-container'>
                                                                 <img 
-                                                                className='programs-images'
+                                                                className='programs-images-mic'
                                                                 src='Images/micro_office_access.png'/>
+                                                                </span>
                                                                 Microsoft Office Access 2007
                                                             </li>
                                                             <li>
+                                                                <span className='mic-container'>
                                                                 <img 
-                                                                className='programs-images'
+                                                                className='programs-images-mic'
                                                                 src='Images/micro_office_excel.png'/>
+                                                                </span>
                                                                 Microsoft Office Excel 2007
                                                             </li>
                                                             <li>
-                                                                <img 
+                                                                <span className='mic-container'>
+                                                                    <img 
                                                                 className='programs-images'
                                                                 src='Images/micro_office_groove.png'/>
+                                                                
+                                                            </span>
                                                                 Microsoft Office Groove 2007
                                                             </li>
-                                                            <li>
+                                                            <li><span className='mic-container'>
                                                                 <img 
                                                                 className='programs-images'
                                                                 src='Images/micro_office_infopath.png'/>
+                                                                </span>
                                                                 Microsoft Office InfoPath 2007
                                                             </li>
                                                             <li>
+                                                                <span className='mic-container'>
                                                                 <img 
                                                                 className='programs-images'
                                                                 src='Images/micro_office_onenote.png'/>
+                                                                </span>
                                                                 Microsoft Office OneNote 2007
                                                             </li>
                                                             <li>
+                                                                <span className='mic-container'>
                                                                 <img 
                                                                 className='programs-images'
                                                                 src='Images/micro_office_outlook.png'/>
+                                                                </span>
                                                                 Microsoft Office Outlook 2007
                                                             </li>
                                                             <li>
+                                                                <span className='mic-container'>
                                                                 <img 
                                                                 className='programs-images'
                                                                 src='Images/micro_office_powerpoint.png'/>
+                                                                </span>
                                                                 Microsoft Office PowerPoint 2007
                                                             </li>
                                                             <li>
+                                                                <span className='mic-container'>
                                                                 <img 
                                                                 className='programs-images'
                                                                 src='Images/micro_office_publisher.png'/>
+                                                                </span>
                                                                 Microsoft Office Publisher 2007
                                                             </li>
                                                             <li>
+                                                                <span className='mic-container'>
                                                                 <img 
                                                                 className='programs-images'
                                                                 src='Images/micro_office_word.png'/>
+                                                                </span>
                                                                 Microsoft Office Word 2007
                                                             </li>
                                                         </ul>
@@ -429,7 +449,10 @@ export default function StartMenu() {
                                                     
                                                 </li>
                                                 <li>
-                                                    <img className='programs-images' src='Images/tiny_explorer.png' />
+                                                    <span className='pro-img-container'>
+                                                        <img className='programs-images' src='Images/tiny_explorer.png' />
+                                                    </span>
+                                                    
                                                     Internet Explorer
                                                 </li>
                                                 <li>
@@ -441,7 +464,10 @@ export default function StartMenu() {
                                                     Remote Assistance
                                                 </li>
                                                 <li>
-                                                    <img className='programs-images' src='Images/tiny_windows_media_player.png' />
+                                                    <span className='pro-img-container-media'>
+                                                        <img className='programs-images' src='Images/tiny_windows_media_player.png' />
+                                                    </span>
+                                                    
                                                     Windows Media Player
                                                 </li>
                                                 <li>

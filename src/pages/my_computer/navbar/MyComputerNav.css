@@ -364,3 +364,25 @@
     text-decoration: underline;
     background: none;
 }
+
+.drop-menu {
+    background: white;
+    width: 590px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 52px;
+    bottom: 298px;
+    border: 1px solid gray;
+    z-index: 100;
+}
+
+.down-btn-container {
+    position: relative;
+    overflow: hidden;
+    width: 12px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
