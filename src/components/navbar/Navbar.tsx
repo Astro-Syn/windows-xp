@@ -4,14 +4,16 @@ import { useState } from 'react';
 import InsertDisc from '../popups/disc/InsertDisc';
 import Limewire from '../../pages/limewire/Limewire';
 import MyComputer from '../../pages/my_computer/MyComputer';
+import Msn from '../../pages/msn/Msn';
 
 
 
-export default function Navbar({ onOpenMyComputer }: {onOpenMyComputer: () => void}){
+export default function Navbar({ onOpenMyComputer, onOpenMSNMessenger }: {onOpenMyComputer: () => void; onOpenMSNMessenger: () => void;}){
     const [selected, setSelected] = useState("");
     const [showInsertDisc, setShowInsertDisc] = useState(false);
     const [showLimewire, setShowLimewire] = useState(false);
     const [showMyComputer, setShowMyComputer] = useState(false);
+   
 
 
     const playErrorSound = () => {
@@ -75,11 +77,12 @@ export default function Navbar({ onOpenMyComputer }: {onOpenMyComputer: () => vo
                 </Link>
 
                 {/*MSN */}
-                <Link to='/msn'
+                <div
                 className='nav-item'
-                onDoubleClick={() => setSelected(
-                    "msn"
-                )}
+                onDoubleClick={() => {
+                    setSelected("msn");
+                    onOpenMSNMessenger();
+                }}
                 >
                 <img
                 src='/Images/icon_msn.png'
@@ -87,7 +90,9 @@ export default function Navbar({ onOpenMyComputer }: {onOpenMyComputer: () => vo
                 className='nav-icon'
                 />
                 <p className={`icon-name ${selected=== "msn" ? "selected" : ""}`}>Msn Messenger</p>
-                </Link>
+
+                </div>
+                
 
                 {/*Limewire */}
                 <div 
@@ -132,6 +137,25 @@ export default function Navbar({ onOpenMyComputer }: {onOpenMyComputer: () => vo
                 {showInsertDisc && (
                     <InsertDisc onClose={() => setShowInsertDisc(false)} />
                 )}
+
+                {/*Github */}
+                <div
+                className='nav-item'
+                onDoubleClick = {() => {
+                    setSelected("github");
+                    window.open("https://github.com/Astro-Syn", "_blank", "noopener, noreferrer")
+                }}
+                >
+                    
+                        <img 
+                className='nav-icon github'
+                src='Images/github_icon.png'/>
+                <p className={`icon-name ${selected === 'github' ? "selected" : ""}`}>Github</p>
+                    
+                    
+
+                </div>
+                
         </div>
         
     )

@@ -8,7 +8,7 @@ import { useRef, useState, useEffect } from 'react';
 
 
 
-export default function Msn(){
+export default function Msn({ onClose }: { onClose: () => void }){
     const [isVisible, setIsVisible] = useState(true);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isMaximized, setIsMaximized] = useState(false);
@@ -94,7 +94,11 @@ export default function Msn(){
                     onClick={() => setIsMaximized (!isMaximized)}>🗖</button>
                     <button 
                     className='standard-nav-btn-close'
-                    onClick={() => setIsVisible(false)}>×</button>
+                    onClick={() => {
+                        setIsVisible(false)
+                        onClose();
+                    }}>
+                        ×</button>
                 </div>
             </div>
             {!isMinimized && (

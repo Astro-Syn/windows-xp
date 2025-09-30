@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter} from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import Background from './components/background/Background';
@@ -11,7 +11,10 @@ import MsnCornerConvo from './pages/msn/msn_corner_convo/MsnCornerConvo';
 import MsnChatWindow from './pages/msn/msn_chat_window/MsnChatWindow';
 import MsnCornerConvo2 from './pages/msn/msn_corner_convo/novie_message_popup/MsnCornerConvo2';
 function App() {
-  
+  const [showMyComputer, setShowMyComputer] = useState(true);
+  const [showMSNMessenger, setShowMSNMessenger] = useState(true);
+
+
   const startUpSound = () => {
     const sound = new Audio('/sounds/Microsoft Windows XP Startup Sound.mp3');
     sound.play().catch((err) => {
@@ -36,12 +39,17 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar 
-      className='navbar-master'
-      />
+       <Navbar onOpenMyComputer={() => setShowMyComputer(true)} 
+        onOpenMSNMessenger={() => setShowMSNMessenger(true)}
+        />
+      {showMyComputer && (
+        <MyComputer onClose={() => setShowMyComputer(false)} />
+      )}
+      {showMSNMessenger && (
+        <Msn onClose={() => setShowMSNMessenger(false)}/>
+      )}
       <Background />
-      <MyComputer />
-      <Msn />
+      
       <MsnCornerConvo/>
       <MsnCornerConvo2/>
       <Footer windows={[]} onTabClick={() => {}}/>
