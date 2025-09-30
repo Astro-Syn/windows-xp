@@ -45,7 +45,7 @@ export default function Navbar({ onOpenMyComputer }: {onOpenMyComputer: () => vo
             {/*My Computer */}
                 <div 
                 className='nav-item'
-                onClick = {() => {
+                onDoubleClick = {() => {
                     setSelected("my_computer");
                     setShowMyComputer(true);
                 }}
@@ -64,7 +64,7 @@ export default function Navbar({ onOpenMyComputer }: {onOpenMyComputer: () => vo
                 {/*My Documents */}
                 <Link to='/my_documents'
                 className='nav-item'
-                onClick={() => setSelected("my_documents")}
+                onDoubleClick={() => setSelected("my_documents")}
                 >
                 <img
                 src='/Images/icon_my_documents.png'
@@ -77,7 +77,7 @@ export default function Navbar({ onOpenMyComputer }: {onOpenMyComputer: () => vo
                 {/*MSN */}
                 <Link to='/msn'
                 className='nav-item'
-                onClick={() => setSelected(
+                onDoubleClick={() => setSelected(
                     "msn"
                 )}
                 >
@@ -92,7 +92,7 @@ export default function Navbar({ onOpenMyComputer }: {onOpenMyComputer: () => vo
                 {/*Limewire */}
                 <div 
                 className='nav-item'
-                onClick = {() => {
+                onDoubleClick = {() => {
                     setSelected("limewire")
                     setShowLimewire(true);
                 }}
@@ -102,9 +102,9 @@ export default function Navbar({ onOpenMyComputer }: {onOpenMyComputer: () => vo
                 alt='Limewire'
                 className='nav-icon'
                 />
-                <span className={`icon-name ${selected === 'limewire' ? "selected" : ""}`}>
-                    <p>Limewire</p>
-                </span>
+                <p className={`icon-name ${selected === 'limewire' ? "selected" : ""}`}>
+                    Limewire</p>
+                
                 </div>
                 {showLimewire && (
                     <Limewire  onClose={() => setShowLimewire(false)}/>
@@ -124,9 +124,9 @@ export default function Navbar({ onOpenMyComputer }: {onOpenMyComputer: () => vo
                     <img src='Images/desktop_icon_sims_2.png'
                     className='nav-icon sims'
                     />
-                    <span className={`icon-name ${selected === 'sims_2' ? "selected" : ""}`}>
-                        <p>Sims 2</p>
-                    </span>
+                    <p className={`icon-name ${selected === 'sims_2' ? "selected" : ""}`}>
+                        Sims 2</p>
+                    
                 </div>
 
                 {showInsertDisc && (

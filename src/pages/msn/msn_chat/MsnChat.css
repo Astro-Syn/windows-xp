@@ -41,6 +41,9 @@
     overflow-x: hidden;
 }
 
+.message {
+    margin-bottom: 15px;
+}
 
 .chat-box-header p:nth-child(2) {
     margin-left: 10px;
@@ -160,6 +163,19 @@
     font-size: 12px;
     margin: 5px;
 }
+.send-btn button:hover {
+    background: linear-gradient(160deg, white, white, rgb(198, 209, 219));
+    border: 2px solid rgb(206, 216, 219);
+    color: rgb(108, 114, 129);
+}
+
+.send-btn button:active {
+    background: linear-gradient(160deg, white, rgb(243, 243, 243), rgb(144, 161, 179));
+    color: rgb(62, 68, 82);
+    border: 2px solid rgb(167, 181, 185);
+    transform: translateY(1px);
+
+}
 
 .send-btn {
     background-color: white;
@@ -196,6 +212,7 @@
 .bottom-option-input-container{
     display: flex;
     justify-content: flex-end;
+
 }
 
 .bottom-option-icons {
@@ -233,4 +250,9 @@
     height: 100%;
     object-fit:cover;
     display: block;
+}
+
+.text-box {
+    width: 100%;
+    height: 100px;
 }

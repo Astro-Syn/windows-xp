@@ -194,7 +194,7 @@ export default function MyComputerNav() {
                   <a><img src='/Images/my_computer_folder.png'/> Shared Documents</a>
                   <button 
                     className='nostalgia-folder' 
-                    onClick={() => goTo("nostalgia-docs")}
+                    onDoubleClick={() => goTo("nostalgia-docs")}
                   >
                     <img src='/Images/my_computer_folder.png'/>
                     Nostalgia Documents

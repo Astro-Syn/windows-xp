@@ -3,6 +3,7 @@ import {useState, useEffect, useRef} from 'react';
 
 export default function MsnNav() {
     const [open, setOpen] = useState(false);
+    const [status, setStatus] = useState('Online');
     const dropdownRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -15,7 +16,12 @@ export default function MsnNav() {
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         }
-    })
+    }, []);
+
+    const handleStatusChange = (newStatus: string) => {
+        setStatus(newStatus);
+        setOpen(false);
+    }
 
     return (
         <div>
@@ -72,15 +78,15 @@ export default function MsnNav() {
                                 >
                                     <button className='drop-btn'
                                     onClick={() => setOpen(!open)}
-                                    >(Online)
+                                    >({status})
                                     <p>▾</p>
                                     </button>
                                     {open && (
                                         <div className='dropdown-content'>
-                                        <a>Online</a>
-                                        <a>Away</a>
-                                        <a>Busy</a>
-                                        <a>Appear Offline</a>
+                                        <a onClick={() => handleStatusChange("Online")}>Online</a>
+                                        <a onClick={() => handleStatusChange("Away")}>Away</a>
+                                        <a onClick={() => handleStatusChange("Busy")}>Busy</a>
+                                        <a onClick={() => handleStatusChange("Appear Offline")}>Appear Offline</a>
                                     </div>
                                     )}
                                     

@@ -97,8 +97,14 @@ export default function Footer() {
                 )}
 
                 <div className='tiny-icons-container'>
-                    <img src='/Images/tiny_explorer.png' />
-                    <img src='/Images/tiny_outlook_express.png'/>
+                    <button className='footer-small-link'>
+                        <img src='/Images/tiny_explorer.png' />
+                    </button>
+                    
+                    <button className='footer-small-link'>
+                        <img src='/Images/tiny_outlook_express.png'/>
+                    </button>
+                    
                 </div>
 
                 <div className='footer-pages-container'>

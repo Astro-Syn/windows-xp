@@ -32,8 +32,8 @@
 }
 
 .msn-chat-window-header-logo-container img {
-    margin-top: 15px;
-    width: 42px;
+    margin-top: 1px;
+    width: 36px;
     display: block;
     align-self: center;
     height: auto;    
@@ -287,5 +287,18 @@
     color: rgb(18, 50, 138);
 }
 
+.invite-btn {
+  width: 48px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;   
+  justify-content: center;
+}
+.invite-btn img {
+  max-width: 70px;
+  height: auto;
+  position: relative;
+  bottom: 6px;
+}
 
 

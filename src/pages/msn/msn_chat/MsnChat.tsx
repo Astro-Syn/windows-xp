@@ -16,15 +16,41 @@ export default function MsnChat() {
     }, [])
 
     const botReply = (input: string) => {
-            if(input.toLowerCase().includes("hello") || (input.toLowerCase().includes("hey"))) return "Hey. What happened to you?";
-            if(input.toLowerCase().includes("2025") || (input.toLowerCase().includes("2026") || (input.toLowerCase().includes("2026")))) return "It's 2007 silly. What did you think it was?";
-            return "Im going to bed.";
+            if(input.toLowerCase().includes("hello") || (input.toLowerCase().includes("hey"))) 
+                
+                return <>
+            <span style={{color: "#5A5A5A"}}>Novie says:</span>
+            <br />
+            <span style={{ color: "black"}}>Where did you go?</span>
+            </>
+            
+            if(input.toLowerCase().includes("2025") || (input.toLowerCase().includes("2026") || (input.toLowerCase().includes("2026")))) 
+                
+                return  <>
+            <span style={{color: "#5A5A5A"}}>Novie says:</span>
+            <br />
+            <span style={{ color: "black"}}>It's 2007. Are you okay?</span>
+            </>
+
+            return <>
+            <span style={{color: "#5A5A5A"}}>Novie says:</span>
+            <br />
+            <span style={{ color: "black"}}>Go get some rest.</span>
+            </>
         };
 
     const sendMessage = () => {
         if (!input.trim()) return;
 
-        setMessages([...messages, {from: "me", text: input}]);
+        const myMessage = (
+            <>
+            <span style={{ color: "#5A5A5A", marginTop: "10px" }}>Nomad says:</span>
+            <br />
+            <span style={{ color: "black" }}>{input}</span>
+            </>
+        );
+
+        setMessages([...messages, {from: "me", text: myMessage}]);
 
         setTimeout(() => {
             setMessages(prev => [...prev, {from: "bot", text: botReply(input)}])}, 2000);
@@ -93,7 +119,7 @@ export default function MsnChat() {
             </div>
         <div className='input-bar'>
             
-            <input
+            <textarea className='text-box'
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && sendMessage()}

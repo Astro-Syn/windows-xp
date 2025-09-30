@@ -42,15 +42,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 15px;
-    margin-right: 10px;
+    margin-left: 10px;
     padding: 10px;
+    
     
 }
 
 .tiny-icons-container img {
-    width: 20px;
-    margin-right: 10px;
+    width: 18px;
+    margin-top: 6px;
 }
 
 .tiny-img-container{
@@ -59,8 +59,13 @@ body{
 }
 
 .tiny-img-container img {
-    padding: 5px;
+    padding: 2px;
     
+}
+
+.footer-small-link:hover {
+    box-shadow: inset 0 0 2px 1px rgba(3, 5, 95, 0.664);
+    border-radius: 2px;
 }
 
 .footer-right-btn {
@@ -526,13 +531,18 @@ ul li:hover {
     border: 1px solid rgb(83, 129, 255);
     font-family: tahoma;
     cursor: default;
-     min-width: 120px;
-    padding: 0 12px;
+     min-width: 150px;
+    padding-right: 12px ;
 }
 
 .footer-page img {
     width: 30px;
     height: 30px;
+}
+
+.footer-page:nth-child(2) img {
+    width: 25px;
+    height: 25px;
 }
 
 .footer-page:hover{
@@ -713,6 +723,7 @@ ul li:hover {
 
 .footer-page.flash {
     animation: flash-bg 1s infinite;
+    animation-delay: 9s;
 }
 
 @keyframes flash-bg {

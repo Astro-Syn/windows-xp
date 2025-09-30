@@ -150,7 +150,7 @@ style={{
         />
     </button>
     <div className='options-buttons-container'>
-        <button>
+        <button className='invite-btn'>
             <img src='/Images/msn_chat_invite.png'/>
         <p>Invite</p>
     </button>
