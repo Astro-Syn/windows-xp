@@ -18,23 +18,23 @@ export default function OldWeb({ goTo, goBack }: OldWebProps) {
   return (
     <div className='folders-container'>
         {/*Myspace */}
-        <div className='myspace-folder'>
+        <div className='old-web-folder myspace-folder'>
           <img src='Images/icon_my_pictures.png'/>
-        <button onClick={() => goTo("myspace")}>
+        <button onDoubleClick={() => goTo("myspace")}>
           MySpace
         </button>
         </div>
         {/*Neopets */}
-      <div className='neopets-folder'>
+      <div className='old-web-folder neopets-folder'>
         <img src='Images/icon_my_pictures.png'/>
-        <button onClick={() => goTo("neopets")}>
+        <button onDoubleClick={() => goTo("neopets")}>
           Neopets
         </button>
       </div>
       {/*Habbo Hotel */}
-      <div className='habbo-folder'>
+      <div className='old-web-folder habbo-folder'>
         <img src='Images/icon_my_pictures.png' alt='Habbo Hotel'/>
-          <button onClick={() => goTo("habbo-hotel")}>Habbo Hotel</button>
+          <button onDoubleClick={() => goTo("habbo-hotel")}>Habbo Hotel</button>
       </div>
      
     </div>

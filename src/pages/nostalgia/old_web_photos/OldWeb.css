@@ -1,0 +1,27 @@
+.folders-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    margin: 20px;
+    width: 430px;
+    height: 400px;
+    cursor: default;
+    gap: 40px;
+}
+
+
+.old-web-folder button {
+    align-self: center;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.old-web-folder button:active {
+    background-color: rgb(35, 130, 255);
+    border: 1px dotted black;
+    color: white;
+}
