@@ -63,7 +63,10 @@ export default function LimewireSearch () {
                 </div>
                 <div className='main-search-master'>
                     <div className='top-search'>
-                            music
+                        <div className='lw-close'>
+                            <p>x</p>
+                        </div>
+                            <p>music</p>
                         </div>
                 <div className='main-search-container'>
                         

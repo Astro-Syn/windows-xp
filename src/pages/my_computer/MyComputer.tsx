@@ -20,7 +20,7 @@ export type NostalgiaView =
 export default function MyComputer({ onClose }: { onClose: () => void }) {
   const [isMinimized, setIsMinimized] = useState(false);
   const [isMaximized, setIsMaximized] = useState(false);
-  const [position, setPosition] = useState({ x: 900, y: 100 });
+  const [position, setPosition] = useState({ x: 150, y: 50 });
   const [isDragging, setIsDragging] = useState(false);
 
   const [currentView, setCurrentView] = useState<NostalgiaView>("root");

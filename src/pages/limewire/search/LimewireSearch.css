@@ -2,6 +2,50 @@
     box-sizing: border-box;
 }
 
+.main-search-master {
+    
+}
+
+.top-search {
+    display: flex;
+    flex-direction: row;
+width: 40px;
+ font-size: 0.7em;
+ border-radius: 10px;
+ background: white;
+ border-right: 1px solid rgb(177, 177, 158);
+  border-left: 1px solid rgb(177, 177, 158);
+    border-top: 4px solid orange;
+}
+
+
+
+.top-search p {
+    margin: 0;
+    padding: 1px;
+    border: 1px solid rgb(195, 195, 177);
+    border-radius: 5px;
+    background: white;
+}
+
+.lw-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  width: 20px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1px solid white;
+  color: white;
+  background: linear-gradient(to top, rgb(213, 0, 0), rgb(248, 166, 166));
+}
+
+.lw-close p {
+    font-size: 0.7em;
+    margin: 0;
+}
+
 .filter-results {
     font-size: 0.7em;
     padding-top: 8px;
@@ -13,9 +57,9 @@
 .search-container {
     display: flex;
     height: 400px;
-    overflow: scroll;
     background: beige;
      border-top: 4px solid white; 
+     overflow-y: scroll;
 }
 
 .media-container{
@@ -23,6 +67,7 @@
     border: 3px solid rgb(255, 255, 243);
     outline: 2px solid gray;
     outline-offset: -2px;
+    
 }
 
 
@@ -31,11 +76,12 @@
     border: 3px solid rgb(255, 255, 243);
     outline: 2px solid gray;
     outline-offset: -2px;
+    
 }
 
 .ul-container{
     height: 120px;
-    overflow: scroll;
+    overflow-y: scroll;
     margin: auto;
     
 }
@@ -46,14 +92,13 @@
     border: 3px solid rgb(255, 255, 243);
     outline: 2px solid gray;
     outline-offset: -2px;
-    
+     
 }
 
 .artist-info-container{
     display: flex;
     flex-direction: column;
     width: 200px;
-    
 }
 
 .search-title {

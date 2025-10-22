@@ -1,7 +1,7 @@
 .disc-popup-container {
-    position: absolute;
-    left: 700px;
-    transform: translate(50%, 50%);
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
     top: 50%;
     width: 370px;
     height: 110px;
@@ -30,7 +30,7 @@
 
 .disc-popup-message img {
     width: 60px;
-    height: 60px;
+    height: 55px;
 }
 
 .ok-container {
@@ -71,7 +71,7 @@
 
 .nav-img {
     width: 30px;
-    height: 30px;
+    height: 28px;
 }
 
 .nav-title {

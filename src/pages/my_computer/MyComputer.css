@@ -3,7 +3,7 @@
     top: 100px;
     left: 100px;
     width: 700px;
-    height: 600px;
+    height: 500px;
     background: white;
     border-left:2px solid #001ea0;
     border-right:2px solid#001ea0;
@@ -13,6 +13,7 @@
     font-weight: 200;
     z-index: 50;
     cursor: default;
+    overflow: hidden;
 }
 
 

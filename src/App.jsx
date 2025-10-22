@@ -38,6 +38,7 @@ function App() {
 
 
   return (
+    <div className='application'>
     <BrowserRouter>
        <Navbar onOpenMyComputer={() => setShowMyComputer(true)} 
         onOpenMSNMessenger={() => setShowMSNMessenger(true)}
@@ -54,6 +55,7 @@ function App() {
       <MsnCornerConvo2/>
       <Footer windows={[]} onTabClick={() => {}}/>
     </BrowserRouter>
+    </div>
   )
 }
 

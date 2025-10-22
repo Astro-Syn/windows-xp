@@ -31,7 +31,7 @@ export default function Navbar({ onOpenMyComputer, onOpenMSNMessenger }: {onOpen
             <Link
             to={'/recycle_bin'}
             className='nav-item'
-            onClick={() => setSelected ('recycle_bin')}
+            onDoubleClick={() => setSelected ('recycle_bin')}
             >
             
             <img
