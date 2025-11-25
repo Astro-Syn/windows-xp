@@ -12,6 +12,7 @@ type Props = {
   headerIconSrc?: string;
   avatarSrc?: string;
   logoSrc?: string;
+  onOpenChat?: () => void;
 };
 
 export default function MsnCornerConvo({
@@ -25,14 +26,12 @@ export default function MsnCornerConvo({
   headerIconSrc = '/Images/tiny_msn_full.png',
   avatarSrc = '/Images/login_fish.png',
   logoSrc = '/Images/msn_logo.png',
+  onOpenChat,
 }: Props) {
 
   const [mounted, setMounted] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const timerRef = useRef<number | null>(null);
-
-  
-
 
 
   useEffect(() => {
@@ -100,6 +99,8 @@ export default function MsnCornerConvo({
         onMouseEnter={pause}
         onMouseLeave={resume}
         onAnimationEnd={handleAnimationEnd}
+
+         onClick={() => onOpenChat?.()}
       >
         <div className="corner-convo-box-header">
           <div className="corner-convo-box-header-title">
