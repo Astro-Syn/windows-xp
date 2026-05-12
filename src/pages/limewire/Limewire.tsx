@@ -1,4 +1,4 @@
-import '../limewire/LimeWire.css';
+import './Limewire.css';
 import { useRef, useState, useEffect } from 'react';
 import LimewireNav from './LimewireNav';
 import LimewireNavTwo from './LimewireNavTwo';
