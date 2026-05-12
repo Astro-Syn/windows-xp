@@ -124,15 +124,15 @@ const goTo = (view: NostalgiaView) => setCurrentView(view);
         <div className='my-computer-content'>
           <Navbar />
           {/* Render Views */}
-          {currentView === "old-web" && (
+          {currentView === "old-web" && 
             <OldWeb goTo={goTo} goBack={goBack} />
-          )}
-        {currentView === "neopets" && (
+          }
+        {currentView === "neopets" && 
         <Neopets goTo={goTo} goBack={goBack} />
-        )}
-        {currentView === "myspace" && (
+        }
+        {currentView === "myspace" && 
         <Myspace goTo={goTo} goBack={goBack} />
-        )}
+        }
         {currentView === "habbo-hotel" && (
         <HabboHotel goTo={goTo} goBack={goBack} />
         )}

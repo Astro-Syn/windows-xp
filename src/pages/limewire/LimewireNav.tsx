@@ -1,5 +1,4 @@
-import '../limewire/LimewireNav.css';
-
+import './LimewireNav.css';
 
 export default function LimewireNav() {
     return (
