@@ -12,6 +12,7 @@
     font-family: tahoma;
     font-weight: 200;
     z-index: 1000;
+    overflow: hidden;
 }
 
 .limewire-title {
@@ -60,6 +61,11 @@
 .header-logo-container{
     display: flex;
     align-items: center;
+}
+
+.header-logo-container img {
+    height: 22px;
+    margin-right: 2px;
 }
 
 .header-line {

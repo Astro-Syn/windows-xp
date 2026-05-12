@@ -1,0 +1,240 @@
+:root{
+  --titlebar-blue-light: #0997ff;
+  --titlebar-blue: #0053ee;
+  --titlebar-blue-deep: #003dd7;
+
+  /* Navigation Buttons */
+  --btn-blue1: #0054e9;
+  --btn-blue2: #2263d5;
+  --btn-blue3: #4479e4;
+  --btn-blue4: #a3bbec;
+  --btn-blue-active1: #0147be;
+  --btn-blue-active2: #1b4ea5;
+
+  /* Close Button Colors */
+  --btn-close1: #cc4600;
+  --btn-close2: #dc6527;
+  --btn-close3: #cd7546;
+  --btn-close4: #ffccb2;
+  --btn-close-active1: #b44001;
+  --btn-close-active2: #b6541f;
+}
+
+
+
+.standard-title-bar {
+  font-family: "Trebuchet MS";
+  background: linear-gradient(
+    180deg,
+    var(--titlebar-blue-light) 0%,
+    var(--titlebar-blue) 8%,
+    var(--titlebar-blue) 40%,
+    var(--titlebar-blue) 88%,
+    var(--titlebar-blue) 93%,
+    var(--titlebar-blue) 95%,
+    var(--titlebar-blue-deep) 96%,
+    var(--titlebar-blue-deep) 100%
+  );
+  padding: 5px 5px 3px 3px;
+  border-top: 1px solid #0831d9;
+  border-left: 1px solid #0831d9;
+  border-right: 1px solid #001ea0;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  font-size: 14px;
+  text-shadow: 2px 10px #0f1089;
+  height: 30px;
+}
+
+::-webkit-scrollbar {
+    width: 17px;
+    height: 17px;
+    
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to right, #efecea, #fffcf8);
+  border-radius: 2px;
+  border: 1px solid rgb(237, 250, 255);
+}
+
+::-webkit-scrollbar-thumb {
+  background: 
+  repeating-linear-gradient(
+            #7a7a7a,
+            #e8e8e8 1px,
+            #ffffffc2 1px,
+            #ffffff35 2px
+        ) center/6px 15px no-repeat,
+  linear-gradient(rgb(198, 222, 255), rgb(204, 225, 255) );
+    background-position: center;
+  border-radius: 2px;
+  border: 1px solid white;
+      
+}
+
+::-webkit-scrollbar-button {
+    background: linear-gradient(rgb(198, 222, 255), rgb(187, 215, 255) );
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+    background: linear-gradient(rgb(198, 222, 255), rgb(187, 215, 255) );
+    background-image: url('/public/Images/scrollbar-down-arrow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 17px;
+
+}
+
+::-webkit-scrollbar-button:vertical:decrement {
+    background: linear-gradient(rgb(198, 222, 255), rgb(187, 215, 255) );
+    background-image: url('/public/Images/scrollbar-up-arrow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15px;
+}
+
+
+.nav-buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.nav-buttons button {
+    margin-left: 2px;
+    width: 22px;
+    height: 22px;
+    border: 1px solid rgb(220, 229, 255);
+    color: white;
+    font-size: 1.1rem;
+    cursor: default;
+    overflow: none;
+    border-radius: 3px;
+}
+
+
+
+
+.standard-nav-btn-min {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding-left: 3px;
+      background-image: radial-gradient(
+      circle at 90% 90%,
+      #0054e9 0%,
+      #2263d5 55%,
+      #4479e4 70%,
+      #a3bbec 90%,
+      white 100%
+    );
+     font-size: 27px !important;
+     font-weight: bold;
+}
+
+.standard-nav-btn-min:hover {
+      background-image: radial-gradient(
+      circle at 90% 90%,
+      #115fe5 0%,
+      #2f6dd7 55%,
+      #5384e7 70%,
+      #afc5f2 90%,
+      white 100%
+    );
+}
+
+.standard-nav-btn-min:active{
+      background-image: radial-gradient(
+      circle at 90% 90%,
+      #0147be 0%,
+      #1b4ea5 55%,
+      #3964bb 70%,
+      #8da1ca 90%,
+      rgb(196, 196, 196) 100%
+    );
+   
+}
+
+.standard-nav-btn-max{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: tahoma;
+    padding-bottom: 4px;
+    line-height: 9px;
+    font-size: 19px;
+    background-image: radial-gradient(
+      circle at 90% 90%,
+      #0054e9 0%,
+      #2263d5 55%,
+      #4479e4 70%,
+      #a3bbec 90%,
+      white 100%
+    );
+}
+
+.standard-nav-btn-max:active{
+       background-image: radial-gradient(
+      circle at 90% 90%,
+      #0147be 0%,
+      #1b4ea5 55%,
+      #3964bb 70%,
+      #8da1ca 90%,
+      rgb(196, 196, 196) 100%
+    );
+   
+}
+
+.standard-nav-btn-max:hover {
+      background-image: radial-gradient(
+      circle at 90% 90%,
+      #115fe5 0%,
+      #2f6dd7 55%,
+      #5384e7 70%,
+      #afc5f2 90%,
+      white 100%
+    );
+}
+
+.standard-nav-btn-close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px !important;
+    font-family: tahoma;
+    padding-bottom: 5px;
+    box-shadow: inset 0 -1px 2px 1px #da4600;
+    background-image: radial-gradient(
+      circle at 90% 90%,
+      #cc4600 0%,
+      #dc6527 55%,
+      #cd7546 70%,
+      #ffccb2 90%,
+      white 100%
+    );
+}
+
+.standard-nav-btn-close:hover {
+     background-image: radial-gradient(
+      circle at 90% 90%,
+      #ca5414 0%,
+      #de743b 55%,
+      #cd7d52 70%,
+      #fed5c0 90%,
+      white 100%
+    );
+}
+
+.standard-nav-btn-close:active {
+  background-image: radial-gradient(
+    circle at 90% 90%,
+    #b44001 0%,
+    #b6541f 55%,
+    #9c5935 70%,
+    #c59d88 90%,
+    rgb(209, 208, 208) 100%
+  );
+}
+

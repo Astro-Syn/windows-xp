@@ -12,7 +12,7 @@ export default function Limewire({ onClose }: LimewireProps) {
     
     const [isMinimized, setIsMinimized] = useState(false);
     const [isMaximized, setIsMaximized] = useState(false);
-    const [position, setPosition] = useState({ x: 100, y: 100 });
+    const [position, setPosition] = useState({ x: 100, y: 110 });
     const [isDragging, setIsDragging] = useState(false);
 
     const limewireRef = useRef<HTMLDivElement>(null);

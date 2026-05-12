@@ -5,14 +5,14 @@ import MsnNav from '../msn/msn_nav/MsnNav';
 import MsnAd from '../msn/msn_ad_section/MsnAd';
 import MsnHeader from '../msn/msn_header/MsnHeader';
 import { useRef, useState, useEffect } from 'react';
-
+import '../../App.css';
 
 
 export default function Msn({ onClose }: { onClose: () => void }){
     const [isVisible, setIsVisible] = useState(true);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isMaximized, setIsMaximized] = useState(false);
-    const [position, setPosition] = useState({x: 2000, y: 100});
+    const [position, setPosition] = useState({x: 400, y: 20});
     const [isDragging, setIsDragging] = useState(false);
 
     const msnRef = useRef<HTMLDivElement>(null);
@@ -111,8 +111,6 @@ export default function Msn({ onClose }: { onClose: () => void }){
                     <MsnNames />
                     <MsnAd/>    
                     
-                                    
-
                 </div>
             )}
 

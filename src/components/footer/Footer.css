@@ -722,8 +722,9 @@ ul li:hover {
 }
 
 .footer-page.flash {
-    animation: flash-bg 1s infinite;
+    animation: flash-bg 1s linear 10;
     animation-delay: 9s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes flash-bg {
